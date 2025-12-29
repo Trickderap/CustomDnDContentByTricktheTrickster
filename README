@@ -1,0 +1,18 @@
+# Custom DnD Content by TricktheTrickster
+
+This repository contains custom homebrew content for Dungeons & Dragons 5th Edition, formatted for use with **Aurora Builder**.
+
+## Content
+
+### Additional Features
+*   **Debtor**: You have entered a physiological or magical debt.
+    *   *Effect:* For 8 hours after you finish a long rest, you gain a +2 bonus to AC.
+    *   *Drawback:* You cannot benefit from another long rest until at least 20 hours have passed since the end of your last one.
+    *   *Prerequisite:* Wisdom 10 or higher.
+
+## How to Use
+
+1.  Open **Aurora Builder**.
+2.  Go to the **Index** tab.
+3.  Add the URL of the `TricktheTrickster_homebrew.index` file from this repository.
+    *   URL: `https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/main/TricktheTrickster_homebrew.index`

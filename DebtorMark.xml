@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <info>
-        <name>Homebrew Additional Features</name>
-        <update version="1.1.1" />
-    </info>
-
-    <element name="Debtor" type="Additional Feature" source="Homebrew" id="ID_HOMEBREW_ADDITIONAL_FEATURE_DEBTOR">
+        <name>Debtor Mark</name>
+        </info>
+    <element name="Debtor" type="Additional Feature" source="Homebrew" id="ID_TRICK_ADDITIONAL_FEATURE_DEBTOR">
         <description>
-            <p>You have entered a physiological or magical debt that enhances your survivability at the cost of your recovery.</p>
-            <p><strong>Bargain:</strong> For 8 hours after you finish a long rest, you gain a +2 bonus to your Armor Class. However, you cannot benefit from another long rest until at least 20 hours have passed since the end of your last one.</p>
+            <p>For 8 hours after you finish a long rest, you gain a +2 bonus to your Armor Class. However, you cannot benefit from another long rest until at least 20 hours have passed since the end of your last one.</p>
             <p class="indent"><b>Prerequisite:</b> Wisdom 10 or higher.</p>
         </description>
         <sheet alt="Debtor">
-            <description>+2 AC for 8 hours after a long rest. You cannot long rest again until 20 hours after your last one.</description>
+            <description>+2 AC for 8 hours after a long rest. Cannot long rest again until 20 hours after your last one.</description>
         </sheet>
         <requirements>
             <requirement name="ID_INTERNAL_STAT_WISDOM" value="10" />

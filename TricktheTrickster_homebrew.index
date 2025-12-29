@@ -4,7 +4,7 @@
         <name>TricktheTrickster Homebrew</name>
         <description>Custom content including the Debtor Mark feature.</description>
         <author>TricktheTrickster</author>
-        <update version="1.0.3">
+        <update version="1.0.4">
             <file name="TricktheTrickster_homebrew.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/TricktheTrickster_homebrew.index" />
         </update>
     </info>
