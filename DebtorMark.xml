@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Debtor Mark Content</name>
-        <update version="0.0.1">
+        <update version="0.0.5">
             <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
         </update>
     </info>
@@ -18,7 +18,26 @@
         </setters>
     </element>
 
-    <element name="Debtor" type="Option" source="Trick the Trickster Homebrew" id="ID_TRICK_OPTION_DEBTOR">
+    <element name="Debtor" type="Item" source="Trick the Trickster Homebrew" id="ID_TRICK_ITEM_DEBTOR">
+        <description>
+            <p><i>Equip this item in your inventory to activate the Debtor Mark feature on your character sheet.</i></p>
+        </description>
+        <setters>
+            <set name="category">Additional Feature</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+            <set name="stackable">false</set>
+        </setters>
+        <requirements>
+            <requirement name="ID_INTERNAL_ABILITY_WISDOM" value="10" />
+        </requirements>
+        <rules>
+            <grant type="Feat" id="ID_TRICK_FEAT_DEBTOR_EFFECT" />
+        </rules>
+    </element>
+
+    <element name="Debtor Mark" type="Feat" source="Trick the Trickster Homebrew" id="ID_TRICK_FEAT_DEBTOR_EFFECT">
+        <supports>Feat</supports>
         <description>
             <p>This mark is the receipt of a suspicious revival offer accepted in a moment of desperation. It manifests on the back of your hand as a circle of <strong>20 iron chain links</strong> surrounding a <strong>sun with 8 rays</strong>.</p>
             <p>The mark acts as a precise metabolic countdown:</p>
@@ -27,14 +46,10 @@
                 <li><strong>The Burden Phase (Hours 9-20):</strong> After 8 hours, the sun is dark and the first 8 links are gone. The remaining 12 iron links continue to bind your vitality. These fade one by one, hour by hour. Only when the 20th link vanishes are you physically capable of benefiting from a Long Rest again.</li>
             </ul>
             <p><strong>Bargain:</strong> For 8 hours after you finish a long rest, you gain a +2 bonus to your Armor Class. However, you cannot benefit from another long rest until at least 20 hours have passed since the end of your last one.</p>
-            <p class="indent"><b>Prerequisite:</b> Wisdom 10 or higher.</p>
         </description>
-        <sheet alt="Debtor Mark">
-            <description>+2 AC for 8 hours (8 rays/links). Cannot long rest again until 20 hours have passed (remaining 12 links).</description>
+        <sheet>
+            <description>For 8 hours after a long rest, you gain a +2 bonus to AC (8 rays). After this, you cannot long rest again until 20 hours have passed (20 links).</description>
         </sheet>
-        <requirements>
-            <requirement name="ID_INTERNAL_ABILITY_WISDOM" value="10" />
-        </requirements>
         <rules>
             <stat name="ac" value="2" />
         </rules>
