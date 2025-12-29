@@ -3,7 +3,7 @@
     <info>
         <name>Trick the Trickster Homebrew Index</name>
         <author>Trick the Trickster</author>
-        <update version="1.2.3">
+        <update version="0.0.1">
             <file name="TricktheTrickster_homebrew.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/TricktheTrickster_homebrew.index" />
         </update>
     </info>
