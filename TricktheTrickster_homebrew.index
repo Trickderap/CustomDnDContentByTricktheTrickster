@@ -5,10 +5,10 @@
         <description>Custom features and rules for our homebrew campaign.</description>
         <author>DungeonMaster</author>
         <update version="1.0.0">
-            <file name="my-homebrew.index" url="YOUR_RAW_URL_HERE/my-homebrew.index" />
+            <file name="TricktheTrickster_homebrew.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/TricktheTrickster_homebrew.index" />
         </update>
     </info>
     <files>
-        <file name="debtor_feature.xml" url="YOUR_RAW_URL_HERE/debtor_feature.xml" />
+        <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
     </files>
 </index>	
