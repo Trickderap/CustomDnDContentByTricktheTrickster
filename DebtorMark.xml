@@ -1,16 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <elements>
     <info>
-        <name>Debtor Mark Content</name>
+        <name>Debtor Mark</name>
+        <update version="1.0.9">
+            <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
+        </update>
     </info>
-
+    
     <element name="TricktheTrickster Homebrew" type="Source" source="Core" id="ID_TRICK_SOURCE_HOMEBREW">
         <description>
-            <p>Custom homebrew content created by TricktheTrickster.</p>
+            <p>Custom content for Aurora Builder.</p>
         </description>
         <setters>
             <set name="abbreviation">TTH</set>
-            <set name="category">Homebrew</set> </setters>
+            <set name="category">Homebrew</set>
+        </setters>
     </element>
 
     <element name="Debtor" type="Additional Feature" source="TricktheTrickster Homebrew" id="ID_TRICK_ADDITIONAL_FEATURE_DEBTOR">
