@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/AuroraLegacy/elements/master/schema/index.xsd">
+    <info>
+        <name>My Campaign Content</name>
+        <description>Custom features and rules for our homebrew campaign.</description>
+        <author>DungeonMaster</author>
+        <update version="1.0.0">
+            <file name="my-homebrew.index" url="YOUR_RAW_URL_HERE/my-homebrew.index" />
+        </update>
+    </info>
+    <files>
+        <file name="debtor_feature.xml" url="YOUR_RAW_URL_HERE/debtor_feature.xml" />
+    </files>
+</index>	
