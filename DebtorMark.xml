@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Debtor Mark Content</name>
-        <update version="1.2.1">
+        <update version="1.2.3">
             <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
         </update>
     </info>
@@ -33,7 +33,7 @@
             <description>+2 AC for 8 hours (8 rays/links). Cannot long rest again until 20 hours have passed (remaining 12 links).</description>
         </sheet>
         <requirements>
-            <requirement name="ID_INTERNAL_STAT_WISDOM" value="10" />
+            <requirement name="ID_INTERNAL_ABILITY_WISDOM" value="10" />
         </requirements>
         <rules>
             <stat name="ac" value="2" />
