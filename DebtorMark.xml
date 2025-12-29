@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Debtor Mark Content</name>
-        <update version="1.1.0">
+        <update version="1.1.6">
             <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
         </update>
     </info>
@@ -14,6 +14,7 @@
         <setters>
             <set name="abbreviation">TTH</set>
             <set name="category">Homebrew</set>
+            <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
         </setters>
     </element>
 
