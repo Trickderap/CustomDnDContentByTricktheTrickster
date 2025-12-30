@@ -5,12 +5,12 @@ This repository contains custom homebrew content for Dungeons & Dragons 5th Edit
 ## Content
 
 ### Items / Feats
-*   **Brand of the Dead Man's Marker**: A gambling debt signed by a soul that should have departed.
+*   **Brand of the Dead Man's Wager**: A gambling debt signed by a soul that should have departed.
     *   *Mechanic - The Metabolic Clock:*
         *   **Active Phase (Hours 1-8):** You gain **+2 AC**. The mark glows, counting down the hours.
         *   **Burden Phase (Hours 9-20):** The mark goes dark. You lose the AC bonus and cannot benefit from a Long Rest until the 20th hour has passed.
     *   *Prerequisite:* Wisdom 10 or higher.
-    *   *Note:* This content is added as an Item that grants a Feat. Equip the item "Brand of the Dead Man's Marker" to activate the effects.
+    *   *Note:* This content is added as an Item that grants a Feat. Equip the item "Brand of the Dead Man's Wager" to activate the effects.
 
 ## How to Use
 
