@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/AuroraLegacy/elements/master/schema/index.xsd">
+    <info>
+        <name>Trick's Ledger of Many Tricks</name>
+        <author>Trick the Trickster</author>
+        <update version="0.0.2">
+            <file name="tricks-ledger-of-many-trick.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-trick.index" />
+        </update>
+    </info>
+    <files>
+        <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
+        <file name="warlock-proprietor.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/warlock-proprietor.xml" />
+        <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/cleric-chance.xml" />
+        <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/rogue-cardsharp.xml" />
+    </files>
+</index>

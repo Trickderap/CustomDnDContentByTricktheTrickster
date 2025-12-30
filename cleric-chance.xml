@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Cleric: Chance Domain</name>
+        <update version="0.0.1">
+            <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/cleric-chance.xml" />
+        </update>
+    </info>
+
+    <element name="Trick the Trickster Homebrew" type="Source" source="Core" id="ID_TRICK_SOURCE_HOMEBREW">
+        <description>
+            <p>Custom homebrew content created by TricktheTrickster.</p>
+        </description>
+        <setters>
+            <set name="abbreviation">TTH</set>
+            <set name="category">Homebrew</set>
+            <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
+        </setters>
+    </element>
+
+    <element name="Chance Domain" type="Archetype" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_CLERIC_CHANCE_DOMAIN">
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Clerics of Chance believe certainty is a cage. They trust in the Golden Roll.</p>
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_POTENT_SPELLCASTING" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS" level="1" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT" level="1" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE" level="1" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE" level="2" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT" level="6" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_POTENT_SPELLCASTING" level="8" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN" level="17" />
+        </rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS">
+        <description>
+            <p>You gain domain spells at the cleric levels listed in the Chance Domain Spells table.</p>
+            <h5>Chance Domain Spells</h5>
+            <table>
+                <thead><tr><td>Cleric Level</td><td>Spells</td></tr></thead>
+                <tr><td>1st</td><td><em>chaos bolt, bane</em></td></tr>
+                <tr><td>3rd</td><td><em>mirror image, nystul's magic aura</em></td></tr>
+                <tr><td>5th</td><td><em>blink, bestow curse</em></td></tr>
+                <tr><td>7th</td><td><em>confusion, death ward</em></td></tr>
+                <tr><td>9th</td><td><em>mislead, skill empowerment</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <spellcasting name="Cleric" extend="true">
+            <extend>ID_XGTE_SPELL_CHAOS_BOLT</extend>
+            <extend>ID_PHB_SPELL_BANE</extend>
+            <extend>ID_PHB_SPELL_MIRROR_IMAGE</extend>
+            <extend>ID_PHB_SPELL_NYSTULS_MAGIC_AURA</extend>
+            <extend>ID_PHB_SPELL_BLINK</extend>
+            <extend>ID_PHB_SPELL_BESTOW_CURSE</extend>
+            <extend>ID_PHB_SPELL_CONFUSION</extend>
+            <extend>ID_PHB_SPELL_DEATH_WARD</extend>
+            <extend>ID_PHB_SPELL_MISLEAD</extend>
+            <extend>ID_XGTE_SPELL_SKILL_EMPOWERMENT</extend>
+        </spellcasting>
+    </element>
+
+    <element name="Gambler's Instinct" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT">
+        <description>
+            <p>Proficiency in Gaming Sets and Deception. Learn Guidance cantrip. When casting Guidance, target rolls 2d4 and takes highest.</p>
+        </description>
+        <sheet>
+            <description>Guidance rolls 2d4 (take highest).</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GAMING_SET" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+            <grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+        </rules>
+    </element>
+
+    <element name="Cascading Fortune" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE">
+        <description>
+            <p>Whenever you roll a die for damage or healing (level 1+ spell), if you roll the max number on the die, roll it again and add it. Repeat if max again.</p>
+        </description>
+        <sheet>
+            <description>Damage/Healing dice explode on Max Roll.</description>
+        </sheet>
+    </element>
+
+    <element name="Channel Divinity: Twist of Fate" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE">
+        <description>
+            <p>As a reaction when a creature within 30 ft rolls d20, force a reroll after seeing the result but before outcome is declared.</p>
+        </description>
+        <sheet action="Reaction" usage="Channel Divinity">
+            <description>Force a creature within 30ft to reroll a d20.</description>
+        </sheet>
+    </element>
+
+    <element name="50/50 Shot" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT">
+        <description>
+            <p>When hit, roll d6. 1-3: Take damage. 4-6: Take 0 damage and teleport 10 ft.</p>
+        </description>
+        <sheet action="Reaction" usage="{{wisdom:modifier}}/Long Rest">
+            <description>When hit: Roll d6. 1-3 Normal dmg. 4-6 Zero dmg and teleport 10ft.</description>
+        </sheet>
+    </element>
+
+    <element name="Potent Spellcasting" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_POTENT_SPELLCASTING">
+        <description>
+            <p>Add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
+        </description>
+        <sheet>
+            <description>+{{wisdom:modifier}} dmg to Cleric Cantrips.</description>
+        </sheet>
+    </element>
+
+    <element name="The Perfect Run" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN">
+        <description>
+            <p>Rolling a 1 counts as a 20. Cascading Fortune now explodes on the highest two numbers of a die.</p>
+        </description>
+        <sheet>
+            <description>Natural 1 counts as Natural 20. Exploding Dice trigger on Max or Max-1.</description>
+        </sheet>
+    </element>
+</elements>

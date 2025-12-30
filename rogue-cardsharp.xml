@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Rogue: The Cardsharp</name>
+        <update version="0.0.1">
+            <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/rogue-cardsharp.xml" />
+        </update>
+    </info>
+
+    <element name="Trick the Trickster Homebrew" type="Source" source="Core" id="ID_TRICK_SOURCE_HOMEBREW">
+        <description>
+            <p>Custom homebrew content created by TricktheTrickster.</p>
+        </description>
+        <setters>
+            <set name="abbreviation">TTH</set>
+            <set name="category">Homebrew</set>
+            <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
+        </setters>
+    </element>
+
+    <element name="The Cardsharp" type="Archetype" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_ROGUE_CARDSHARP">
+        <supports>Roguish Archetype</supports>
+        <description>
+            <p>You blend arcane infusion with sleight of hand, turning playing cards into deadly weapons.</p>
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_DEADLY_DEALING" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_THE_DRAW" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FOLD_EM" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FORCED_SHUFFLE" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_52_CARD_PICKUP" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_DEADLY_DEALING" level="3" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_THE_DRAW" level="3" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FOLD_EM" level="9" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FORCED_SHUFFLE" level="13" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_52_CARD_PICKUP" level="17" />
+        </rules>
+    </element>
+
+    <element name="Deadly Dealing" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_DEADLY_DEALING">
+        <description>
+            <p>Gain proficiency/expertise with Playing Cards. Treat cards as weapons (Ranged 30/60, Finesse, Thrown, 1d6 Slashing, Magical).</p>
+        </description>
+        <sheet>
+            <description>Cards are 1d6 Finesse/Thrown weapons.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GAMING_SET_PLAYING_CARDS" />
+        </rules>
+    </element>
+
+    <element name="The Draw" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_THE_DRAW">
+        <description>
+            <p>When dealing Sneak Attack with cards, roll d4 for Suit effect. 1(Hearts): Extra Fire dmg (Dex Mod). 2(Clubs): Cha Save or Push 10ft. 3(Diamonds): Extra Force dmg (Dex Mod). 4(Spades): Prevent healing.</p>
+        </description>
+        <sheet>
+            <description>Sneak Attack triggers Suit effect (Roll d4).</description>
+        </sheet>
+    </element>
+
+    <element name="Fold 'Em" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FOLD_EM">
+        <description>
+            <p>Immune to mind reading/truth detection. Can palm small objects perfectly.</p>
+        </description>
+        <sheet>
+            <description>Immune to mind reading/truth detection. Perfect palming.</description>
+        </sheet>
+    </element>
+
+    <element name="The Forced Shuffle" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FORCED_SHUFFLE">
+        <description>
+            <p>Bonus Action: Throw card at creature within 30ft. Cha Save. Fail: Swap places. Success: Teleport to them.</p>
+        </description>
+        <sheet action="Bonus Action" usage="{{charisma:modifier}}/Long Rest">
+            <description>Throw card (30ft). Cha Save. Fail: Swap places. Success: Teleport next to them.</description>
+        </sheet>
+    </element>
+
+    <element name="52-Card Pickup" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_52_CARD_PICKUP">
+        <description>
+            <p>Action: 30ft Cone. Dex Save. Fail: 8d6 Slashing + 8d6 Force. Success: Half. Apply Sneak Attack to one target.</p>
+        </description>
+        <sheet action="Action" usage="1/Short Rest">
+            <description>30ft Cone. 8d6 Slash + 8d6 Force. Apply Sneak Attack to one.</description>
+        </sheet>
+    </element>
+
+    <element name="Deadly Playing Card" type="Weapon" source="Trick the Trickster Homebrew" id="ID_TRICK_WEAPON_DEADLY_CARD">
+        <description>
+            <p>A magical playing card used by a Cardsharp.</p>
+        </description>
+        <setters>
+            <set name="keywords">finesse,thrown,ranged</set>
+            <set name="damage" type="slashing">1d6</set>
+            <set name="range">30/60</set>
+            <set name="category">Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight">0</set>
+            <set name="slot">onehand</set>
+            <set name="proficiency">ID_INTERNAL_PROFICIENCY_GAMING_SET_PLAYING_CARDS</set>
+        </setters>
+    </element>
+</elements>

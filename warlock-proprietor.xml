@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Warlock: The Proprietor</name>
+        <update version="0.0.1">
+            <file name="warlock-proprietor.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/warlock-proprietor.xml" />
+        </update>
+    </info>
+
+    <element name="Trick the Trickster Homebrew" type="Source" source="Core" id="ID_TRICK_SOURCE_HOMEBREW">
+        <description>
+            <p>Custom homebrew content created by TricktheTrickster.</p>
+        </description>
+        <setters>
+            <set name="abbreviation">TTH</set>
+            <set name="category">Homebrew</set>
+            <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
+        </setters>
+    </element>
+
+    <element name="The Proprietor" type="Archetype" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_WARLOCK_PROPRIETOR">
+        <supports>Patron</supports>
+        <description>
+            <p>You have signed a contract of employment with the Proprietor. Your job is to enforce the House Rules.</p>
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EXPANDED_SPELLS" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_THE_HOUSE_EDGE" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_VIP_SUBSTITUTION" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EYE_IN_THE_SKY" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_FORECLOSURE" />
+            <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_HOUSE_ALWAYS_WINS" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EXPANDED_SPELLS" level="1" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_THE_HOUSE_EDGE" level="1" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_VIP_SUBSTITUTION" level="6" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EYE_IN_THE_SKY" level="10" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_FORECLOSURE" level="14" />
+            <grant type="Archetype Feature" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_HOUSE_ALWAYS_WINS" level="20" />
+        </rules>
+    </element>
+
+    <element name="Expanded Spell List" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EXPANDED_SPELLS">
+        <description>
+            <p>The Proprietor lets you choose from an expanded list of spells when you learn a warlock spell.</p>
+            <h5>Proprietor Expanded Spells</h5>
+            <table>
+                <thead><tr><td>Spell Level</td><td>Spells</td></tr></thead>
+                <tr><td>1st</td><td><em>command, identify</em></td></tr>
+                <tr><td>2nd</td><td><em>detect thoughts, zone of truth</em></td></tr>
+                <tr><td>3rd</td><td><em>clairvoyance, glyph of warding</em></td></tr>
+                <tr><td>4th</td><td><em>locate creature, private sanctum</em></td></tr>
+                <tr><td>5th</td><td><em>dominate person, geas</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <spellcasting name="Warlock" extend="true">
+            <extend>ID_PHB_SPELL_COMMAND</extend>
+            <extend>ID_PHB_SPELL_IDENTIFY</extend>
+            <extend>ID_PHB_SPELL_DETECT_THOUGHTS</extend>
+            <extend>ID_PHB_SPELL_ZONE_OF_TRUTH</extend>
+            <extend>ID_PHB_SPELL_CLAIRVOYANCE</extend>
+            <extend>ID_PHB_SPELL_GLYPH_OF_WARDING</extend>
+            <extend>ID_PHB_SPELL_LOCATE_CREATURE</extend>
+            <extend>ID_PHB_SPELL_PRIVATE_SANCTUM</extend>
+            <extend>ID_PHB_SPELL_DOMINATE_PERSON</extend>
+            <extend>ID_PHB_SPELL_GEAS</extend>
+        </spellcasting>
+    </element>
+
+    <element name="The House Edge" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_THE_HOUSE_EDGE">
+        <description>
+            <p>When a creature within 60 ft rolls with Advantage, you can use your reaction to cancel it. If you do, you gain a "House Chip" (d6) to add to your own roll within 1 minute.</p>
+        </description>
+        <sheet action="Reaction" usage="{{proficiency}}/Long Rest">
+            <description>Cancel Advantage on a creature within 60ft. Gain a d6 Chip to add to your own roll within 1 minute.</description>
+        </sheet>
+    </element>
+
+    <element name="VIP Substitution" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_VIP_SUBSTITUTION">
+        <description>
+            <p>When you are hit by an attack, you can use your reaction to swap places with a willing creature or a Hexed creature within 30 ft. They take the hit instead.</p>
+        </description>
+        <sheet action="Reaction" usage="1/Short Rest">
+            <description>Swap places with willing or Hexed creature within 30ft to make them take the hit.</description>
+        </sheet>
+    </element>
+
+    <element name="Eye in the Sky" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EYE_IN_THE_SKY">
+        <description>
+            <p>Immune to Charm. Proficiency in Insight (or Expertise if already proficient). Truesight 15 ft.</p>
+        </description>
+        <sheet>
+            <description>Immune to Charmed. Truesight 15 ft.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_CHARMED" />
+            <stat name="insight:proficiency" value="proficiency" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Foreclosure" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_FORECLOSURE">
+        <description>
+            <p>As an action, touch a creature. Cha Save vs Spell DC. Fail: 10d10 force damage. Success: Half. If reduced to 0 HP, gain a Soul Coin (use Bonus Action to regain spell slot).</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>Touch attack. Cha Save. Fail: 10d10 Force. If 0 HP, gain Soul Coin.</description>
+        </sheet>
+    </element>
+
+    <element name="The House Always Wins" type="Archetype Feature" source="Trick the Trickster Homebrew" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_HOUSE_ALWAYS_WINS">
+        <description>
+            <p>At 20th level, use an Action to transform for 1 minute: Immune to Crits. Reaction to replace a creature's d20 roll with a 10 (Uses: Cha Mod). Cast Counterspell/Dispel Magic at 5th level for free.</p>
+        </description>
+        <sheet action="Action" usage="1/Long Rest">
+            <description>1 Minute transformation. Immune to Crits. Reaction to force a roll of 10. Free Counterspell/Dispel Magic.</description>
+        </sheet>
+    </element>
+</elements>
