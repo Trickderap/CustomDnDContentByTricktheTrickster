@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.0.4">
+        <update version="0.0.5">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
@@ -56,7 +56,7 @@
         <description>
             <p>A deck of pristine, white vellum cards. The ink only appears the moment the card strikes a living target.</p>
             <h4>The Infinite Deal</h4>
-            <p>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The deck is never depleted; cards return to the deck immediately after use. It functions as a Deadly Playing Card (Finesse, Thrown 30/60, 1d6 Slashing).</p>
+            <p>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The deck is never depleted; cards return to the deck immediately after use.</p>
             <h4>Fate Revealed (Critical Hit)</h4>
             <p>When you score a Critical Hit (Natural 20), roll a d4 to determine the effect:</p>
             <ol>
@@ -76,10 +76,26 @@
             <set name="rarity">Rare</set>
             <set name="attunement">true</set>
             
-            <set name="weapon">ID_TRICK_WEAPON_DEADLY_CARD</set>
+            <set name="weapon">Deadly Playing Card</set>
             <set name="type" addition="Deadly Playing Card">Weapon</set>
             <set name="slot">onehand</set>
             <set name="bonus">1</set>
+        </setters>
+    </element>
+
+    <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_TRICK_WEAPON_DEADLY_CARD">
+        <supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_THROWN</supports>
+        <description>
+            <p>A magically infused playing card that cuts like a razor.</p>
+        </description>
+        <setters>
+            <set name="category">Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="slot">onehand</set>
+            <set name="range">30/60</set>
+            <set name="damage" type="slashing">1d6</set>
+            <set name="proficiency">ID_INTERNAL_PROFICIENCY_GAMING_SET_PLAYING_CARDS</set>
         </setters>
     </element>
 </elements>
