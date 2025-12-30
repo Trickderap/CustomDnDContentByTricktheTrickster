@@ -4,17 +4,43 @@ This repository contains custom homebrew content for Dungeons & Dragons 5th Edit
 
 ## Content
 
+### Subclasses
+
+#### Cleric: Chance Domain
+*   **Concept:** Clerics who believe certainty is a cage and trust in the "Golden Roll". They manipulate luck and probability.
+*   **Key Features:**
+    *   *Gambler's Instinct:* Bonuses based on risk.
+    *   *Channel Divinity: Twist of Fate:* Altering outcomes.
+    *   *50/50 Shot:* High risk, high reward mechanics.
+
+#### Rogue: The Cardsharp
+*   **Concept:** A rogue who blends arcane infusion with sleight of hand, turning playing cards into deadly weapons.
+*   **Key Features:**
+    *   *Deadly Dealing:* Use playing cards as 1d6 finesse/thrown weapons.
+    *   *The Draw:* Mechanics involving drawing cards for effects.
+    *   *52 Card Pickup:* A high-level area of effect attack using cards.
+
+#### Warlock: The Proprietor
+*   **Concept:** A warlock bound by a contract of employment to "The Proprietor," enforcing House Rules and ensuring debts are paid.
+*   **Key Features:**
+    *   *The House Edge:* Gaining advantage through contractual stipulations.
+    *   *VIP Substitution:* Swapping places or protecting allies.
+    *   *Foreclosure:* Penalizing enemies who break the rules.
+
 ### Items / Feats
-*   **Brand of the Dead Man's Wager**: A gambling debt signed by a soul that should have departed.
-    *   *Mechanic - The Metabolic Clock:*
-        *   **Active Phase (Hours 1-8):** You gain **+2 AC**. The mark glows, counting down the hours.
-        *   **Burden Phase (Hours 9-20):** The mark goes dark. You lose the AC bonus and cannot benefit from a Long Rest until the 20th hour has passed.
-    *   *Prerequisite:* Wisdom 10 or higher.
-    *   *Note:* This content is added as an Item that grants a Feat. Equip the item "Brand of the Dead Man's Wager" to activate the effects.
+
+#### Brand of the Dead Man's Wager
+*   **Concept:** A gambling debt signed by a soul that should have departed. A "Dark Gift" that acts as a metabolic clock.
+*   **Mechanic - The Metabolic Clock:**
+    *   **Active Phase (Hours 1-8):** You gain **+2 AC**. The mark glows, counting down the hours.
+    *   **Burden Phase (Hours 9-20):** The mark goes dark. You lose the AC bonus and cannot benefit from a Long Rest until the 20th hour has passed.
+*   **Rolling the Bones:** During the Burden Phase, there is a risk of corruption or penalty if luck turns against you.
+*   **Prerequisite:** Wisdom 10 or higher.
+*   **Note:** This content is added as an Item that grants a Feat. Equip the item "Brand of the Dead Man's Wager" to activate the effects.
 
 ## How to Use
 
 1.  Open **Aurora Builder**.
 2.  Go to the **Index** tab.
-3.  Add the URL of the `TricktheTrickster_homebrew.index` file from this repository.
-    *   URL: `https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/TricktheTrickster_homebrew.index`
+3.  Add the URL of the `tricks-ledger-of-many-tricks.index` file from this repository.
+    *   URL: `https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index`
