@@ -2,12 +2,12 @@
 <elements>
     <info>
         <name>Rogue: The Cardsharp</name>
-        <update version="0.0.2">
+        <update version="0.0.3">
             <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/rogue-cardsharp.xml" />
         </update>
     </info>
 
-    <element name="The Cardsharp" type="Archetype" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_ROGUE_CARDSHARP">
+    <element name="The Cardsharp" type="Archetype" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_ROGUE_CARDSHARP">
         <supports>Roguish Archetype</supports>
         <description>
             <p>You blend arcane infusion with sleight of hand, turning playing cards into deadly weapons.</p>
@@ -27,7 +27,7 @@
         </rules>
     </element>
 
-    <element name="Deadly Dealing" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_DEADLY_DEALING">
+    <element name="Deadly Dealing" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_DEADLY_DEALING">
         <description>
             <p>Gain proficiency/expertise with Playing Cards. Treat cards as weapons (Ranged 30/60, Finesse, Thrown, 1d6 Slashing, Magical).</p>
         </description>
@@ -39,7 +39,7 @@
         </rules>
     </element>
 
-    <element name="The Draw" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_THE_DRAW">
+    <element name="The Draw" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_THE_DRAW">
         <description>
             <p>When dealing Sneak Attack with cards, roll d4 for Suit effect. 1(Hearts): Extra Fire dmg (Dex Mod). 2(Clubs): Cha Save or Push 10ft. 3(Diamonds): Extra Force dmg (Dex Mod). 4(Spades): Prevent healing.</p>
         </description>
@@ -48,7 +48,7 @@
         </sheet>
     </element>
 
-    <element name="Fold 'Em" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FOLD_EM">
+    <element name="Fold 'Em" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FOLD_EM">
         <description>
             <p>Immune to mind reading/truth detection. Can palm small objects perfectly.</p>
         </description>
@@ -57,7 +57,7 @@
         </sheet>
     </element>
 
-    <element name="The Forced Shuffle" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FORCED_SHUFFLE">
+    <element name="The Forced Shuffle" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FORCED_SHUFFLE">
         <description>
             <p>Bonus Action: Throw card at creature within 30ft. Cha Save. Fail: Swap places. Success: Teleport to them.</p>
         </description>
@@ -66,7 +66,7 @@
         </sheet>
     </element>
 
-    <element name="52-Card Pickup" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_52_CARD_PICKUP">
+    <element name="52-Card Pickup" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_52_CARD_PICKUP">
         <description>
             <p>Action: 30ft Cone. Dex Save. Fail: 8d6 Slashing + 8d6 Force. Success: Half. Apply Sneak Attack to one target.</p>
         </description>
@@ -75,7 +75,7 @@
         </sheet>
     </element>
 
-    <element name="Deadly Playing Card" type="Weapon" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_WEAPON_DEADLY_CARD">
+    <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_TRICK_WEAPON_DEADLY_CARD">
         <description>
             <p>A magical playing card used by a Cardsharp.</p>
         </description>

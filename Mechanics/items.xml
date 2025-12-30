@@ -7,14 +7,14 @@
         </update>
     </info>
 
-    <element name="Brand of the Dead Man's Wager" type="Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
+    <element name="Brand of the Dead Man's Wager" type="Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
         <description>
             <p>This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes.</p>
             <p>While this mark is on your person, you feel a constant, feverish heat during the day and a phantom weight dragging at your soul at night.</p>
             <p class="indent"><i><b>Instruction:</b> Equip this item in your inventory to activate the mark's mechanics and the "Metabolic Clock" on your character sheet.</i></p>
         </description>
         <setters>
-            <set name="category">Supernatural Gift</set>
+            <set name="category">Supernatural Gifts</set>
             <set name="slot">misc</set>
             <set name="inventory-hidden">true</set>
             <set name="stackable">false</set>
@@ -27,7 +27,7 @@
         </rules>
     </element>
 
-    <element name="Coin of the Double-Cross" type="Magic Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_COIN_DOUBLE_CROSS">
+    <element name="Coin of the Double-Cross" type="Magic Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_COIN_DOUBLE_CROSS">
         <description>
             <p>This heavy gold coin features the smiling mask of the Trickster on one side ("Heads") and the weeping mask of the Dealer on the other ("Tails"). While attuned, the coin feels warm to the touch.</p>
             <h4>Mechanic: The Fix (Social)</h4>
@@ -52,7 +52,7 @@
         </setters>
     </element>
 
-    <element name="Deck of Empty Fates" type="Magic Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_DECK_EMPTY_FATES">
+    <element name="Deck of Empty Fates" type="Magic Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_DECK_EMPTY_FATES">
         <description>
             <p>A deck of pristine, white vellum cards. The ink only appears the moment the card strikes a living target.</p>
             <h4>The Infinite Deal</h4>

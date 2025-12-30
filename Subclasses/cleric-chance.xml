@@ -2,12 +2,12 @@
 <elements>
     <info>
         <name>Cleric: Chance Domain</name>
-        <update version="0.0.2">
+        <update version="0.0.3">
             <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/cleric-chance.xml" />
         </update>
     </info>
 
-    <element name="Chance Domain" type="Archetype" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_CLERIC_CHANCE_DOMAIN">
+    <element name="Chance Domain" type="Archetype" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_CLERIC_CHANCE_DOMAIN">
         <supports>Divine Domain</supports>
         <description>
             <p>Clerics of Chance believe certainty is a cage. They trust in the Golden Roll.</p>
@@ -31,7 +31,7 @@
         </rules>
     </element>
 
-    <element name="Domain Spells" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS">
+    <element name="Domain Spells" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS">
         <description>
             <p>You gain domain spells at the cleric levels listed in the Chance Domain Spells table.</p>
             <h5>Chance Domain Spells</h5>
@@ -59,7 +59,7 @@
         </spellcasting>
     </element>
 
-    <element name="Gambler's Instinct" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT">
+    <element name="Gambler's Instinct" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT">
         <description>
             <p>Proficiency in Gaming Sets and Deception. Learn Guidance cantrip. When casting Guidance, target rolls 2d4 and takes highest.</p>
         </description>
@@ -73,7 +73,7 @@
         </rules>
     </element>
 
-    <element name="Cascading Fortune" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE">
+    <element name="Cascading Fortune" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE">
         <description>
             <p>Whenever you roll a die for damage or healing (level 1+ spell), if you roll the max number on the die, roll it again and add it. Repeat if max again.</p>
         </description>
@@ -82,7 +82,7 @@
         </sheet>
     </element>
 
-    <element name="Channel Divinity: Twist of Fate" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE">
+    <element name="Channel Divinity: Twist of Fate" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE">
         <description>
             <p>As a reaction when a creature within 30 ft rolls d20, force a reroll after seeing the result but before outcome is declared.</p>
         </description>
@@ -91,7 +91,7 @@
         </sheet>
     </element>
 
-    <element name="50/50 Shot" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT">
+    <element name="50/50 Shot" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT">
         <description>
             <p>When hit, roll d6. 1-3: Take damage. 4-6: Take 0 damage and teleport 10 ft.</p>
         </description>
@@ -100,7 +100,7 @@
         </sheet>
     </element>
 
-    <element name="Potent Spellcasting" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_POTENT_SPELLCASTING">
+    <element name="Potent Spellcasting" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_POTENT_SPELLCASTING">
         <description>
             <p>Add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
         </description>
@@ -109,7 +109,7 @@
         </sheet>
     </element>
 
-    <element name="The Perfect Run" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN">
+    <element name="The Perfect Run" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN">
         <description>
             <p>Rolling a 1 counts as a 20. Cascading Fortune now explodes on the highest two numbers of a die.</p>
         </description>

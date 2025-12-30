@@ -7,7 +7,7 @@
         </update>
     </info>
 
-    <element name="Brand of the Dead Man's Wager" type="Feat" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
+    <element name="Brand of the Dead Man's Wager" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
         <description>
             <p>This brand is a <strong>Dead Man's Marker</strong>—a gambling debt signed by a soul that should have departed.</p>
             <h4>The Metabolic Clock</h4>
