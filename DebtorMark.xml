@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Debtor Mark Content</name>
-        <update version="0.0.7">
+        <update version="0.0.8">
             <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
         </update>
     </info>
