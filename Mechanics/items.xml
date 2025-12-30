@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.0.3">
+        <update version="0.0.2">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
