@@ -7,14 +7,15 @@
         </update>
     </info>
 
-    <element name="Trick's Ledger of Many Tricks" type="Source" source="Core" id="ID_TRICK_SOURCE_HOMEBREW">
+    <element name="Trick's Ledger of Many Tricks" type="Source" source="Core" id="ID_TRICK_SOURCE_LEDGER">
         <description>
-            <p>A collection of high-stakes archetypes and forbidden probability magic.</p>
+            <p>A collection of high-stakes archetypes, cursed marks, and forbidden probability magic.</p>
         </description>
         <setters>
             <set name="abbreviation">TLoMT</set>
             <set name="category">Homebrew</set>
             <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
+            <set name="author">Trick the Trickster</set>
         </setters>
     </element>
 
