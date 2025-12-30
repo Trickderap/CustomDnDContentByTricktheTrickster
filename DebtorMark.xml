@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Debtor Mark Content</name>
-        <update version="0.0.6">
+        <update version="0.0.7">
             <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
         </update>
     </info>
@@ -47,9 +47,9 @@
                 <li><strong>Burden Phase (Hours 9-20):</strong> The sun is dark. You lose the AC bonus. You cannot Long Rest until the 20th hour passes.</li>
             </ul>
 
-            <h4>Risk of Default</h4>
-            <p>During the Burden Phase, the instability remains constant. For every hour that passes after the 8th, roll a <strong>d20</strong>. <strong>If you roll a 1</strong>, the mark triggers a corruption effect.</p>
-            <p>If triggered, roll a <strong>d8</strong> on the table below:</p>
+            <h4>Rolling the Bones</h4>
+            <p>During the Burden Phase, the odds turn against you. For every hour that passes after the 8th, roll a <strong>d20</strong>. <strong>If you roll a 1</strong>, the Dealer collects interest on the debt.</p>
+            <p>If triggered, roll a <strong>d8</strong> on the Corruption Table below:</p>
             
             <table>
                 <thead>
