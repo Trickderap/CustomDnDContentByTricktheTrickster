@@ -4,7 +4,7 @@
         <name>Trick's Ledger of Many Tricks</name>
         <author>Trick the Trickster</author>
         <update version="0.0.2">
-            <file name="tricks-ledger-of-many-trick.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-trick.index" />
+            <file name="tricks-ledger-of-many-tricks.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index" />
         </update>
     </info>
     <files>
