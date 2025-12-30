@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.0.2">
+        <update version="0.0.3">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
@@ -75,7 +75,10 @@
             <set name="weight" lb="1">1 lb.</set>
             <set name="rarity">Rare</set>
             <set name="attunement">true</set>
+            
             <set name="weapon">Dart</set>
+            <set name="type" type="weapon">Simple Ranged Weapon</set>
+            <set name="slot">onehand</set>
             <set name="bonus">1</set>
         </setters>
     </element>
