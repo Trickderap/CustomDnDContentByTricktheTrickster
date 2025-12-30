@@ -2,17 +2,19 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.0.1">
+        <update version="0.0.3">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
 
     <element name="Brand of the Dead Man's Wager" type="Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
         <description>
-            <p><i>Equip this item in your inventory to activate the mark's feature on your character sheet.</i></p>
+            <p>This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes.</p>
+            <p>While this mark is on your person, you feel a constant, feverish heat during the day and a phantom weight dragging at your soul at night.</p>
+            <p class="indent"><i><b>Instruction:</b> Equip this item in your inventory to activate the mark's mechanics and the "Metabolic Clock" on your character sheet.</i></p>
         </description>
         <setters>
-            <set name="category">Additional Feature</set>
+            <set name="category">Supernatural Gift</set>
             <set name="slot">misc</set>
             <set name="inventory-hidden">true</set>
             <set name="stackable">false</set>
@@ -23,5 +25,58 @@
         <rules>
             <grant type="Feat" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT" />
         </rules>
+    </element>
+
+    <element name="Coin of the Double-Cross" type="Magic Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_COIN_DOUBLE_CROSS">
+        <description>
+            <p>This heavy gold coin features the smiling mask of the Trickster on one side ("Heads") and the weeping mask of the Dealer on the other ("Tails"). While attuned, the coin feels warm to the touch.</p>
+            <h4>Mechanic: The Fix (Social)</h4>
+            <p>You can manipulate the outcome of the toss. When you flip this coin, you can mentally command it to land on Heads or Tails.</p>
+            <h4>Mechanic: "Heads I Win, Tails You Lose" (Combat)</h4>
+            <p>As a Bonus Action, you can flick the coin to distract a creature within 30 feet. The creature must make a DC 13 Wisdom saving throw.</p>
+            <ul>
+                <li><strong>Heads (The Smile):</strong> On a failure, you gain <strong>Advantage</strong> on your next attack roll against that creature before the end of your turn.</li>
+                <li><strong>Tails (The Weep):</strong> On a failure, the creature has <strong>Disadvantage</strong> on the next attack roll it makes against you before the start of your next turn.</li>
+            </ul>
+            <p>The coin magically returns to your pocket at the start of your next turn.</p>
+            <h4>The Edge (The Curse)</h4>
+            <p>If you use the combat feature and roll a Natural 1 on your attack (Heads) or the enemy rolls a Natural 20 on their attack (Tails), the coin lands on its Edge and vanishes instantly, returning to the Trickster.</p>
+        </description>
+        <setters>
+            <set name="keywords">wondrous item, trickster</set>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">500</set>
+            <set name="weight" lb="0.02">0.02 lb.</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Deck of Empty Fates" type="Magic Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_DECK_EMPTY_FATES">
+        <description>
+            <p>A deck of pristine, white vellum cards. The ink only appears the moment the card strikes a living target.</p>
+            <h4>The Infinite Deal</h4>
+            <p>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The deck is never depleted; cards return to the deck immediately after use.</p>
+            <h4>Fate Revealed (Critical Hit)</h4>
+            <p>When you score a Critical Hit (Natural 20), roll a d4 to determine the effect:</p>
+            <ol>
+                <li><strong>Jack of Knaves:</strong> You regain hit points equal to the damage dealt.</li>
+                <li><strong>Queen of Sorrows:</strong> The target is Incapacitated until the start of your next turn.</li>
+                <li><strong>King of Ruin:</strong> The target is Frightened of you until the end of your next turn.</li>
+                <li><strong>Ace of Endings:</strong> Triple the damage dice instead of doubling them.</li>
+            </ol>
+            <h4>The Joker (Fumble)</h4>
+            <p>If you roll a Natural 1, the card explodes in your hand. You take 2d6 force damage and cannot use the deck until the start of your next turn.</p>
+        </description>
+        <setters>
+            <set name="keywords">weapon, ranged, finesse, thrown</set>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">2500</set>
+            <set name="weight" lb="1">1 lb.</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Dart</set>
+            <set name="bonus">1</set>
+        </setters>
     </element>
 </elements>
