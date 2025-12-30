@@ -18,9 +18,9 @@
         </setters>
     </element>
 
-    <element name="Debtor" type="Item" source="Trick the Trickster Homebrew" id="ID_TRICK_ITEM_DEBTOR">
+    <element name="Brand of the Dead Man's Marker" type="Item" source="Trick the Trickster Homebrew" id="ID_TRICK_ITEM_DEAD_MANS_MARKER">
         <description>
-            <p><i>Equip this item in your inventory to activate the Debtor Mark feature on your character sheet.</i></p>
+            <p><i>Equip this item in your inventory to activate the mark's feature on your character sheet.</i></p>
         </description>
         <setters>
             <set name="category">Additional Feature</set>
@@ -32,14 +32,14 @@
             <requirement name="ID_INTERNAL_ABILITY_WISDOM" value="10" />
         </requirements>
         <rules>
-            <grant type="Feat" id="ID_TRICK_FEAT_DEBTOR_EFFECT" />
+            <grant type="Feat" id="ID_TRICK_FEAT_DEAD_MANS_MARKER_EFFECT" />
         </rules>
     </element>
 
-    <element name="Debtor Mark" type="Feat" source="Trick the Trickster Homebrew" id="ID_TRICK_FEAT_DEBTOR_EFFECT">
+    <element name="Brand of the Dead Man's Marker" type="Feat" source="Trick the Trickster Homebrew" id="ID_TRICK_FEAT_DEAD_MANS_MARKER_EFFECT">
         <supports>Feat</supports>
         <description>
-            <p>This mark is the receipt of a suspicious revival offer accepted in a moment of desperation. It manifests on the back of your hand as a circle of <strong>20 iron chain links</strong> surrounding a <strong>sun with 8 rays</strong>.</p>
+            <p>This mark is a <strong>Dead Man's Marker</strong>—a gambling debt signed by a soul that should have departed. It manifests on the back of your hand as <strong>20 iron chain links</strong> surrounding a <strong>sun with 8 rays</strong>. The contract acts as a blank check: the Dealer holds an unspecified favor to be called in at their discretion.</p>
             
             <h4>The Metabolic Clock</h4>
             <ul>
@@ -48,7 +48,7 @@
             </ul>
 
             <h4>Risk of Default</h4>
-            <p>During the Burden Phase, the instability remains constant. For every hour that passes after the 8th, there is a flat <strong>5% chance</strong> that the mark triggers a corruption effect.</p>
+            <p>During the Burden Phase, the instability remains constant. For every hour that passes after the 8th, roll a <strong>d20</strong>. <strong>If you roll a 1</strong>, the mark triggers a corruption effect.</p>
             <p>If triggered, roll a <strong>d8</strong> on the table below:</p>
             
             <table>
@@ -95,7 +95,7 @@
             <p class="indent"><b>Prerequisite:</b> Wisdom 10 or higher.</p>
         </description>
         <sheet>
-            <description>+2 AC for 8 hours. Afterwards, AC bonus is lost. Each hour past 8 has a 5% chance to trigger a d8 Corruption effect. Cannot rest until Hour 20 unless a Grace Period (Roll 8) occurs.</description>
+            <description>+2 AC for 8 hours. Afterwards, AC bonus is lost. Each hour past 8, roll a d20; on a 1, trigger a Corruption effect. Cannot rest until Hour 20 unless a Grace Period (Roll 8) occurs.</description>
         </sheet>
         <rules>
             <stat name="ac" value="2" />
