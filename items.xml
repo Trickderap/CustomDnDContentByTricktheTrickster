@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Items &amp; Supernatural Gifts</name>
+        <update version="0.0.1">
+            <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/items.xml" />
+        </update>
+    </info>
+
+    <element name="Brand of the Dead Man's Wager" type="Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
+        <description>
+            <p><i>Equip this item in your inventory to activate the mark's feature on your character sheet.</i></p>
+        </description>
+        <setters>
+            <set name="category">Additional Feature</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+            <set name="stackable">false</set>
+        </setters>
+        <requirements>
+            <requirement name="ID_INTERNAL_ABILITY_WISDOM" value="10" />
+        </requirements>
+        <rules>
+            <grant type="Feat" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT" />
+        </rules>
+    </element>
+</elements>

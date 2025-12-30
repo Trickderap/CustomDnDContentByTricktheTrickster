@@ -2,25 +2,13 @@
 <elements>
     <info>
         <name>Warlock: The Proprietor</name>
-        <update version="0.0.3">
+        <update version="0.0.2">
             <file name="warlock-proprietor.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/warlock-proprietor.xml" />
         </update>
     </info>
 
-    <element name="Trick's Ledger of Many Tricks" type="Source" source="Core" id="ID_TRICK_SOURCE_LEDGER">
-        <description>
-            <p>A collection of high-stakes archetypes, cursed marks, and forbidden probability magic.</p>
-        </description>
-        <setters>
-            <set name="abbreviation">TLoMT</set>
-            <set name="category">Homebrew</set>
-            <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
-            <set name="author">Trick the Trickster</set>
-        </setters>
-    </element>
-
     <element name="The Proprietor" type="Archetype" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_WARLOCK_PROPRIETOR">
-        <supports>Patron</supports>
+        <supports>Otherworldly Patron</supports>
         <description>
             <p>You have signed a contract of employment with the Proprietor. Your job is to enforce the House Rules.</p>
             <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EXPANDED_SPELLS" />
@@ -87,34 +75,4 @@
         </sheet>
     </element>
 
-    <element name="Eye in the Sky" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EYE_IN_THE_SKY">
-        <description>
-            <p>Immune to Charm. Proficiency in Insight (or Expertise if already proficient). Truesight 15 ft.</p>
-        </description>
-        <sheet>
-            <description>Immune to Charmed. Truesight 15 ft.</description>
-        </sheet>
-        <rules>
-            <grant type="Condition" id="ID_INTERNAL_CONDITION_CHARMED" />
-            <stat name="insight:proficiency" value="proficiency" bonus="base" />
-        </rules>
-    </element>
-
-    <element name="Foreclosure" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_FORECLOSURE">
-        <description>
-            <p>As an action, touch a creature. Cha Save vs Spell DC. Fail: 10d10 force damage. Success: Half. If reduced to 0 HP, gain a Soul Coin (use Bonus Action to regain spell slot).</p>
-        </description>
-        <sheet action="Action" usage="1/Long Rest">
-            <description>Touch attack. Cha Save. Fail: 10d10 Force. If 0 HP, gain Soul Coin.</description>
-        </sheet>
-    </element>
-
-    <element name="The House Always Wins" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_HOUSE_ALWAYS_WINS">
-        <description>
-            <p>At 20th level, use an Action to transform for 1 minute: Immune to Crits. Reaction to replace a creature's d20 roll with a 10 (Uses: Cha Mod). Cast Counterspell/Dispel Magic at 5th level for free.</p>
-        </description>
-        <sheet action="Action" usage="1/Long Rest">
-            <description>1 Minute transformation. Immune to Crits. Reaction to force a roll of 10. Free Counterspell/Dispel Magic.</description>
-        </sheet>
-    </element>
-</elements>
+    <element name="Eye in the Sky" type="Archetype Feature" source="ID_TRICK_SOURCE_LEDGER" id="

@@ -9,23 +9,30 @@ This repository contains custom homebrew content for Dungeons & Dragons 5th Edit
 #### Cleric: Chance Domain
 *   **Concept:** Clerics who believe certainty is a cage and trust in the "Golden Roll". They manipulate luck and probability.
 *   **Key Features:**
-    *   *Gambler's Instinct:* Bonuses based on risk.
-    *   *Channel Divinity: Twist of Fate:* Altering outcomes.
-    *   *50/50 Shot:* High risk, high reward mechanics.
+    *   *Gambler's Instinct:* Proficiency in Gaming Sets and Deception.
+    *   *Cascading Fortune:* Damage and healing dice explode on max rolls.
+    *   *Channel Divinity: Twist of Fate:* Force a reroll on a creature within 30 ft.
+    *   *50/50 Shot:* Risk taking damage to potentially take none and teleport.
+    *   *Potent Spellcasting:* Add Wisdom modifier to cleric cantrip damage.
+    *   *Perfect Run:* Treat a d20 roll of 9 or lower as a 10.
 
 #### Rogue: The Cardsharp
 *   **Concept:** A rogue who blends arcane infusion with sleight of hand, turning playing cards into deadly weapons.
 *   **Key Features:**
     *   *Deadly Dealing:* Use playing cards as 1d6 finesse/thrown weapons.
-    *   *The Draw:* Mechanics involving drawing cards for effects.
+    *   *The Draw:* Sneak Attack triggers random suit effects (Fire, Push, Force, or Anti-Heal).
+    *   *Fold 'Em:* Immunity to mind reading and truth detection.
+    *   *The Forced Shuffle:* Swap places with a creature or teleport to them.
     *   *52 Card Pickup:* A high-level area of effect attack using cards.
 
 #### Warlock: The Proprietor
 *   **Concept:** A warlock bound by a contract of employment to "The Proprietor," enforcing House Rules and ensuring debts are paid.
 *   **Key Features:**
-    *   *The House Edge:* Gaining advantage through contractual stipulations.
-    *   *VIP Substitution:* Swapping places or protecting allies.
+    *   *The House Edge:* Cancel an enemy's advantage to gain a bonus later.
+    *   *VIP Substitution:* Swap places with a willing or Hexed creature to make them take a hit.
+    *   *Eye in the Sky:* Magical surveillance and detection.
     *   *Foreclosure:* Penalizing enemies who break the rules.
+    *   *The House Always Wins:* The ultimate advantage in any wager.
 
 ### Items / Feats
 

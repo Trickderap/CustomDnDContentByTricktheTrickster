@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Feats &amp; Features</name>
+        <update version="0.0.1">
+            <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/feat.xml" />
+        </update>
+    </info>
+
+    <element name="Brand of the Dead Man's Wager" type="Feat" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
+        <description>
+            <p>This brand is a <strong>Dead Man's Marker</strong>—a gambling debt signed by a soul that should have departed.</p>
+            <h4>The Metabolic Clock</h4>
+            <ul>
+                <li><strong>Active Phase (Hours 1-8):</strong> You gain <strong>+2 AC</strong>. The sun glows, but one ray extinguishes every hour.</li>
+                <li><strong>Burden Phase (Hours 9-20):</strong> The sun is dark. You lose the AC bonus. You cannot Long Rest until the 20th hour passes.</li>
+            </ul>
+            <h4>Rolling the Bones</h4>
+            <p>During the Burden Phase, roll a <strong>d20</strong> every hour. <strong>On a 1</strong>, the Dealer collects interest. Roll a d8 on the Corruption Table:</p>
+            <table>
+                <thead><tr><td>d8</td><td>Effect</td></tr></thead>
+                <tr><td>1</td><td><strong>Singed Nerves:</strong> 1d4 fire damage (unmitigated).</td></tr>
+                <tr><td>2</td><td><strong>Phantom Weight:</strong> Speed reduced by 10 ft for 1 hour.</td></tr>
+                <tr><td>3</td><td><strong>Creaking Joints:</strong> Disadvantage on Stealth checks for 1 hour.</td></tr>
+                <tr><td>4</td><td><strong>Spectral Whispers:</strong> Disadvantage on Perception checks for 1 hour.</td></tr>
+                <tr><td>5</td><td><strong>Lead Arm:</strong> Disadvantage on Strength Checks/Saves for 1 hour.</td></tr>
+                <tr><td>6</td><td><strong>Metabolic Tax:</strong> Max HP reduced by <strong>1d6 + Level</strong> until Long Rest.</td></tr>
+                <tr><td>7</td><td><strong>Feverish Haze:</strong> Disadvantage on Int/Cha Checks for 1 hour.</td></tr>
+                <tr><td>8</td><td><strong>Grace Period:</strong> Cooldown ends immediately. You may Long Rest.</td></tr>
+            </table>
+        </description>
+        <sheet>
+            <description>+2 AC for 8 hours. Afterwards, AC bonus is lost. Each hour past 8, roll a d20; on a 1, trigger a Corruption effect.</description>
+        </sheet>
+        <rules>
+            <stat name="ac" value="2" />
+        </rules>
+    </element>
+</elements>
