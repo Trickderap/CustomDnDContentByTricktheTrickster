@@ -2,23 +2,24 @@
 <elements>
     <info>
         <name>Debtor Mark Content</name>
-        <update version="0.0.8">
+        <update version="0.0.9">
             <file name="DebtorMark.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/DebtorMark.xml" />
         </update>
     </info>
 
-    <element name="Trick's Ledger of Many Tricks" type="Source" source="Core" id="ID_TRICK_SOURCE_HOMEBREW">
+    <element name="Trick's Ledger of Many Tricks" type="Source" source="Core" id="ID_TRICK_SOURCE_LEDGER">
         <description>
-            <p>A collection of high-stakes archetypes and forbidden probability magic.</p>
+            <p>A collection of high-stakes archetypes, cursed marks, and forbidden probability magic.</p>
         </description>
         <setters>
             <set name="abbreviation">TLoMT</set>
             <set name="category">Homebrew</set>
             <set name="url">https://github.com/Trickderap/CustomDnDContentByTricktheTrickster</set>
+            <set name="author">Trick the Trickster</set>
         </setters>
     </element>
 
-    <element name="Brand of the Dead Man's Wager" type="Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
+    <element name="Brand of the Dead Man's Wager" type="Item" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
         <description>
             <p><i>Equip this item in your inventory to activate the mark's feature on your character sheet.</i></p>
         </description>
@@ -36,7 +37,7 @@
         </rules>
     </element>
 
-    <element name="Brand of the Dead Man's Wager" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
+    <element name="Brand of the Dead Man's Wager" type="Feat" source="ID_TRICK_SOURCE_LEDGER" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
         <supports>Feat</supports>
         <description>
             <p>This brand is a <strong>Dead Man's Marker</strong>—a gambling debt signed by a soul that should have departed. It manifests on the back of your hand as <strong>20 iron chain links</strong> surrounding a <strong>sun with 8 rays</strong>. The wager is simple but terrifying: you get your life back, but the Dealer holds an unspecified favor to be called in at their discretion.</p>
