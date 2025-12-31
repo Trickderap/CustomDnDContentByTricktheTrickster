@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Warlock: The Proprietor</name>
-        <update version="0.0.3">
+        <update version="0.0.4">
             <file name="warlock-proprietor.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/warlock-proprietor.xml" />
         </update>
     </info>
@@ -83,7 +83,6 @@
             <description>Immune to Charmed. Truesight 15 ft.</description>
         </sheet>
         <rules>
-            <grant type="Condition" id="ID_INTERNAL_CONDITION_CHARMED" />
             <stat name="insight:proficiency" value="proficiency" bonus="base" />
         </rules>
     </element>
@@ -99,7 +98,7 @@
 
     <element name="The House Always Wins" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_HOUSE_ALWAYS_WINS">
         <description>
-            <p>At 20th level, use an Action to transform for 1 minute: Immune to Crits. Reaction to replace a creature's d20 roll with a 10 (Uses: Cha Mod). Cast Counterspell/Dispel Magic at 5th level for free.</p>
+            <p>At 20th level, use an Action to transform for 1 minute: Immune to Crits. Reaction to replace a creature's d20 roll with a 10 (Uses: Cha Mod). Cast Counterspell or Dispel Magic at 5th level for free.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>1 Minute transformation. Immune to Crits. Reaction to force a roll of 10. Free Counterspell/Dispel Magic.</description>

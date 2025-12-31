@@ -2,13 +2,14 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.0.5">
+        <update version="0.0.6">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
 
     <element name="Brand of the Dead Man's Wager" type="Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_DEAD_MANS_WAGER">
         <description>
+            <p><em>"The ink never dries on a contract with the Proprietor. It just burns deeper."</em></p>
             <p>This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes.</p>
             <p>While this mark is on your person, you feel a constant, feverish heat during the day and a phantom weight dragging at your soul at night.</p>
             <p class="indent"><i><b>Instruction:</b> Equip this item in your inventory to activate the mark's mechanics and the "Metabolic Clock" on your character sheet.</i></p>
@@ -29,6 +30,7 @@
 
     <element name="Coin of the Double-Cross" type="Magic Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_COIN_DOUBLE_CROSS">
         <description>
+            <p><em>"Fairness is a lie told by the loser. I prefer to win." — Trick the Trickster</em></p>
             <p>This heavy gold coin features the smiling mask of the Trickster on one side ("Heads") and the weeping mask of the Dealer on the other ("Tails"). While attuned, the coin feels warm to the touch.</p>
             <h4>Mechanic: The Fix (Social)</h4>
             <p>You can manipulate the outcome of the toss. When you flip this coin, you can mentally command it to land on Heads or Tails.</p>
@@ -54,6 +56,7 @@
 
     <element name="Deck of Empty Fates" type="Magic Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_DECK_EMPTY_FATES">
         <description>
+            <p><em>"The future isn't written in the stars. It's written in the hand you're dealt... and I'm the one shuffling."</em></p>
             <p>A deck of pristine, white vellum cards. The ink only appears the moment the card strikes a living target.</p>
             <h4>The Infinite Deal</h4>
             <p>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The deck is never depleted; cards return to the deck immediately after use.</p>
@@ -86,6 +89,7 @@
     <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_TRICK_WEAPON_DEADLY_CARD">
         <supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_THROWN</supports>
         <description>
+            <p><em>"Sharp as a razor, light as a feather, and deadly as sin."</em></p>
             <p>A magically infused playing card that cuts like a razor.</p>
         </description>
         <setters>
