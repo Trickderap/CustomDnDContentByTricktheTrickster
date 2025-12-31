@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Cleric: Chance Domain</name>
-        <update version="0.0.3">
+        <update version="0.0.4">
             <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/cleric-chance.xml" />
         </update>
     </info>
@@ -10,6 +10,7 @@
     <element name="Chance Domain" type="Archetype" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_CLERIC_CHANCE_DOMAIN">
         <supports>Divine Domain</supports>
         <description>
+            <p><em>"Certainty is a cage. Faith is the courage to roll the dice when you can't see the numbers."</em></p>
             <p>Clerics of Chance believe certainty is a cage. They trust in the Golden Roll.</p>
             <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS" />
             <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT" />
@@ -61,6 +62,7 @@
 
     <element name="Gambler's Instinct" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT">
         <description>
+            <p><em>"I like those odds."</em></p>
             <p>Proficiency in Gaming Sets and Deception. Learn Guidance cantrip. When casting Guidance, target rolls 2d4 and takes highest.</p>
         </description>
         <sheet>
@@ -75,6 +77,7 @@
 
     <element name="Cascading Fortune" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE">
         <description>
+            <p><em>"Fortune favors the bold, and hits them twice."</em></p>
             <p>Whenever you roll a die for damage or healing (level 1+ spell), if you roll the max number on the die, roll it again and add it. Repeat if max again.</p>
         </description>
         <sheet>
@@ -84,6 +87,7 @@
 
     <element name="Channel Divinity: Twist of Fate" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE">
         <description>
+            <p><em>"Let's try that again, shall we?"</em></p>
             <p>As a reaction when a creature within 30 ft rolls d20, force a reroll after seeing the result but before outcome is declared.</p>
         </description>
         <sheet action="Reaction" usage="Channel Divinity">
@@ -93,6 +97,7 @@
 
     <element name="50/50 Shot" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT">
         <description>
+            <p><em>"Heads I live, tails... well, let's hope for heads."</em></p>
             <p>When hit, roll d6. 1-3: Take damage. 4-6: Take 0 damage and teleport 10 ft.</p>
         </description>
         <sheet action="Reaction" usage="{{wisdom:modifier}}/Long Rest">
@@ -111,6 +116,7 @@
 
     <element name="The Perfect Run" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN">
         <description>
+            <p><em>"The Golden Roll. It happens once in a lifetime."</em></p>
             <p>Rolling a 1 counts as a 20. Cascading Fortune now explodes on the highest two numbers of a die.</p>
         </description>
         <sheet>
