@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Lineages</name>
+        <update version="0.0.1">
+            <file name="races.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/races.xml" />
+        </update>
+    </info>
+
+    <element name="Chanceborn" type="Race" source="Trick's Ledger of Many Tricks" id="ID_TRICK_RACE_CHANCEBORN">
+        <description>
+            <p><em>"I didn't mean to do that. But I'm glad I did."</em></p>
+            <p>You were born during a convergence of improbable events—a coin landing on its edge, a solar eclipse at midnight, or a dice roll that defied physics. The Trickster's influence runs in your veins, making you a living anomaly in the laws of probability.</p>
+            <h4>Born of Chaos</h4>
+            <p>Chanceborn look mostly like their mortal parents, but they always bear the mark of the odds. This might manifest as <strong>pupils shaped like the front projection of a twenty-sided die</strong>, a shadow that moves slightly out of sync with their body, or the faint, rhythmic sound of tumbling dice whenever they walk. They are often restless, driven by an instinctive need to push their luck.</p>
+            <h4>Living Talismans</h4>
+            <p>Society views Chanceborn with a mix of awe and superstition. In some cultures, they are considered living good luck charms, invited to weddings and business deals to bless the proceedings. In others, they are shunned as agents of chaos who bring instability wherever they go. A Chanceborn rarely stays in one place for long; they drift wherever the winds of fate—or the flip of a coin—take them.</p>
+            <h4>Chanceborn Names</h4>
+            <p>Chanceborn are often given names related to luck, gambling, or sudden events.</p>
+            <p><strong>Names:</strong> Ace, Chance, Cipher, Dice, Echo, Fate, Felix, Hazard, Jinx, Kismet, Lucky, Merit, Omen, Penny, Rook, Seven, Venture.</p>
+            <h4>Chanceborn Traits</h4>
+            <p><strong>Ability Score Increase.</strong> Your <strong>Wisdom</strong> score increases by 2, and one other ability score of your choice increases by 1.</p>
+            <p><strong>Creature Type.</strong> You are a Humanoid.</p>
+            <p><strong>Size.</strong> You are Medium or Small.</p>
+            <p><strong>Speed.</strong> Your walking speed is 30 feet.</p>
+            <p><strong>Innate Luck.</strong> When you roll a <strong>Natural 1</strong> on the d20 for an attack roll, an ability check, or a saving throw, you can reroll the die and must use the new roll.</p>
+            <p><strong>Serendipity.</strong> You have proficiency in the <strong>Insight</strong> or <strong>Perception</strong> skill (your choice).</p>
+            <p><strong>Twist of Fate.</strong> When you make an attack roll, an ability check, or a saving throw and dislike the result, you can give yourself <strong>Advantage</strong> on that roll. You can use this ability after you roll, but before the DM determines the outcome. Once you use this trait, you can't use it again until you finish a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="wisdom" value="2" />
+            <select type="Ability Score Improvement" name="Ability Score Increase" supports="ID_INTERNAL_ABILITY_STRENGTH|ID_INTERNAL_ABILITY_DEXTERITY|ID_INTERNAL_ABILITY_CONSTITUTION|ID_INTERNAL_ABILITY_INTELLIGENCE|ID_INTERNAL_ABILITY_CHARISMA" />
+            
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Size" id="ID_INTERNAL_SIZE_MEDIUM" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <select type="Language" name="Language" supports="Standard||Exotic" />
+            
+            <grant type="Racial Trait" id="ID_TRICK_TRAIT_CHANCEBORN_INNATE_LUCK" />
+            <grant type="Racial Trait" id="ID_TRICK_TRAIT_CHANCEBORN_SERENDIPITY" />
+            <grant type="Racial Trait" id="ID_TRICK_TRAIT_CHANCEBORN_TWIST_OF_FATE" />
+        </rules>
+    </element>
+
+    <element name="Innate Luck" type="Racial Trait" source="Trick's Ledger of Many Tricks" id="ID_TRICK_TRAIT_CHANCEBORN_INNATE_LUCK">
+        <description>
+            <p>When you roll a <strong>Natural 1</strong> on the d20 for an attack roll, an ability check, or a saving throw, you can reroll the die and must use the new roll.</p>
+        </description>
+        <sheet>
+            <description>Reroll Natural 1s on attacks, checks, and saves (must use new roll).</description>
+        </sheet>
+    </element>
+
+    <element name="Serendipity" type="Racial Trait" source="Trick's Ledger of Many Tricks" id="ID_TRICK_TRAIT_CHANCEBORN_SERENDIPITY">
+        <description>
+            <p>You have proficiency in the <strong>Insight</strong> or <strong>Perception</strong> skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Serendipity Skill" supports="ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION" />
+        </rules>
+    </element>
+
+    <element name="Twist of Fate" type="Racial Trait" source="Trick's Ledger of Many Tricks" id="ID_TRICK_TRAIT_CHANCEBORN_TWIST_OF_FATE">
+        <description>
+            <p>When you make an attack roll, an ability check, or a saving throw and dislike the result, you can give yourself <strong>Advantage</strong> on that roll. You can use this ability after you roll, but before the DM determines the outcome. Once you use this trait, you can't use it again until you finish a long rest.</p>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>Give yourself Advantage on a roll after seeing the result.</description>
+        </sheet>
+    </element>
+</elements>
