@@ -9,7 +9,8 @@
 
     <element name="Brand of the Dead Man's Wager" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
         <description>
-            <p>This brand is a <strong>Dead Man's Marker</strong>—a gambling debt signed by a soul that should have departed.</p>
+            <p><em>"The ink never dries on a contract with the Proprietor. It just burns deeper."</em></p>
+            <p>This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes.</p>
             <h4>The Metabolic Clock</h4>
             <ul>
                 <li><strong>Active Phase (Hours 1-8):</strong> You gain <strong>+2 AC</strong>. The sun glows, but one ray extinguishes every hour.</li>
@@ -34,7 +35,6 @@
         </sheet>
         
         <requirements>ID_INTERNAL_DO_NOT_SELECT_THIS_MANUALLY</requirements>
-        
         <rules>
             <stat name="ac" value="2" />
         </rules>
@@ -49,15 +49,19 @@
                 <li>Increase your Dexterity score by 1, to a maximum of 20.</li>
                 <li>You gain proficiency with playing cards. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.</li>
                 <li>You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 20/60). On a hit, they deal 1d6 slashing damage. <strong>If you are already proficient with playing cards as weapons, the damage die increases by one step (to 1d8).</strong></li>
+                <li>Your ranged weapon attacks with playing cards ignore half cover and three-quarters cover.</li>
                 <li>When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.</li>
             </ul>
         </description>
         <sheet>
-            <description>Cards are 1d6 weapons (20/60). If already proficient as weapons, damage die increases to 1d8. Bonus action: Throw extra card after attacking with one.</description>
+            <description>Cards are 1d6 weapons (20/60). If already proficient, damage is 1d8. Attacks ignore 1/2 and 3/4 cover. Bonus action: Throw extra card.</description>
         </sheet>
         <rules>
             <stat name="dexterity" value="1" />
-            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GAMING_SET_PLAYING_CARDS" />
+            
+            <select type="Proficiency" name="Card Shark (Gaming Set)" supports="Gaming Set" />
+
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD" />
         </rules>
     </element>
 
