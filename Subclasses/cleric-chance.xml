@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Cleric: Chance Domain</name>
-        <update version="0.0.4">
+        <update version="0.0.5">
             <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/cleric-chance.xml" />
         </update>
     </info>
@@ -11,7 +11,7 @@
         <supports>Divine Domain</supports>
         <description>
             <p><em>"Certainty is a cage. Faith is the courage to roll the dice when you can't see the numbers."</em></p>
-            <p>Clerics of Chance believe certainty is a cage. They trust in the Golden Roll.</p>
+            <p>Clerics of Chance believe that the only truth in the universe is the Golden Roll. They reject destiny and embrace the chaos of the moment.</p>
             <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_DOMAIN_SPELLS" />
             <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT" />
             <div element="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE" />
@@ -63,7 +63,7 @@
     <element name="Gambler's Instinct" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_GAMBLERS_INSTINCT">
         <description>
             <p><em>"I like those odds."</em></p>
-            <p>Proficiency in Gaming Sets and Deception. Learn Guidance cantrip. When casting Guidance, target rolls 2d4 and takes highest.</p>
+            <p>At 1st level, you gain proficiency with gaming sets and the Deception skill. You learn the <em>guidance</em> cantrip if you don't already know it. When you cast <em>guidance</em>, the target rolls <strong>2d4</strong> and chooses the highest number to add to the check.</p>
         </description>
         <sheet>
             <description>Guidance rolls 2d4 (take highest).</description>
@@ -78,7 +78,7 @@
     <element name="Cascading Fortune" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CASCADING_FORTUNE">
         <description>
             <p><em>"Fortune favors the bold, and hits them twice."</em></p>
-            <p>Whenever you roll a die for damage or healing (level 1+ spell), if you roll the max number on the die, roll it again and add it. Repeat if max again.</p>
+            <p>Also at 1st level, whenever you roll a die for damage or healing for a spell of 1st level or higher, if you roll the maximum possible number on the die, you can roll that die again and add the new result to the total. This can happen multiple times if you continue to roll the maximum.</p>
         </description>
         <sheet>
             <description>Damage/Healing dice explode on Max Roll.</description>
@@ -88,26 +88,31 @@
     <element name="Channel Divinity: Twist of Fate" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_CD_TWIST_OF_FATE">
         <description>
             <p><em>"Let's try that again, shall we?"</em></p>
-            <p>As a reaction when a creature within 30 ft rolls d20, force a reroll after seeing the result but before outcome is declared.</p>
+            <p>At 2nd level, you can use your Channel Divinity to alter a pivotal moment. As a reaction when a creature within 30 feet of you makes an attack roll, ability check, or saving throw, you can force the creature to reroll the d20. You make this choice after seeing the roll but before the DM says whether the roll succeeds or fails.</p>
         </description>
         <sheet action="Reaction" usage="Channel Divinity">
-            <description>Force a creature within 30ft to reroll a d20.</description>
+            <description>Force a creature within 30 ft to reroll a d20.</description>
         </sheet>
     </element>
 
     <element name="50/50 Shot" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_50_50_SHOT">
         <description>
             <p><em>"Heads I live, tails... well, let's hope for heads."</em></p>
-            <p>When hit, roll d6. 1-3: Take damage. 4-6: Take 0 damage and teleport 10 ft.</p>
+            <p>At 6th level, you can gamble with your own safety. When you take damage, you can use your reaction to roll a <strong>d6</strong>.</p>
+            <ul>
+                <li><strong>1-3:</strong> You take the damage as normal.</li>
+                <li><strong>4-6:</strong> You take <strong>0 damage</strong> and immediately teleport up to 10 feet to an unoccupied space.</li>
+            </ul>
+            <p>You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain expended uses when you finish a long rest.</p>
         </description>
         <sheet action="Reaction" usage="{{wisdom:modifier}}/Long Rest">
-            <description>When hit: Roll d6. 1-3 Normal dmg. 4-6 Zero dmg and teleport 10ft.</description>
+            <description>When hit: Roll d6. 1-3 Normal dmg. 4-6 Zero dmg and teleport 10 ft.</description>
         </sheet>
     </element>
 
     <element name="Potent Spellcasting" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_POTENT_SPELLCASTING">
         <description>
-            <p>Add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
+            <p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
         </description>
         <sheet>
             <description>+{{wisdom:modifier}} dmg to Cleric Cantrips.</description>
@@ -117,7 +122,11 @@
     <element name="The Perfect Run" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CHANCE_PERFECT_RUN">
         <description>
             <p><em>"The Golden Roll. It happens once in a lifetime."</em></p>
-            <p>Rolling a 1 counts as a 20. Cascading Fortune now explodes on the highest two numbers of a die.</p>
+            <p>At 17th level, you master the flow of chance.</p>
+            <ul>
+                <li>If you roll a 1 on a d20, it counts as a <strong>20</strong>.</li>
+                <li>Your <strong>Cascading Fortune</strong> feature now triggers if you roll the highest <strong>two numbers</strong> on a damage or healing die (e.g., rolling a 5 or 6 on a d6).</li>
+            </ul>
         </description>
         <sheet>
             <description>Natural 1 counts as Natural 20. Exploding Dice trigger on Max or Max-1.</description>

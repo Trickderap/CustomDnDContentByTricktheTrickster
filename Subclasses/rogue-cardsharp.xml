@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Rogue: The Cardsharp</name>
-        <update version="0.0.6">
+        <update version="0.0.7">
             <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/rogue-cardsharp.xml" />
         </update>
     </info>
@@ -31,7 +31,7 @@
     <element name="Deadly Dealing" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_DEADLY_DEALING">
         <description>
             <p><em>"Pick a card. Any card. It'll be the last thing you see."</em></p>
-            <p>Gain proficiency/expertise with Playing Cards. Treat cards as weapons (Ranged 30/60, Finesse, Thrown, 1d6 Slashing, Magical).</p>
+            <p>At 3rd level, you gain proficiency with playing cards. You treat playing cards as simple ranged weapons with the finesse and thrown properties (range 30/60). On a hit, they deal <strong>1d6 slashing damage</strong>. These cards count as magical for the purpose of overcoming resistance.</p>
         </description>
         <sheet>
             <description>Cards are 1d6 Finesse/Thrown weapons.</description>
@@ -44,7 +44,13 @@
     <element name="The Draw" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_THE_DRAW">
         <description>
             <p><em>"Hearts for burning passion, Spades for the grave."</em></p>
-            <p>When dealing Sneak Attack with cards, roll d4 for Suit effect. 1(Hearts): Extra Fire dmg (Dex Mod). 2(Clubs): Cha Save or Push 10ft. 3(Diamonds): Extra Force dmg (Dex Mod). 4(Spades): Prevent healing.</p>
+            <p>At 3rd level, your Sneak Attack is infused with the magic of the suits. When you deal Sneak Attack damage with a playing card, roll a <strong>d4</strong> to determine a bonus effect:</p>
+            <ul>
+                <li><strong>1 (Hearts):</strong> Deal extra fire damage equal to your Dexterity modifier.</li>
+                <li><strong>2 (Clubs):</strong> The target must succeed on a Strength saving throw (DC = 8 + Prof + Cha) or be pushed 10 feet away.</li>
+                <li><strong>3 (Diamonds):</strong> Deal extra force damage equal to your Dexterity modifier.</li>
+                <li><strong>4 (Spades):</strong> The target cannot regain hit points until the start of your next turn.</li>
+            </ul>
         </description>
         <sheet>
             <description>Sneak Attack triggers Suit effect (Roll d4).</description>
@@ -54,7 +60,7 @@
     <element name="Fold 'Em" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FOLD_EM">
         <description>
             <p><em>"You can't read a face that isn't there."</em></p>
-            <p>Immune to mind reading/truth detection. Can palm small objects perfectly.</p>
+            <p>At 9th level, you become impossible to read. You are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, or know your alignment. You can also perfectly palm Small or smaller objects, making them impossible to detect on your person without a physical search.</p>
         </description>
         <sheet>
             <description>Immune to mind reading/truth detection. Perfect palming.</description>
@@ -64,20 +70,30 @@
     <element name="The Forced Shuffle" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_FORCED_SHUFFLE">
         <description>
             <p><em>"I think it's time we switched seats."</em></p>
-            <p>Bonus Action: Throw card at creature within 30ft. Cha Save. Fail: Swap places. Success: Teleport to them.</p>
+            <p>At 13th level, you can manipulate positioning on the battlefield. As a bonus action, you can throw a card at a creature within 30 feet. The target must make a Charisma saving throw (DC = 8 + Prof + Cha).</p>
+            <ul>
+                <li><strong>Failure:</strong> You and the target instantly swap places.</li>
+                <li><strong>Success:</strong> You instantly teleport to an unoccupied space within 5 feet of the target.</li>
+            </ul>
+            <p>You can use this feature a number of times equal to your Charisma modifier (minimum of once). You regain expended uses on a long rest.</p>
         </description>
         <sheet action="Bonus Action" usage="{{charisma:modifier}}/Long Rest">
-            <description>Throw card (30ft). Cha Save. Fail: Swap places. Success: Teleport next to them.</description>
+            <description>Throw card (30 ft). Cha Save. Fail: Swap places. Success: Teleport next to them.</description>
         </sheet>
     </element>
 
     <element name="52-Card Pickup" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_CARDSHARP_52_CARD_PICKUP">
         <description>
             <p><em>"Let's see how you handle a bad beat."</em></p>
-            <p>Action: 30ft Cone. Dex Save. Fail: 8d6 Slashing + 8d6 Force. Success: Half. Apply Sneak Attack to one target.</p>
+            <p>At 17th level, you can unleash your entire deck in a storm of blades. As an action, you spray cards in a 30-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + Prof + Dex).</p>
+            <ul>
+                <li><strong>Failure:</strong> <strong>8d6 slashing damage</strong> + <strong>8d6 force damage</strong>.</li>
+                <li><strong>Success:</strong> Half damage.</li>
+            </ul>
+            <p>You can choose one creature who failed the save to apply your Sneak Attack damage to. Once you use this feature, you cannot use it again until you finish a short or long rest.</p>
         </description>
         <sheet action="Action" usage="1/Short Rest">
-            <description>30ft Cone. 8d6 Slash + 8d6 Force. Apply Sneak Attack to one.</description>
+            <description>30 ft Cone. 8d6 Slash + 8d6 Force. Apply Sneak Attack to one.</description>
         </sheet>
     </element>
 </elements>

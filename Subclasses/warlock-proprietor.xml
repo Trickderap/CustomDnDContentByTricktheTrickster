@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Warlock: The Proprietor</name>
-        <update version="0.0.5">
+        <update version="0.0.6">
             <file name="warlock-proprietor.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/warlock-proprietor.xml" />
         </update>
     </info>
@@ -11,7 +11,7 @@
         <supports>Otherworldly Patron</supports>
         <description>
             <p><em>"The House does not gamble. The House invests. And you, my dear, are a very high-risk asset."</em></p>
-            <p>You have signed a contract of employment with the Proprietor. Your job is to enforce the House Rules.</p>
+            <p>You have signed a contract of employment with the Proprietor. Your job is to enforce the House Rules, collect debts, and ensure that the odds always favor your patron.</p>
             <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EXPANDED_SPELLS" />
             <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_THE_HOUSE_EDGE" />
             <div element="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_VIP_SUBSTITUTION" />
@@ -61,27 +61,29 @@
     <element name="The House Edge" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_THE_HOUSE_EDGE">
         <description>
             <p><em>"The odds are never in your favor."</em></p>
-            <p>When a creature within 60 ft rolls with Advantage, you can use your reaction to cancel it. If you do, you gain a "House Chip" (d6) to add to your own roll within 1 minute.</p>
+            <p>Starting at 1st level, you learn to manipulate probability in your favor. When a creature within 60 feet of you makes an attack roll, ability check, or saving throw with advantage, you can use your reaction to cancel the advantage. If you do so, you gain a <strong>House Chip</strong> (a d6). Within the next minute, you can roll this chip and add the number rolled to one attack roll, ability check, or saving throw you make.</p>
+            <p>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
         </description>
         <sheet action="Reaction" usage="{{proficiency}}/Long Rest">
-            <description>Cancel Advantage on a creature within 60ft. Gain a d6 Chip to add to your own roll within 1 minute.</description>
+            <description>When a creature within 60 ft rolls with Advantage, you can cancel it. If you do, you gain a House Chip (d6) to add to your own roll within 1 minute.</description>
         </sheet>
     </element>
 
     <element name="VIP Substitution" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_VIP_SUBSTITUTION">
         <description>
             <p><em>"My best employees get... special protections."</em></p>
-            <p>When you are hit by an attack, you can use your reaction to swap places with a willing creature or a Hexed creature within 30 ft. They take the hit instead.</p>
+            <p>At 6th level, your patron ensures their assets are protected. When you are hit by an attack, you can use your reaction to swap places with a willing creature within 30 feet of you. If you have cast <em>hex</em> on a creature within 30 feet, you can swap places with them (unwillingly) instead. The creature you swapped with takes the hit.</p>
+            <p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
         </description>
         <sheet action="Reaction" usage="1/Short Rest">
-            <description>Swap places with willing or Hexed creature within 30ft to make them take the hit.</description>
+            <description>Swap places with willing or Hexed creature within 30 ft to make them take the hit.</description>
         </sheet>
     </element>
 
     <element name="Eye in the Sky" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_EYE_IN_THE_SKY">
         <description>
             <p><em>"I see everything. Even the cards you haven't drawn yet."</em></p>
-            <p>Immune to Charm. Proficiency in Insight (or Expertise if already proficient). Truesight 15 ft.</p>
+            <p>At 10th level, your senses are heightened to detect cheats and frauds. You are immune to being charmed. You gain proficiency in the Insight skill. If you are already proficient, you gain expertise. Additionally, you gain <strong>truesight</strong> out to a range of 15 feet.</p>
         </description>
         <sheet>
             <description>Immune to Charmed. Truesight 15 ft.</description>
@@ -94,7 +96,8 @@
     <element name="Foreclosure" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_FORECLOSURE">
         <description>
             <p><em>"Your debt is due. Immediately."</em></p>
-            <p>As an action, touch a creature. Cha Save vs Spell DC. Fail: 10d10 force damage. Success: Half. If reduced to 0 HP, gain a Soul Coin (use Bonus Action to regain spell slot).</p>
+            <p>At 14th level, you can call in a debt with lethal force. As an action, you touch a creature. The target must make a Charisma saving throw against your warlock spell save DC. On a failed save, the target takes <strong>10d10 force damage</strong>. On a successful save, it takes half as much damage.</p>
+            <p>If this damage reduces the target to 0 hit points, you rip a fragment of their soul free, manifesting as a <strong>Soul Coin</strong>. You can consume this coin as a bonus action to regain one warlock spell slot.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>Touch attack. Cha Save. Fail: 10d10 Force. If 0 HP, gain Soul Coin.</description>
@@ -104,7 +107,13 @@
     <element name="The House Always Wins" type="Archetype Feature" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ARCHETYPE_FEATURE_PROPRIETOR_HOUSE_ALWAYS_WINS">
         <description>
             <p><em>"Did you really think you could beat the Dealer?"</em></p>
-            <p>At 20th level, use an Action to transform for 1 minute: Immune to Crits. Reaction to replace a creature's d20 roll with a 10 (Uses: Cha Mod). Cast Counterspell or Dispel Magic at 5th level for free.</p>
+            <p>At 20th level, you can channel the ultimate authority of the Proprietor. As an action, you can transform for 1 minute. While transformed:</p>
+            <ul>
+                <li>You are immune to critical hits.</li>
+                <li>When a creature you can see makes a d20 roll, you can use your reaction to treat the roll as a <strong>10</strong>. You can do this a number of times equal to your Charisma modifier.</li>
+                <li>You can cast <em>counterspell</em> or <em>dispel magic</em> at 5th level without expending a spell slot.</li>
+            </ul>
+            <p>Once you use this feature, you can't use it again until you finish a long rest.</p>
         </description>
         <sheet action="Action" usage="1/Long Rest">
             <description>1 Minute transformation. Immune to Crits. Reaction to force a roll of 10. Free Counterspell/Dispel Magic.</description>
