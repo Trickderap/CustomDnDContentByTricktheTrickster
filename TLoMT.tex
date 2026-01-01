@@ -1,86 +1,472 @@
-\documentclass[11pt, a4paper]{article}
+\documentclass[10pt, letterpaper, twocolumn, openany]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
-\usepackage{array}
 \usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{mathpazo} 
+\usepackage{ragged2e}
+\usepackage{fancyhdr} 
+\usepackage{tocloft}
 
-% Adjust margins to look more like a handout
-\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+% --- D&D VISUAL STYLE SETTINGS ---
 
-\title{\textbf{Brand of the Dead Man's Wager}}
-\author{}
-\date{}
+% Margins
+\geometry{top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm}
+
+% Colors
+\definecolor{PhbRed}{HTML}{58180D} 
+
+% Chapter Formatting
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{PhbRed}}
+  {\chaptertitlename\ \thechapter}
+  {20pt}
+  {\Huge\scshape}
+
+% Section Formatting
+\titleformat{\section}
+  {\normalfont\Large\scshape\color{PhbRed}}
+  {}{0em}{}
+  [\titlerule]
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{PhbRed}}
+  {}{0em}{}
+
+% Table Styling
+\renewcommand{\arraystretch}{1.3}
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% --- DOCUMENT CONTENT ---
 
 \begin{document}
 
-\section*{Brand of the Dead Man's Wager}
-\textit{Dark Gift (Supernatural Gift)}
+% =========================================================
+% TITLE PAGE
+% =========================================================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge \scshape \color{PhbRed} Trick's Ledger of \\ Many Tricks \par}
+    \vspace{1cm}
+    {\Large \textit{A Compendium of Debts, Wagers, and Wildcards} \par}
+    \vspace{4cm}
+    
+    \textbf{Author:} Trick the Trickster \\
+    \textbf{Version:} 0.0.6 \\
+    
+    \vfill
+    
+    {\small ``Life is not a gift. It is a loan. And I am here to collect.'' \\ --- The Dealer}
+\end{titlepage}
+
+% =========================================================
+% TABLE OF CONTENTS
+% =========================================================
+\tableofcontents
+\newpage
+
+% =========================================================
+% INTRODUCTION
+% =========================================================
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\begin{quote}
+\textit{``You say you want a fair game? My dear friend, fairness is a statistical anomaly. I offer you something much better: I offer you a chance to win. Just... mind the fine print.''}
+\begin{flushright}
+--- The Dealer
+\end{flushright}
+\end{quote}
 
 \vspace{0.5cm}
 
-\noindent \textbf{Prerequisite:} Wisdom 10 or higher
+\textbf{Trick's Ledger of Many Tricks} is a compilation of options for those who find the standard rules of existence too... restrictive. It is built upon the lore of an entity known variously as the Golden Hand, the Keeper of the Loophole, or simply \textbf{The Trickster}.
 
-\vspace{0.3cm}
+\section*{The Two Faces}
+To mortals, this entity presents himself as \textbf{The Dealer}. He appears in moments of dire desperation—a warrior bleeding out on the battlefield, a wizard whose spell has failed, a thief cornered in an alley.
 
-\noindent This brand is a ``Dead Man's Marker''---a gambling debt signed by a soul that should have departed. It manifests on the back of your hand as a circle of \textbf{20 iron chain links} surrounding a \textbf{sun with 8 rays}.
+The Dealer wears a mask of perfect porcelain neutrality. He offers a simple transaction: power, life, or luck, in exchange for a signature in his Ledger. He speaks of ``The Rules'' with religious reverence. He claims that the universe is a casino, and he is merely the floor manager ensuring the game is played correctly.
 
-The mark represents a high-stakes wager: you have been granted a loan on your life, but the terms are volatile. By accepting this revival, you have handed the Dealer a blank check---an unspecified favor to be called in at their discretion.
+\subsection*{The House Edge}
+However, the Dealer is a lie. Beneath the mask is the Trickster, an ancient spirit of chaos who despises destiny. He does not play fair. Every contract in this Ledger contains a trapdoor. Every magical item has a cost hidden in the mechanics. Every boon creates a vulnerability.
 
-\subsection*{The Metabolic Clock}
-The brand acts as a precise countdown tied to your vitality. It cycles through two phases each day:
+The Trickster does not cheat by breaking the laws of the universe; he cheats by bending them until they snap. When a character chooses an option from this book, they are sitting down at a table where the cards are marked, the dice are loaded, and the House always wins.
 
-\subsubsection*{1. The Active Phase (Hours 1--8)}
-Upon finishing a Long Rest, the 8 solar rays of the mark ignite with unnatural heat.
+\section*{Using This Book}
+This supplement provides new \textbf{Subclasses}, \textbf{Lineages}, \textbf{Feats}, \textbf{Supernatural Gifts}, and \textbf{Magic Items}. As a Dungeon Master, you play the role of the Dealer. You offer these powers to your players. Be generous. Be fair. Let them feel powerful. And then, when the moment is right... reveal the trick.
+
+\newpage
+
+% =========================================================
+% CHAPTER 1: SUBCLASSES
+% =========================================================
+
+\chapter{Subclasses}
+The multiverse is a place of infinite possibility, where luck and skill often blur into one. These archetypes represent those who have mastered the art of the gamble.
+
+% ---------------------------------------------------------
+% WARLOCK
+% ---------------------------------------------------------
+\section{Warlock: The Proprietor}
+\textit{``The House does not gamble. The House invests. And you, my dear, are a very high-risk asset.''}
+
+You have signed a contract of employment with the Proprietor. Your job is to enforce the House Rules, collect debts, and ensure that the odds always favor your patron.
+
+\subsection*{Expanded Spell List}
+The Proprietor lets you choose from an expanded list of spells when you learn a warlock spell. Most involve control, surveillance, or enforcement of terms.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{c X}
+    \hline
+    \textbf{Spell Level} & \textbf{Spells} \\
+    \hline
+    1st & \textit{command, identify} \\
+    2nd & \textit{detect thoughts, zone of truth} \\
+    3rd & \textit{clairvoyance, glyph of warding} \\
+    4th & \textit{locate creature, private sanctum} \\
+    5th & \textit{dominate person, geas} \\
+    \hline
+\end{tabularx}
+\end{center}
+
+\subsection*{The House Edge}
+\textit{``The odds are never in your favor.''}
+
+Starting at 1st level, you learn to manipulate probability in your favor. When a creature within 60 feet of you makes an attack roll, ability check, or saving throw with advantage, you can use your reaction to cancel the advantage. If you do so, you gain a \textbf{House Chip} (a d6). Within the next minute, you can roll this chip and add the number rolled to one attack roll, ability check, or saving throw you make.
+
+You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+\subsection*{VIP Substitution}
+\textit{``My best employees get... special protections.''}
+
+At 6th level, your patron ensures their assets are protected. When you are hit by an attack, you can use your reaction to swap places with a willing creature within 30 feet of you. If you have cast \textit{hex} on a creature within 30 feet, you can swap places with them (unwillingly) instead. The creature you swapped with takes the hit.
+
+Once you use this feature, you can't use it again until you finish a short or long rest.
+
+\subsection*{Eye in the Sky}
+\textit{``I see everything. Even the cards you haven't drawn yet.''}
+
+At 10th level, your senses are heightened to detect cheats and frauds. You are immune to being charmed. You gain proficiency in the Insight skill. If you are already proficient, you gain expertise. Additionally, you gain \textbf{truesight} out to a range of 15 feet.
+
+\subsection*{Foreclosure}
+\textit{``Your debt is due. Immediately.''}
+
+At 14th level, you can call in a debt with lethal force. As an action, you touch a creature. The target must make a Charisma saving throw against your warlock spell save DC. On a failed save, the target takes \textbf{10d10 force damage}. On a successful save, it takes half as much damage.
+
+If this damage reduces the target to 0 hit points, you rip a fragment of their soul free, manifesting as a \textbf{Soul Coin}. You can consume this coin as a bonus action to regain one warlock spell slot.
+
+\subsection*{The House Always Wins}
+\textit{``Did you really think you could beat the Dealer?''}
+
+At 20th level, you can channel the ultimate authority of the Proprietor. As an action, you can transform for 1 minute. While transformed:
 \begin{itemize}
-    \item \textbf{Benefit:} You gain a \textbf{+2 bonus to Armor Class}.
-    \item \textbf{Visual:} One ray extinguishes every hour. Once the last ray fades (after 8 hours), the protection ends.
+    \item You are immune to critical hits.
+    \item When a creature you can see makes a d20 roll, you can use your reaction to treat the roll as a \textbf{10}. You can do this a number of times equal to your Charisma modifier.
+    \item You can cast \textit{counterspell} or \textit{dispel magic} at 5th level without expending a spell slot.
+\end{itemize}
+Once you use this feature, you can't use it again until you finish a long rest.
+
+% FORCE NEW PAGE FOR CLERIC
+\clearpage
+
+% ---------------------------------------------------------
+% CLERIC
+% ---------------------------------------------------------
+\section{Cleric: Chance Domain}
+\textit{``Certainty is a cage. Faith is the courage to roll the dice when you can't see the numbers.''}
+
+Clerics of Chance believe that the only truth in the universe is the Golden Roll. They reject destiny and embrace the chaos of the moment.
+
+\subsection*{Domain Spells}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{c X}
+    \hline
+    \textbf{Cleric Level} & \textbf{Spells} \\
+    \hline
+    1st & \textit{chaos bolt, bane} \\
+    3rd & \textit{mirror image, nystul's magic aura} \\
+    5th & \textit{blink, bestow curse} \\
+    7th & \textit{confusion, death ward} \\
+    9th & \textit{mislead, skill empowerment} \\
+    \hline
+\end{tabularx}
+\end{center}
+
+\subsection*{Gambler's Instinct}
+\textit{``I like those odds.''}
+
+At 1st level, you gain proficiency with gaming sets and the Deception skill. You learn the \textit{guidance} cantrip if you don't already know it. When you cast \textit{guidance}, the target rolls \textbf{2d4} and chooses the highest number to add to the check.
+
+\subsection*{Cascading Fortune}
+\textit{``Fortune favors the bold, and hits them twice.''}
+
+Also at 1st level, whenever you roll a die for damage or healing for a spell of 1st level or higher, if you roll the maximum possible number on the die, you can roll that die again and add the new result to the total. This can happen multiple times if you continue to roll the maximum.
+
+\subsection*{Channel Divinity: Twist of Fate}
+\textit{``Let's try that again, shall we?''}
+
+At 2nd level, you can use your Channel Divinity to alter a pivotal moment. As a reaction when a creature within 30 feet of you makes an attack roll, ability check, or saving throw, you can force the creature to reroll the d20. You make this choice after seeing the roll but before the DM says whether the roll succeeds or fails.
+
+\subsection*{50/50 Shot}
+\textit{``Heads I live, tails... well, let's hope for heads.''}
+
+At 6th level, you can gamble with your own safety. When you take damage, you can use your reaction to roll a \textbf{d6}.
+\begin{itemize}
+    \item \textbf{1-3:} You take the damage as normal.
+    \item \textbf{4-6:} You take \textbf{0 damage} and immediately teleport up to 10 feet to an unoccupied space.
+\end{itemize}
+You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain expended uses when you finish a long rest.
+
+\subsection*{Potent Spellcasting}
+\textit{``The House always gets its cut... and so do I.''}
+
+Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.
+
+\subsection*{The Perfect Run}
+\textit{``The Golden Roll. It happens once in a lifetime.''}
+
+At 17th level, you master the flow of chance.
+\begin{itemize}
+    \item If you roll a 1 on a d20, it counts as a \textbf{20}.
+    \item Your \textbf{Cascading Fortune} feature now triggers if you roll the highest \textbf{two numbers} on a damage or healing die (e.g., rolling a 5 or 6 on a d6).
 \end{itemize}
 
-\subsubsection*{2. The Burden Phase (Hours 9--20)}
-Once the sun is dark, the weight of the debt settles.
+% FORCE NEW PAGE FOR ROGUE
+\clearpage
+
+% ---------------------------------------------------------
+% ROGUE
+% ---------------------------------------------------------
+\section{Rogue: The Cardsharp}
+\textit{``A deck of cards is 52 opportunities for a betrayal. I only need one.''}
+
+You blend arcane infusion with sleight of hand, turning playing cards into deadly weapons.
+
+\subsection*{Deadly Dealing}
+\textit{``Pick a card. Any card. It'll be the last thing you see.''}
+
+At 3rd level, you gain proficiency with playing cards. You treat playing cards as simple ranged weapons with the finesse and thrown properties (range 30/60). On a hit, they deal \textbf{1d6 slashing damage}. These cards count as magical for the purpose of overcoming resistance.
+
+\subsection*{The Draw}
+\textit{``Hearts for burning passion, Spades for the grave.''}
+
+At 3rd level, your Sneak Attack is infused with the magic of the suits. When you deal Sneak Attack damage with a playing card, roll a \textbf{d4} to determine a bonus effect:
 \begin{itemize}
-    \item \textbf{Restriction:} You lose the AC bonus and cannot benefit from a Long Rest until the 20th hour has passed.
-    \item \textbf{Visual:} The chain links begin to fade one by one, counting down the hours until you are permitted to rest again.
+    \item \textbf{1 (Hearts):} Deal extra fire damage equal to your Dexterity modifier.
+    \item \textbf{2 (Clubs):} The target must succeed on a Strength saving throw (DC = 8 + Prof + Cha) or be pushed 10 feet away.
+    \item \textbf{3 (Diamonds):} Deal extra force damage equal to your Dexterity modifier.
+    \item \textbf{4 (Spades):} The target cannot regain hit points until the start of your next turn.
+\end{itemize}
+
+\subsection*{Fold 'Em}
+\textit{``You can't read a face that isn't there.''}
+
+At 9th level, you become impossible to read. You are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, or know your alignment. You can also perfectly palm Small or smaller objects, making them impossible to detect on your person without a physical search.
+
+\subsection*{The Forced Shuffle}
+\textit{``I think it's time we switched seats.''}
+
+At 13th level, you can manipulate positioning on the battlefield. As a bonus action, you can throw a card at a creature within 30 feet. The target must make a Charisma saving throw (DC = 8 + Prof + Cha).
+\begin{itemize}
+    \item \textbf{Failure:} You and the target instantly swap places.
+    \item \textbf{Success:} You instantly teleport to an unoccupied space within 5 feet of the target.
+\end{itemize}
+You can use this feature a number of times equal to your Charisma modifier (minimum of once). You regain expended uses on a long rest.
+
+\subsection*{52-Card Pickup}
+\textit{``Let's see how you handle a bad beat.''}
+
+At 17th level, you can unleash your entire deck in a storm of blades. As an action, you spray cards in a 30-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + Prof + Dex).
+\begin{itemize}
+    \item \textbf{Failure:} \textbf{8d6 slashing damage} + \textbf{8d6 force damage}.
+    \item \textbf{Success:} Half damage.
+\end{itemize}
+You can choose one creature who failed the save to apply your Sneak Attack damage to. Once you use this feature, you cannot use it again until you finish a short or long rest.
+
+% =========================================================
+% CHAPTER 2: LINEAGES
+% =========================================================
+\chapter{Lineages}
+Some are born into the game; others are dragged into it. These lineages represent those whose very blood has been altered by luck, fate, or a deal gone wrong.
+
+\textit{(Content coming soon...)}
+
+% =========================================================
+% CHAPTER 3: FEATS
+% =========================================================
+\chapter{Feats}
+These new feats represent the specialized tricks, hustles, and gambits learned by those who live on the edge of luck.
+
+\section*{Card Shark}
+\textit{Prerequisite: Dexterity 13 or higher}
+
+\textit{``It's not gambling if you know you're going to win.''}
+
+You have mastered the art of throwing cards with deadly precision. You gain the following benefits:
+\begin{itemize}
+    \item Increase your Dexterity score by 1, to a maximum of 20.
+    \item You gain proficiency with playing cards. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.
+    \item You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 20/60). On a hit, they deal \textbf{1d6 slashing damage}. If you are already proficient with playing cards as weapons (such as from the Cardsharp archetype), the damage die increases by one step (to \textbf{1d8}).
+    \item When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.
+\end{itemize}
+
+\section*{Cheat Death}
+\textit{``The grave can wait. I have one last hand to play.''}
+
+You have a standing arrangement with the powers that govern death—or perhaps you just know how to bluff the Reaper. You gain the following benefits:
+\begin{itemize}
+    \item Increase your Constitution or Charisma score by 1, to a maximum of 20.
+    \item When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.
+    \item You have \textbf{advantage} on death saving throws.
+\end{itemize}
+
+% =========================================================
+% CHAPTER 4: SUPERNATURAL GIFTS
+% =========================================================
+
+\chapter{Supernatural Gifts}
+Not all power comes from study or devotion. Some power is bought, bargained for, or stolen.
+
+\section{Brand of the Dead Man's Wager}
+\textit{Supernatural Gift (mark)}
+
+\textit{``The ink never dries on a contract with the Proprietor. It just burns deeper.''}
+
+This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes. While this mark is on your person, you feel a constant, feverish heat during the day and a phantom weight dragging at your soul at night.
+
+\subsection*{The Metabolic Clock}
+The mark binds your vitality to the cycle of the sun and the debt you owe.
+\begin{itemize}
+    \item \textbf{Active Phase (Hours 1-8):} You gain a \textbf{+2 bonus to AC}. The sun on the brand glows brightly, but one ray extinguishes every hour.
+    \item \textbf{Burden Phase (Hours 9-20):} The sun goes dark. You lose the AC bonus. You cannot benefit from a Long Rest until the 20th hour of the cycle passes.
 \end{itemize}
 
 \subsection*{Rolling the Bones}
-The debt is unstable. During the \textbf{Burden Phase} (from the 9th hour onward), the odds turn against you.
+During the Burden Phase, the Dealer comes to collect interest on your borrowed time. At the end of every hour, roll a \textbf{d20}. 
+\textbf{On a roll of 1}, you trigger a Corruption Effect. Roll a \textbf{d8} on the table below:
 
-For every hour that passes during the Burden Phase, roll a \textbf{d20}. If you roll a \textbf{1}, the Dealer collects interest on the debt. Roll a \textbf{d8} on the Corruption Table below to determine the penalty.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{c X} 
+    \hline
+    \textbf{d8} & \textbf{Effect} \\
+    \hline
+    1 & \textbf{Singed Nerves:} You take 1d4 fire damage that cannot be reduced. \\
+    2 & \textbf{Phantom Weight:} Your speed is reduced by 10 feet for 1 hour. \\
+    3 & \textbf{Creaking Joints:} Disadvantage on Stealth checks for 1 hour. \\
+    4 & \textbf{Spectral Whispers:} Disadvantage on Perception checks for 1 hour. \\
+    5 & \textbf{Lead Arm:} Disadvantage on Strength checks and saving throws for 1 hour. \\
+    6 & \textbf{Metabolic Tax:} Your hit point maximum is reduced by \textbf{1d6 + your level} until you finish a Long Rest. \\
+    7 & \textbf{Feverish Haze:} Disadvantage on Intelligence and Charisma checks for 1 hour. \\
+    8 & \textbf{Grace Period:} The cooldown ends immediately. You may begin a Long Rest. \\
+    \hline
+\end{tabularx}
+\end{center}
+
+% =========================================================
+% CHAPTER 5: MAGIC ITEMS
+% =========================================================
+
+\chapter{Magic Items}
+The tools of the Trickster are rarely straightforward weapons of war. They are puzzles, wagers, and instruments of chaos scattered across the multiverse to tempt the bold and the desperate.
+
+\section{Coin of the Double-Cross}
+\textit{Wondrous Item, Uncommon (Requires Attunement)}
+
+\textit{``Fairness is a lie told by the loser. I prefer to win.'' --- Trick the Trickster}
+
+This heavy gold coin features the smiling mask of the Trickster on one side (``Heads'') and the weeping mask of the Dealer on the other (``Tails''). While attuned to it, the coin always feels warm to your touch.
+
+\subsection*{The Fix}
+You can manipulate the outcome of the toss to suit your needs. When you flip this coin, you can mentally command it to land on \textbf{Heads} or \textbf{Tails}. You can use this to settle disputes, cheat at gambling, or fool NPCs into thinking Fate has made a decision.
+
+\subsection*{Heads I Win, Tails You Lose}
+As a \textbf{bonus action}, you can flick the coin into the air to distract a creature you can see within 30 feet of you. The coin flashes with hypnotic light, forcing the creature to make a \textbf{DC 13 Wisdom saving throw}.
+
+If they fail, their attention is fixated on the coin, triggering an effect based on how you mentally commanded it to land:
+\begin{itemize}
+    \item \textbf{Heads (The Smile):} You gain \textbf{Advantage} on the next attack roll you make against that creature before the end of your turn.
+    \item \textbf{Tails (The Weep):} The creature has \textbf{Disadvantage} on the next attack roll it makes against you before the start of your next turn.
+\end{itemize}
+The coin magically returns to your pocket at the start of your next turn.
+
+\subsection*{The Edge (Curse)}
+If you use the combat feature and roll a \textbf{Natural 1} on your attack (Heads) or the enemy rolls a \textbf{Natural 20} on their attack (Tails), the coin lands on its Edge. It vanishes instantly, returning to the Trickster's vault.
 
 \vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
 
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|c|l|p{10cm}|}
-\hline
-\textbf{d8} & \textbf{Name} & \textbf{Effect} \\
-\hline
-1 & \textbf{Singed Nerves} & The chains heat up violently. You take \textbf{1d4 fire damage} which cannot be reduced in any way. \\
-\hline
-2 & \textbf{Phantom Weight} & The mark feels impossibly heavy, dragging your arm down. Your \textbf{walking speed is reduced by 10 feet} for 1 hour. \\
-\hline
-3 & \textbf{Creaking Joints} & Your movements echo with the sound of grinding metal. You have \textbf{Disadvantage on Dexterity (Stealth)} checks for 1 hour. \\
-\hline
-4 & \textbf{Spectral Whispers} & You hear the murmurs of debt collectors in the periphery. You have \textbf{Disadvantage on Wisdom (Perception)} checks for 1 hour. \\
-\hline
-5 & \textbf{Lead Arm} & Your muscles seize up under the weight of the debt. You have \textbf{Disadvantage on Strength checks and Strength saving throws} for 1 hour. \\
-\hline
-6 & \textbf{Metabolic Tax} & The mark siphons your vitality to pay the interest. Your \textbf{Hit Point Maximum is reduced by 1d6 + your level} until you finish a Long Rest. \\
-\hline
-7 & \textbf{Feverish Haze} & The pain clouds your mind. You have \textbf{Disadvantage on Intelligence and Charisma checks} for 1 hour. \\
-\hline
-8 & \textbf{Grace Period} & A loophole opens, or perhaps the Dealer is feeling generous. The chains fade early and the cooldown ends immediately. \textbf{You may begin a Long Rest at any time.} \\
-\hline
-\end{tabular}
+\section{Deck of Empty Fates}
+\textit{Weapon (Deadly Playing Card), Rare (Requires Attunement)}
 
-\vspace{1cm}
+\textit{``The future isn't written in the stars. It's written in the hand you're dealt... and I'm the one shuffling.''}
 
-\noindent \hrulefill
+To the naked eye, this appears to be a deck of pristine, white vellum cards with no markings. They feel cool to the touch, like polished marble. The ink only appears the moment the card strikes a living target, writing their fate in real-time.
 
-\subsubsection*{Dungeon Master Notes}
+\subsection*{The Infinite Deal}
+You gain a \textbf{+1 bonus} to attack and damage rolls made with this magic weapon. The deck is never depleted. Immediately after you make a ranged attack with a card, it vanishes and reappears in the deck. It functions as a Deadly Playing Card (Finesse, Thrown 30/60).
+
+\subsection*{Fate Revealed}
+The cards remain blank on normal hits. However, when you score a \textbf{Critical Hit} (Natural 20) with this weapon, the card flashes with magical ink, revealing a Face Card. Roll a \textbf{d4}:
+\begin{enumerate}
+    \item \textbf{Jack of Knaves:} You regain hit points equal to the damage dealt.
+    \item \textbf{Queen of Sorrows:} The target is \textbf{Incapacitated} until the start of your next turn.
+    \item \textbf{King of Ruin:} The target is \textbf{Frightened} of you until the end of your next turn.
+    \item \textbf{Ace of Endings:} Instead of doubling the damage dice, you \textbf{triple} the damage dice.
+\end{enumerate}
+
+\subsection*{The Joker}
+If you roll a \textbf{Natural 1} on an attack roll with this deck, you draw the Joker. The card explodes in your hand. You take \textbf{2d6 force damage}, and you cannot use the Deck again until the start of your next turn.
+
+% =========================================================
+% CHAPTER 6: NEW WEAPONS
+% =========================================================
+
+\newpage
+
+\chapter{New Weapons}
+The Trickster's arsenal includes weapons that are not found in a typical armory. These specialized tools require a deft hand and a deceptive mind to master.
+
+\section*{Weapon Descriptions}
+The following new weapon is available to characters who have proficiency with it, most notably the Cardsharp rogue archetype.
+
+\subsection*{Weapon Properties}
+\textbf{Deadly Playing Card.} \textit{``Sharp as a razor, light as a feather, and deadly as sin.''} These cards are magically infused or razor-edged, designed to slice through air and armor alike.
+
 \begin{itemize}
-    \item \textbf{The Dealer's Favor:} The ``Unspecified Favor'' is a narrative hook. The DM can invoke this at any time, forcing the player to undertake a specific quest, spare a specific enemy, or sacrifice a valuable item to settle the ``principal'' of the debt.
-    \item \textbf{Removal:} As a supernatural mark, this cannot be removed by \textit{Dispel Magic}. It requires a \textit{Wish} spell, divine intervention, or the completion of the Dealer's Favor.
+    \item \textbf{Finesse:} When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+    \item \textbf{Thrown:} If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon.
 \end{itemize}
+
+% Table automatically handled by float environment
+\begin{table*}[t]
+\caption{Weapons}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{l l l l X}
+    \hline
+    \textbf{Name} & \textbf{Cost} & \textbf{Damage} & \textbf{Weight} & \textbf{Properties} \\
+    \hline
+    \multicolumn{5}{l}{\textit{\textbf{Simple Ranged Weapons}}} \\
+    Deadly Playing Card & --- & 1d6 slashing & --- & Finesse, Thrown (range 30/60) \\
+    \hline
+\end{tabularx}
+\end{table*}
 
 \end{document}

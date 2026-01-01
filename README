@@ -1,53 +1,26 @@
-# Custom DnD Content by TricktheTrickster
+# Trick's Ledger of Many Tricks
+*A Compendium of Debts, Wagers, and Wildcards*
 
-This repository contains custom homebrew content for Dungeons & Dragons 5th Edition, formatted for use with **Aurora Builder**.
+**Trick's Ledger of Many Tricks** is a homebrew supplement for D&D 5e, compatible with Aurora Builder. It introduces high-stakes archetypes, cursed marks, and forbidden probability magic.
 
-## Content
+## 📦 Content
+* **Warlock: The Proprietor** - Enforce the House Rules and collect debts.
+* **Cleric: Chance Domain** - Worship the Golden Roll and manipulate fate.
+* **Rogue: The Cardsharp** - Turn playing cards into deadly magical weapons.
+* **Magic Items** - Including the *Coin of the Double-Cross* and *Deck of Empty Fates*.
+* **Supernatural Gifts** - The cursed *Brand of the Dead Man's Wager*.
+* **Feats** - Become a *Card Shark* or learn to *Cheat Death*.
 
-### Subclasses
-
-#### Cleric: Chance Domain
-*   **Concept:** Clerics who believe certainty is a cage and trust in the "Golden Roll". They manipulate luck and probability.
-*   **Key Features:**
-    *   *Gambler's Instinct:* Proficiency in Gaming Sets and Deception.
-    *   *Cascading Fortune:* Damage and healing dice explode on max rolls.
-    *   *Channel Divinity: Twist of Fate:* Force a reroll on a creature within 30 ft.
-    *   *50/50 Shot:* Risk taking damage to potentially take none and teleport.
-    *   *Potent Spellcasting:* Add Wisdom modifier to cleric cantrip damage.
-    *   *Perfect Run:* Treat a d20 roll of 9 or lower as a 10.
-
-#### Rogue: The Cardsharp
-*   **Concept:** A rogue who blends arcane infusion with sleight of hand, turning playing cards into deadly weapons.
-*   **Key Features:**
-    *   *Deadly Dealing:* Use playing cards as 1d6 finesse/thrown weapons.
-    *   *The Draw:* Sneak Attack triggers random suit effects (Fire, Push, Force, or Anti-Heal).
-    *   *Fold 'Em:* Immunity to mind reading and truth detection.
-    *   *The Forced Shuffle:* Swap places with a creature or teleport to them.
-    *   *52 Card Pickup:* A high-level area of effect attack using cards.
-
-#### Warlock: The Proprietor
-*   **Concept:** A warlock bound by a contract of employment to "The Proprietor," enforcing House Rules and ensuring debts are paid.
-*   **Key Features:**
-    *   *The House Edge:* Cancel an enemy's advantage to gain a bonus later.
-    *   *VIP Substitution:* Swap places with a willing or Hexed creature to make them take a hit.
-    *   *Eye in the Sky:* Magical surveillance and detection.
-    *   *Foreclosure:* Penalizing enemies who break the rules.
-    *   *The House Always Wins:* The ultimate advantage in any wager.
-
-### Items / Feats
-
-#### Brand of the Dead Man's Wager
-*   **Concept:** A gambling debt signed by a soul that should have departed. A "Dark Gift" that acts as a metabolic clock.
-*   **Mechanic - The Metabolic Clock:**
-    *   **Active Phase (Hours 1-8):** You gain **+2 AC**. The mark glows, counting down the hours.
-    *   **Burden Phase (Hours 9-20):** The mark goes dark. You lose the AC bonus and cannot benefit from a Long Rest until the 20th hour has passed.
-*   **Rolling the Bones:** During the Burden Phase, there is a risk of corruption or penalty if luck turns against you.
-*   **Prerequisite:** Wisdom 10 or higher.
-*   **Note:** This content is added as an Item that grants a Feat. Equip the item "Brand of the Dead Man's Wager" to activate the effects.
-
-## How to Use
-
+## 🚀 How to Install in Aurora Builder
 1.  Open **Aurora Builder**.
-2.  Go to the **Index** tab.
-3.  Add the URL of the `tricks-ledger-of-many-tricks.index` file from this repository.
-    *   URL: `https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index`
+2.  Go to the **Additional Content** tab.
+3.  Click **Update** (or **Add Index**).
+4.  Paste the following URL into the box:
+
+    [https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index](https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index)
+
+## 📜 PDF Documentation
+You can find the full PDF sourcebook generated from this content in the repository (if you upload your compiled PDF).
+
+---
+*Created by Trick the Trickster*
