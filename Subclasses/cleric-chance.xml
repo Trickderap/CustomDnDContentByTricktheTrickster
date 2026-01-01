@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Cleric: Chance Domain</name>
-        <update version="0.0.5">
+        <update version="0.0.6">
             <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/cleric-chance.xml" />
         </update>
     </info>
@@ -69,7 +69,8 @@
             <description>Guidance rolls 2d4 (take highest).</description>
         </sheet>
         <rules>
-            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GAMING_SET" />
+            <select type="Proficiency" name="Gaming Set (Gambler's Instinct)" supports="Gaming Set" />
+            
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
             <grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
         </rules>

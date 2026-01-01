@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Rogue: The Cardsharp</name>
-        <update version="0.0.7">
+        <update version="0.0.8">
             <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/rogue-cardsharp.xml" />
         </update>
     </info>
@@ -37,7 +37,9 @@
             <description>Cards are 1d6 Finesse/Thrown weapons.</description>
         </sheet>
         <rules>
-            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GAMING_SET_PLAYING_CARDS" />
+            <select type="Proficiency" name="Deadly Dealing (Gaming Set)" supports="Gaming Set" />
+            
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD" />
         </rules>
     </element>
 
