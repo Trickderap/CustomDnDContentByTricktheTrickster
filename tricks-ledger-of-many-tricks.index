@@ -3,13 +3,14 @@
     <info>
         <name>Trick's Ledger of Many Tricks</name>
         <author>Trick the Trickster</author>
-        <update version="0.0.4">
+        <update version="0.0.6">
             <file name="tricks-ledger-of-many-tricks.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index" />
         </update>
     </info>
     <files>
         <file name="source.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/source.xml" />
         
+        <file name="races.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/races.xml" />
         <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         
