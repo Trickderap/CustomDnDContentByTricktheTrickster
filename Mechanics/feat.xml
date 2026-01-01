@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Feats &amp; Features</name>
-        <update version="0.0.1">
+        <update version="0.0.2">
             <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         </update>
     </info>
@@ -32,8 +32,52 @@
         <sheet>
             <description>+2 AC for 8 hours. Afterwards, AC bonus is lost. Each hour past 8, roll a d20; on a 1, trigger a Corruption effect.</description>
         </sheet>
+        <setters>
+            <set name="hidden">true</set>
+        </setters>
         <rules>
             <stat name="ac" value="2" />
+        </rules>
+    </element>
+
+    <element name="Card Shark" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_CARD_SHARK">
+        <requirements>
+            <requirement name="ID_INTERNAL_ABILITY_DEXTERITY" value="13" />
+        </requirements>
+        <description>
+            <p><em>"It's not gambling if you know you're going to win."</em></p>
+            <p>You have mastered the art of throwing cards with deadly precision. You gain the following benefits:</p>
+            <ul>
+                <li>Increase your Dexterity score by 1, to a maximum of 20.</li>
+                <li>You gain proficiency with playing cards. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.</li>
+                <li>You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 20/60). On a hit, they deal 1d6 slashing damage. <strong>If you are already proficient with playing cards as weapons, the damage die increases by one step (to 1d8).</strong></li>
+                <li>When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Cards are 1d6 weapons (20/60). If already proficient as weapons, damage die increases to 1d8. Bonus action: Throw extra card after attacking with one.</description>
+        </sheet>
+        <rules>
+            <stat name="dexterity" value="1" />
+            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_GAMING_SET_PLAYING_CARDS" />
+        </rules>
+    </element>
+
+    <element name="Cheat Death" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_CHEAT_DEATH">
+        <description>
+            <p><em>"The grave can wait. I have one last hand to play."</em></p>
+            <p>You have a standing arrangement with the powers that govern death—or perhaps you just know how to bluff the Reaper. You gain the following benefits:</p>
+            <ul>
+                <li>Increase your Constitution or Charisma score by 1, to a maximum of 20.</li>
+                <li>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.</li>
+                <li>You have advantage on death saving throws.</li>
+            </ul>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>When reduced to 0 HP, drop to 1 HP instead. Advantage on Death Saves.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Cheat Death ASI" supports="ID_INTERNAL_ABILITY_CONSTITUTION|ID_INTERNAL_ABILITY_CHARISMA" />
         </rules>
     </element>
 </elements>
