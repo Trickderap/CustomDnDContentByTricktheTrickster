@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Feats &amp; Features</name>
-        <update version="0.0.3">
+        <update version="0.0.4">
             <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         </update>
     </info>
@@ -79,7 +79,7 @@
             <description>When reduced to 0 HP, drop to 1 HP instead. Advantage on Death Saves.</description>
         </sheet>
         <rules>
-            <select type="Ability Score Improvement" name="Cheat Death ASI" supports="ID_INTERNAL_ABILITY_CONSTITUTION|ID_INTERNAL_ABILITY_CHARISMA" />
+            <select type="Ability Score Improvement" name="Cheat Death ASI" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_CHARISMA" />
         </rules>
     </element>
 </elements>
