@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.0.9">
+        <update version="0.1.0">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
@@ -24,6 +24,7 @@
             <requirement name="ID_INTERNAL_ABILITY_WISDOM" value="10" />
         </requirements>
         <rules>
+            <stat name="trick_brand_key" value="1" />
             <grant type="Feat" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT" />
         </rules>
     </element>

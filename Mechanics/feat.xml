@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Feats &amp; Features</name>
-        <update version="0.0.4">
+        <update version="0.0.5">
             <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         </update>
     </info>
@@ -35,7 +35,7 @@
             <description>+2 AC for 8 hours. Afterwards, AC bonus is lost. Each hour past 8, roll a d20; on a 1, trigger a Corruption effect.</description>
         </sheet>
         
-        <requirements>ID_INTERNAL_DO_NOT_SELECT_THIS_MANUALLY</requirements>
+        <requirements>[trick_brand_key:1]</requirements>
         <rules>
             <stat name="ac" value="2" />
         </rules>
