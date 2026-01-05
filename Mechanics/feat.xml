@@ -8,7 +8,7 @@
     </info>
 
     <element name="Brand of the Dead Man's Wager" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_DEAD_MANS_WAGER_EFFECT">
-        <supports> Feat </supports>
+        <supports>Feat</supports>
         <description>
             <p><em>"The ink never dries on a contract with the Proprietor. It just burns deeper."</em></p>
             <p>This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes.</p>
