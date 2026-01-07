@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Rogue: The Cardsharp</name>
-        <update version="0.0.8">
+        <update version="0.0.9">
             <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/rogue-cardsharp.xml" />
         </update>
     </info>
