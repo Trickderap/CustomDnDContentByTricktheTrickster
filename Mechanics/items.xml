@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.1.4">
+        <update version="0.1.4.1">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
@@ -86,10 +86,6 @@
             <set name="slot">onehand</set>
             <set name="bonus">1</set>
         </setters>
-    </element>
-
-    <element name="Proficiency (Deadly Playing Card)" type="Proficiency" source="Trick's Ledger of Many Tricks" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD">
-        <supports>Weapon</supports>
     </element>
 
     <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_WEAPON_DEADLY_PLAYING_CARD">
