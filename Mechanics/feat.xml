@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Feats &amp; Features</name>
-        <update version="0.0.5">
+        <update version="0.0.6">
             <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         </update>
     </info>
@@ -49,19 +49,17 @@
             <ul>
                 <li>Increase your Dexterity score by 1, to a maximum of 20.</li>
                 <li>You gain proficiency with playing cards. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.</li>
-                <li>You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 20/60). On a hit, they deal 1d6 slashing damage. <strong>If you are already proficient with playing cards as weapons, the damage die increases by one step (to 1d8).</strong></li>
+                <li>You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 30/60). On a hit, they deal 1d6 slashing damage. <strong>If you are already proficient with playing cards as weapons, the damage die increases by one step (to 1d8).</strong></li>
                 <li>Your ranged weapon attacks with playing cards ignore half cover and three-quarters cover.</li>
                 <li>When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.</li>
             </ul>
         </description>
         <sheet>
-            <description>Cards are 1d6 weapons (20/60). If already proficient, damage is 1d8. Attacks ignore 1/2 and 3/4 cover. Bonus action: Throw extra card.</description>
+            <description>Cards are 1d6 weapons (30/60). If already proficient, damage is 1d8. Attacks ignore 1/2 and 3/4 cover. Bonus action: Throw extra card.</description>
         </sheet>
         <rules>
             <stat name="dexterity" value="1" />
-            
             <select type="Proficiency" name="Card Shark (Gaming Set)" supports="Gaming Set" />
-
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD" />
         </rules>
     </element>

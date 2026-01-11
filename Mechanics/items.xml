@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.1.1">
+        <update version="0.1.2">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
@@ -92,20 +92,23 @@
         <supports>Weapon</supports>
     </element>
 
-    <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_TRICK_WEAPON_DEADLY_CARD">
-        <supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_THROWN</supports>
+    <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_WEAPON_DEADLY_PLAYING_CARD">
         <description>
-            <p><em>"Sharp as a razor, light as a feather, and deadly as sin."</em></p>
-            <p>A magically infused playing card that cuts like a razor.</p>
+            <p>Sharp as a razor, light as a feather, and deadly as sin. These cards are magically infused or razor-edged, designed to slice through air and armor alike.</p>
         </description>
         <setters>
             <set name="category">Weapons</set>
             <set name="cost" currency="gp">0</set>
-            <set name="weight" lb="0">0 lb.</set>
+            <set name="weight" lb="0">0</set>
             <set name="slot">onehand</set>
-            <set name="range">30/60</set>
             <set name="damage" type="slashing">1d6</set>
-            <set name="proficiency">ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD</set>
+            <set name="range">30/60</set> <set name="proficiency">ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD</set>
+        </setters>
+    </element>
+    
+    <element name="Proficiency: Deadly Playing Card" type="Proficiency" source="Trick's Ledger of Many Tricks" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD">
+        <setters>
+            <set name="proficiency group">Simple Weapons</set>
         </setters>
     </element>
 </elements>
