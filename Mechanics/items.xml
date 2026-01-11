@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Items &amp; Supernatural Gifts</name>
-        <update version="0.1.2">
+        <update version="0.1.3">
             <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
         </update>
     </info>
@@ -110,5 +110,24 @@
         <setters>
             <set name="proficiency group">Simple Weapons</set>
         </setters>
+    </element>
+
+    <element name="Unluck Eater" type="Magic Item" source="Trick's Ledger of Many Tricks" id="ID_TRICK_ITEM_UNLUCK_EATER">
+        <description>
+            <p>This tiny, spherical furball seems to vibrate with a comforting purr whenever things go wrong. It feels heavier than it looks.</p>
+            <h4>Mechanics</h4>
+            <p><strong>Glutton for Failure.</strong> When you or a creature within 30 feet of you fails an attack roll, ability check, or saving throw, you can use your reaction to feed the failure to the Unluck Eater. The roll is treated as a <strong>success</strong>.</p>
+            <p><strong>Digestive Track.</strong> Each time you use this ability, the Unluck Eater gains 1 <strong>Entropy Charge</strong>. It grows slightly heavier and warmer.</p>
+            <p class="indent"><em><strong>DM Note:</strong> Keep track of the Entropy Charges. The Eater's true master may call upon this debt later.</em></p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="slot">misc</set>
+            <set name="weight" lb="5">5 lb.</set>
+        </setters>
+        <sheet action="Reaction">
+            <description>Turn a failed roll (Self/30ft) into a Success. Add 1 Entropy Charge per use.</description>
+        </sheet>
     </element>
 </elements>

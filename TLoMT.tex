@@ -9,6 +9,8 @@
 \usepackage{ragged2e}
 \usepackage{fancyhdr} 
 \usepackage{tocloft}
+\usepackage{cuted}
+\usepackage{multicol}
 
 % --- D&D VISUAL STYLE SETTINGS ---
 
@@ -47,6 +49,44 @@
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
+
+% --- STAT BLOCK & SIDEBAR SETTINGS ---
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{breakable} % <--- 1. ENABLE BREAKING LIBRARY
+
+% Define the Colors
+\definecolor{StatBg}{HTML}{FDF1DC}
+\definecolor{StatFrame}{HTML}{E69A28}
+\definecolor{SidebarBg}{HTML}{E0E5C1}
+\definecolor{PhbRed}{HTML}{58180D}
+
+% Define the Monster Stat Block Box
+\newtcolorbox{monsterbox}[1]{
+    colback=StatBg,
+    colframe=StatFrame,
+    fonttitle=\bfseries\scshape\Large\color{PhbRed},
+    coltitle=PhbRed,
+    title=#1,
+    sharp corners,
+    boxrule=1.5pt,
+    enhanced,
+    /tcb/size=small
+}
+
+% Define the Green Sidebar Box
+\newtcolorbox{sidebarbox}[1]{
+    colback=SidebarBg,
+    colframe=SidebarBg,
+    fonttitle=\bfseries\scshape\large\color{black},
+    coltitle=black,
+    title=#1,
+    sharp corners,
+    boxrule=0pt,
+    enhanced,
+    /tcb/size=small
+}
+
+\newcommand{\statrule}{\vspace{2pt}\hrule height 1pt \color{PhbRed}\vspace{4pt}}
 
 % --- DOCUMENT CONTENT ---
 
@@ -165,7 +205,7 @@ At 10th level, your senses are heightened to detect cheats and frauds. You are i
 \subsection*{Foreclosure}
 \textit{``Your debt is due. Immediately.''}
 
-At 14th level, you can call in a debt with lethal force. As an action, you touch a creature. The target must make a Charisma saving throw against your warlock spell save DC. On a failed save, the target takes \textbf{10d10 force damage}. On a successful save, it takes half as much damage.
+At 14th level, you can call in a debt with lethal force. As an action, you touch a creature. The target must make a Charisma saving throw against your warlock spell save DC. On a failed save, the target takes \textbf{55 (10d10) force damage}. On a successful save, it takes half as much damage. On a successful save, it takes half as much damage.
 
 If this damage reduces the target to 0 hit points, you rip a fragment of their soul free, manifesting as a \textbf{Soul Coin}. You can consume this coin as a bonus action to regain one warlock spell slot.
 
@@ -304,7 +344,32 @@ You can choose one creature who failed the save to apply your Sneak Attack damag
 \chapter{Lineages}
 Some are born into the game; others are dragged into it. These lineages represent those whose very blood has been altered by luck, fate, or a deal gone wrong.
 
-\textit{(Content coming soon...)}
+\section{Chanceborn}
+\textit{``I didn't mean to do that. But I'm glad I did.''}
+
+You were born during a convergence of improbable events—a coin landing on its edge, a solar eclipse at midnight, or a dice roll that defied physics. The Trickster's influence runs in your veins, making you a living anomaly in the laws of probability.
+
+\subsection*{Born of Chaos}
+Chanceborn look mostly like their mortal parents, but they always bear the mark of the odds. This might manifest as \textbf{pupils shaped like the front projection of a twenty-sided die}, a shadow that moves slightly out of sync with their body, or the faint, rhythmic sound of tumbling dice whenever they walk. They are often restless, driven by an instinctive need to push their luck.
+
+\subsection*{Living Talismans}
+Society views Chanceborn with a mix of awe and superstition. In some cultures, they are considered living good luck charms, invited to weddings and business deals to bless the proceedings. In others, they are shunned as agents of chaos who bring instability wherever they go. A Chanceborn rarely stays in one place for long; they drift wherever the winds of fate—or the flip of a coin—take them.
+
+\subsection*{Chanceborn Names}
+Chanceborn are often given names related to luck, gambling, or sudden events.
+
+\textbf{Names:} Ace, Chance, Cipher, Dice, Echo, Fate, Felix, Hazard, Jinx, Kismet, Lucky, Merit, Omen, Penny, Rook, Seven, Venture.
+
+\subsection*{Chanceborn Traits}
+\begin{itemize}
+    \item \textbf{Ability Score Increase:} Your \textbf{Wisdom} score increases by 2, and one other ability score of your choice increases by 1.
+    \item \textbf{Creature Type:} You are a Humanoid.
+    \item \textbf{Size:} You are Medium or Small.
+    \item \textbf{Speed:} Your walking speed is 30 feet.
+    \item \textbf{Innate Luck:} When you roll a \textbf{Natural 1} on the d20 for an attack roll, an ability check, or a saving throw, you can reroll the die and must use the new roll.
+    \item \textbf{Serendipity:} You have proficiency in the \textbf{Insight} or \textbf{Perception} skill (your choice).
+    \item \textbf{Twist of Fate:} When you make an attack roll, an ability check, or a saving throw and dislike the result, you can give yourself \textbf{Advantage} on that roll. You can use this ability after you roll, but before the DM determines the outcome. Once you use this trait, you can't use it again until you finish a long rest.
+\end{itemize}
 
 % =========================================================
 % CHAPTER 3: FEATS
@@ -321,7 +386,7 @@ You have mastered the art of throwing cards with deadly precision. You gain the 
 \begin{itemize}
     \item Increase your Dexterity score by 1, to a maximum of 20.
     \item You gain proficiency with playing cards. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.
-    \item You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 20/60). On a hit, they deal \textbf{1d6 slashing damage}. If you are already proficient with playing cards as weapons (such as from the Cardsharp archetype), the damage die increases by one step (to \textbf{1d8}).
+    \item You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 30/60). On a hit, they deal \textbf{1d6 slashing damage}. If you are already proficient with playing cards as weapons (such as from the Cardsharp archetype), the damage die increases by one step (to \textbf{1d8}).
     \item When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.
 \end{itemize}
 
@@ -468,5 +533,152 @@ The following new weapon is available to characters who have proficiency with it
     \hline
 \end{tabularx}
 \end{table*}
+
+% =========================================================
+% CHAPTER 7: MONSTERS
+% =========================================================
+
+\chapter{Monsters}
+The darker corners of the Proprietor's ledger are not filled with gold, but with things that should not exist.
+
+\section*{Unluck Eater}
+\textit{"It looked at me with those big, watering eyes, and I swear I felt my sword hand twitch. It wasn't fear. It was the feeling of missing a parry that hadn't happened yet."}
+\\—Sergeant Darrow, shortly before the incident at the Gilded Rose.
+
+To the untrained eye, an Unluck Eater appears to be a mundane, albeit slightly uncanny, forest spirit or exotic pet—resembling a spherical, fluffy mammal with overly large ears and eyes that reflect a little too much light. It behaves with the affection of a house cat, purring loudly when its companions make mistakes.
+
+However, those who study the arcane know them as \textbf{Probability Parasites}. They do not originate from the natural world but leak into the Material Plane from the gaps between the Feywild and the Far Realm.
+
+\subsection*{The Nature of the Beast}
+\textbf{The Purr of Entropy.} The Unluck Eater does not verbalize like a normal beast. Its "purr" is actually a low-frequency vibration that sounds remarkably like the clicking of dice tumbling on a wooden table or the ticking of a clock that skips a second.
+
+\textbf{Static Affection.} Touching an Unluck Eater feels pleasant but wrong. Its fur is incredibly soft, yet petting it leaves a lingering static charge on your fingertips. Characters holding an Unluck Eater might find small objects slipping from their grasp or coins disappearing from their pockets, only to reappear in the creature's bedding.
+
+\textbf{The Shadow's Lag.} The most telltale sign of an Unluck Eater is its shadow. It does not move perfectly in sync with the creature. If the Eater jumps, the shadow might wait a fraction of a second before following, or land slightly before the creature does. This is because the Eater exists slightly outside the linear flow of cause and effect.
+
+\subsection*{Tactics \& Behavior}
+Unluck Eaters are drawn to individuals of "high destiny"—adventurers, gamblers, and royalty—whose actions cause significant ripples in the fabric of fate. It will bond with a party, acting the part of a loyal mascot.
+
+It instinctively uses its \textit{Glutton for Failure} ability to endear itself to the party, saving them from minor embarrassments or missed attacks. It wants them to succeed, because the higher they climb, the more delicious the eventual fall will be.
+
+When the Eater is "full" (holding many Entropy Charges), it becomes sluggish and heavy. Its eyes may dilate until they are entirely black, and the air around it smells faintly of ozone and copper (the smell of blood).
+
+% Force the Unluck Eater Stat Block to a clean column/page
+\clearpage 
+
+\begin{monsterbox}{Unluck Eater}
+\textit{Tiny aberration, chaotic neutral}
+\statrule
+\textbf{Armor Class} 14 (natural armor) \\
+\textbf{Hit Points} 21 (6d4 + 6) \\
+\textbf{Speed} 30 ft., climb 30 ft.
+\statrule
+\begin{tabularx}{\linewidth}{XXXXXX}
+\textbf{STR} & \textbf{DEX} & \textbf{CON} & \textbf{INT} & \textbf{WIS} & \textbf{CHA} \\
+6 (-2) & 16 (+3) & 12 (+1) & 10 (+0) & 14 (+2) & 18 (+4) \\
+\end{tabularx}
+\statrule
+\textbf{Skills} Stealth +5, Persuasion +6 \\
+\textbf{Senses} Darkvision 60 ft., passive Perception 12 \\
+\textbf{Languages} Understands Common and Deep Speech but can't speak \\
+\textbf{Challenge} 1/2 (100 XP)
+\statrule
+
+\textit{\textbf{Innocent Guise.}} While the Unluck Eater has not attacked or used its \textit{Entropy Burst}, any creature who targets it with an attack or a harmful spell must first make a \textbf{DC 14 Wisdom saving throw}. On a failed save, the creature must choose a new target or lose the attack or spell.
+
+\textit{\textbf{Entropy Storage.}} The Unluck Eater tracks the number of times it has used \textit{Glutton for Failure}. It has no maximum limit, but if it dies, it explodes. Each creature within 20 feet must make a DC 13 Dexterity saving throw, taking 1d6 force damage per stored charge on a failed save, or half as much on a successful one.
+
+\section*{Actions}
+\textit{\textbf{Nip.}} \textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 1 piercing damage plus 2 (1d4) force damage.
+
+\textit{\textbf{Entropy Burst (Recharge 6).}} The Unluck Eater unleashes a wave of bad luck. It expends up to 5 stored entropy charges. For each charge expended, one creature it can see within 30 feet must succeed on a \textbf{DC 14 Charisma saving throw} or take 2d8 psychic damage and have disadvantage on the next attack roll it makes.
+
+\section*{Reactions}
+\textit{\textbf{Glutton for Failure.}} When a creature within 30 feet of the Unluck Eater fails an attack roll, ability check, or saving throw, the Unluck Eater can turn that failure into a \textbf{success}. The Unluck Eater gains 1 entropy charge.
+\end{monsterbox}
+
+\vspace{0.5cm}
+
+\begin{sidebarbox}{Synergy: The Gilded Croupier}
+If the Unluck Eater is present during a fight with a Gilded Croupier, the Croupier can use its \textbf{Cash Out} legendary action to detonate the Eater, healing itself and damaging players based on the stored Entropy Charges.
+\end{sidebarbox}
+
+% --- THE GILDED CROUPIER SECTION ---
+\clearpage
+\onecolumn      % Switch to Full Width Canvas
+\raggedbottom   % Force content to the top
+
+\section*{The Gilded Croupier}
+
+% --- LORE SECTION (Unbalanced Columns: Fill Left then Right) ---
+\begin{multicols*}{2}
+\textit{"I demanded to speak to the manager. The thing that rolled out from behind the curtain didn't have a face, just a mask of polished mahogany. It told me my credit was declined. Then it stamped my brother, and... he just wasn't there anymore."}
+\\—Survivor of the Infinite Casino.
+
+The Proprietor does not demean himself by collecting every petty debt personally. For that, he constructs the Croupiers—imposing, nine-foot-tall constructs of dark mahogany, brass, and green velvet, powered by the rhythmic ticking of an internal probability engine.
+
+\textbf{The House's Enforcer.} A Gilded Croupier presides over the Proprietor’s domains, whether they are literal casinos in the Feywild or soul-vaults in the Shadowfell. They act as impartial judges, ensuring the "games" are played fairly—until it is time for the House to win. To fight a Croupier is to fight an equation that has already solved for your defeat.
+
+% SUBSECTION 1: Physical Description & Mechanics
+\subsection*{Constructed Perfection}
+\textbf{The Golden Ratio of Violence.} Croupiers are built with four arms to maximize efficiency. Two arms are delicate, tipped with brass fingers for shuffling decks or raking chips with blinding speed. The other two are heavy, piston-driven limbs designed for "customer service." They do not feel pain, pity, or greed.
+
+\textbf{The Ticker Heart.} Inside the chest of every Croupier is a specialized modron-core, ticking in perfect rhythm with the multiverse. A glass window in the center of their torso reveals a constantly scrolling spool of golden parchment—a ticker tape of every debt owed within a 100-mile radius. When a Croupier identifies a debtor, the tape stops, a bell chimes, and the construct initiates "collection protocols."
+
+\textbf{Clockwork Courtesy.} Despite their lethal nature, Croupiers are programmed with a veneer of high-class hospitality. They move with fluid, eerie grace. They speak in pre-recorded, multi-tonal voices, offering polite phrases like \textit{"Please keep your hands off the table"} or \textit{"Your time has expired"} while dismembering intruders.
+
+% SUBSECTION 2: Weapons & Hierarchy
+\subsection*{Tools of the Trade}
+\textbf{The Void Stamp.} The most feared tool in a Croupier's arsenal is not a weapon of war, but of bureaucracy. The Void Stamp is a heavy brass device wreathed in necrotic magic. When a Croupier deems a creature's debt "unpayable," it does not kill them—it cancels their contract with existence. The stamp leaves behind nothing but a lingering smell of ozone and a memory that is already beginning to fade.
+
+\textbf{Pit Boss Hierarchy.} Croupiers often command squads of lesser constructs, such as Animated Armor painted in livery or tiny Modron runners. In the Proprietor's casinos, the Croupier is the absolute authority; even powerful devils and demons respect the floor rules when a Croupier is watching, for they know that the House has means of collection that transcend immortality.
+\end{multicols*}
+
+% --- WIDE STAT BLOCK ---
+\begin{monsterbox}{The Gilded Croupier}
+\textit{Large construct, lawful neutral}
+\statrule
+\textbf{Armor Class} 17 (natural armor) \\
+\textbf{Hit Points} 114 (12d10 + 48) \\
+\textbf{Speed} 30 ft.
+\statrule
+\begin{tabularx}{\linewidth}{XXXXXX}
+\textbf{STR} & \textbf{DEX} & \textbf{CON} & \textbf{INT} & \textbf{WIS} & \textbf{CHA} \\
+18 (+4) & 14 (+2) & 18 (+4) & 12 (+1) & 14 (+2) & 1 (-5) \\
+\end{tabularx}
+\statrule
+\textbf{Saving Throws} Con +7, Wis +5 \\
+\textbf{Damage Immunities} poison, psychic \\
+\textbf{Condition Immunities} charmed, exhaustion, frightened, paralyzed, petrified, poisoned \\
+\textbf{Senses} darkvision 60 ft., passive Perception 12 \\
+\textbf{Languages} understands Common and Infernal but speaks only in pre-recorded phrases \\
+\textbf{Challenge} 7 (2,900 XP)
+\statrule
+
+\textit{\textbf{Immutable Form.}} The Croupier is immune to any spell or effect that would alter its form.
+
+\textit{\textbf{Magic Resistance.}} The Croupier has advantage on saving throws against spells and other magical effects.
+
+\textit{\textbf{Calculated Risk.}} The Croupier scores a critical hit on a roll of 19 or 20.
+
+\section*{Actions}
+\textit{\textbf{Multiattack.}} The Croupier makes three attacks: two with its Rake and one with its Razor Card.
+
+\textit{\textbf{The House Rake.}} \textit{Melee Weapon Attack:} +7 to hit, reach 10 ft., one target. \textit{Hit:} 13 (2d8 + 4) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be pulled up to 10 feet toward the Croupier and knocked prone.
+
+\textit{\textbf{Razor Card.}} \textit{Ranged Weapon Attack:} +7 to hit, range 30/60 ft., one target. \textit{Hit:} 9 (1d6 + 4) slashing damage plus 7 (2d6) force damage.
+
+\textit{\textbf{Void Stamp (Recharge 5–6).}} The Croupier attempts to cancel a creature's existence. It slams its stamp onto a prone creature within 5 feet. The target must make a \textbf{DC 15 Constitution saving throw}. On a failure, the target takes 33 (6d10) necrotic damage and is stunned until the end of its next turn. On a success, it takes half damage and isn't stunned.
+
+\section*{Legendary Actions}
+The Croupier can take 3 legendary actions, choosing from the options below.
+
+\textbf{Deal.} The Croupier makes one Razor Card attack. \\
+\textbf{Shuffle (Costs 2 Actions).} The Croupier moves up to its speed without provoking opportunity attacks. \\
+\textbf{Cash Out (Costs 3 Actions).} The Croupier targets an Unluck Eater it can see within 60 feet. The Eater is destroyed. All creatures within 20 feet of the Eater must make a DC 15 Dexterity saving throw, taking 1d8 force damage for every \textit{Entropy Charge} the Eater had stored (half on success). The Croupier heals for the same amount.
+\end{monsterbox}
+
+% --- RESET FOR REST OF BOOK ---
+\twocolumn
 
 \end{document}
