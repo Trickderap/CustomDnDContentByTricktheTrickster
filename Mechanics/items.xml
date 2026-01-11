@@ -88,6 +88,10 @@
         </setters>
     </element>
 
+    <element name="Proficiency: Deadly Playing Card" type="Proficiency" source="Trick's Ledger of Many Tricks" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD">
+        <supports>Weapon, Simple Weapons</supports>
+    </element>
+
     <element name="Deadly Playing Card" type="Weapon" source="Trick's Ledger of Many Tricks" id="ID_WEAPON_DEADLY_PLAYING_CARD">
         <supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_THROWN, ID_INTERNAL_WEAPON_PROPERTY_LIGHT</supports>
         <description>
