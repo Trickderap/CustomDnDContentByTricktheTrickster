@@ -3,7 +3,7 @@
     <info>
         <name>Trick's Ledger of Many Tricks</name>
         <author>Trick the Trickster</author>
-        <update version="0.0.8">
+        <update version="0.0.9">
             <file name="tricks-ledger-of-many-tricks.index" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index" />
         </update>
     </info>
@@ -13,9 +13,6 @@
         <file name="races.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/races.xml" />
         <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         <file name="items.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/items.xml" />
-        
-        <file name="warlock-proprietor.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/warlock-proprietor.xml" />
-        <file name="cleric-chance.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/cleric-chance.xml" />
-        <file name="rogue-cardsharp.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/rogue-cardsharp.xml" />
+        <file name="subclasses.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Subclasses/subclasses.xml" />
     </files>
 </index>
