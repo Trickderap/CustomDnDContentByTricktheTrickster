@@ -3,7 +3,7 @@
     <info>
         <name>Subclasses: Collected</name>
         <update version="0.0.1">
-            <file name="subclass.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/subclass.xml" />
+            <file name="subclasses.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/subclasses.xml" />
         </update>
     </info>
 
