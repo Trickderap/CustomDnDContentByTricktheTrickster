@@ -1,26 +1,60 @@
-# Trick's Ledger of Many Tricks
-*A Compendium of Debts, Wagers, and Wildcards*
+# Trick's Ledger of Many Tricks (TLoMT) 🎲
 
-**Trick's Ledger of Many Tricks** is a homebrew supplement for D&D 5e, compatible with Aurora Builder. It introduces high-stakes archetypes, cursed marks, and forbidden probability magic.
+> *"Certainty is a cage. Faith is the courage to roll the dice when you can't see the numbers."*
 
-## 📦 Content
-* **Warlock: The Proprietor** - Enforce the House Rules and collect debts.
-* **Cleric: Chance Domain** - Worship the Golden Roll and manipulate fate.
-* **Rogue: The Cardsharp** - Turn playing cards into deadly magical weapons.
-* **Magic Items** - Including the *Coin of the Double-Cross* and *Deck of Empty Fates*.
-* **Supernatural Gifts** - The cursed *Brand of the Dead Man's Wager*.
-* **Feats** - Become a *Card Shark* or learn to *Cheat Death*.
+Welcome to **Trick's Ledger of Many Tricks**! This repository contains a collection of high-stakes, gambling-themed, and cosmic-debt-driven homebrew content for Dungeons & Dragons 5th Edition, built specifically for the **Aurora Character Builder**. 
 
-## 🚀 How to Install in Aurora Builder
-1.  Open **Aurora Builder**.
-2.  Go to the **Additional Content** tab.
-3.  Click **Update** (or **Add Index**).
-4.  Paste the following URL into the box:
-
-    [https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index](https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index)
-
-## 📜 PDF Documentation
-You can find the full PDF sourcebook generated from this content in the repository (if you upload your compiled PDF).
+Whether you want to cheat death, enforce cosmic contracts, or turn a deck of playing cards into a deadly weapon, the House always has a seat open for you.
 
 ---
-*Created by Trick the Trickster*
+
+## 📦 What's Inside?
+
+### 🧬 Lineages
+* **Chanceborn:** Born from a convergence of improbable events, these "living talismans" manipulate probability and treat natural 1s as mere suggestions.
+
+### 🛡️ Subclasses
+* **Cleric: Chance Domain** - Reject destiny and embrace the chaos of the moment with exploding dice and probability manipulation.
+* **Paladin: Oath of the Ledger** - The cosmic debt collectors. You are the enforcer who ensures everyone pays up, tracking down oathbreakers and tax evaders of the soul.
+* **Paladin: Oath of the Debtor** - Sworn by the desperate. You are living collateral, utilizing your cursed debt and temporary health to survive another day.
+* **Rogue: The Cardsharp** - Blend arcane infusion with sleight of hand. Treat playing cards as lethal weapons and unleash a 52-card pickup of doom.
+* **Warlock: The Proprietor** - Sign a contract of employment with the ultimate cosmic casino boss. Manipulate the "House Edge" and foreclose on your enemies' souls.
+
+### 🪄 Feats & Items
+* **Brand of the Dead Man's Wager:** A supernatural gift/curse that grants immense defensive power before shifting into a grueling "Burden Phase."
+* **Deadly Playing Cards:** Finesse/Thrown weapons for the discerning Cardsharp.
+* **Unluck Eater:** A wondrous furball that eats your failed rolls and turns them into successes (for a hidden price).
+* **Cheat Death & Card Shark:** Specialized feats for those living on the edge.
+
+---
+
+## ⚙️ How to Install in Aurora Builder
+
+To use this content in your Aurora Character Builder, you don't need to download the files manually. Just use the index URL!
+
+1. Open **Aurora Builder**.
+2. Go to the **Additional Content** section (usually found in the settings or startup screen).
+3. Click on **Add Custom Content** or **Update Index**.
+4. Paste the following URL into the input box:
+
+   `https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/tricks-ledger-of-many-tricks.index`
+
+5. Hit **Enter** or **Download**. Aurora will automatically fetch all the subclasses, races, and items directly from this repository!
+
+---
+
+## 📜 Repository Structure
+
+For those looking to fork or study the XML architecture, the files are organized as follows:
+* `source.xml` - Registers TLoMT as an official source in the builder.
+* `tricks-ledger-of-many-tricks.index` - The master manifest file that tells Aurora what to download.
+* `Mechanics/` - Contains `feat.xml`, `items.xml`, `races.xml`, and the consolidated `subclasses.xml` file.
+* `TLoMT.tex` - A LaTeX source file for generating a beautifully formatted, official-looking PDF document of all the rules.
+
+---
+
+## 🤝 Credits & Feedback
+Created by **Trick the Trickster**. 
+If you find any bugs, broken XML tags, or have balancing suggestions, feel free to open an **Issue** or submit a **Pull Request**!
+
+*The House always wins... but maybe you can break even.*
