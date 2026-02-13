@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Feats &amp; Features</name>
-        <update version="0.0.6">
+        <update version="0.0.7">
             <file name="feat.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/feat.xml" />
         </update>
     </info>
@@ -11,30 +11,18 @@
         <supports>Feat</supports>
         <description>
             <p><em>"The ink never dries on a contract with the Proprietor. It just burns deeper."</em></p>
-            <p>This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes.</p>
+            <p>This brand appears on your skin as a searing mark of your debt to the Trickster.</p>
             <h4>The Metabolic Clock</h4>
             <ul>
                 <li><strong>Active Phase (Hours 1-8):</strong> You gain <strong>+2 AC</strong>. The sun glows, but one ray extinguishes every hour.</li>
                 <li><strong>Burden Phase (Hours 9-20):</strong> The sun is dark. You lose the AC bonus. You cannot Long Rest until the 20th hour passes.</li>
             </ul>
             <h4>Rolling the Bones</h4>
-            <p>During the Burden Phase, roll a <strong>d20</strong> every hour. <strong>On a 1</strong>, the Dealer collects interest. Roll a d8 on the Corruption Table:</p>
-            <table>
-                <thead><tr><td>d8</td><td>Effect</td></tr></thead>
-                <tr><td>1</td><td><strong>Singed Nerves:</strong> 1d4 fire damage (unmitigated).</td></tr>
-                <tr><td>2</td><td><strong>Phantom Weight:</strong> Speed reduced by 10 ft for 1 hour.</td></tr>
-                <tr><td>3</td><td><strong>Creaking Joints:</strong> Disadvantage on Stealth checks for 1 hour.</td></tr>
-                <tr><td>4</td><td><strong>Spectral Whispers:</strong> Disadvantage on Perception checks for 1 hour.</td></tr>
-                <tr><td>5</td><td><strong>Lead Arm:</strong> Disadvantage on Strength Checks/Saves for 1 hour.</td></tr>
-                <tr><td>6</td><td><strong>Metabolic Tax:</strong> Max HP reduced by <strong>1d6 + Level</strong> until Long Rest.</td></tr>
-                <tr><td>7</td><td><strong>Feverish Haze:</strong> Disadvantage on Int/Cha Checks for 1 hour.</td></tr>
-                <tr><td>8</td><td><strong>Grace Period:</strong> Cooldown ends immediately. You may Long Rest.</td></tr>
-            </table>
+            <p>During the Burden Phase, roll a <strong>d20</strong> every hour. <strong>On a 1</strong>, the Dealer collects interest. Roll a d8 on the Corruption Table.</p>
         </description>
         <sheet>
             <description>+2 AC for 8 hours. Afterwards, AC bonus is lost. Each hour past 8, roll a d20; on a 1, trigger a Corruption effect.</description>
         </sheet>
-        
         <requirements>[trick_brand_key:1]</requirements>
         <rules>
             <stat name="ac" value="2" />
@@ -45,17 +33,16 @@
         <requirements>[dex:13]</requirements>
         <description>
             <p><em>"It's not gambling if you know you're going to win."</em></p>
-            <p>You have mastered the art of throwing cards with deadly precision. You gain the following benefits:</p>
+            <p>You have mastered the art of throwing cards with deadly precision.</p>
             <ul>
                 <li>Increase your Dexterity score by 1, to a maximum of 20.</li>
-                <li>You gain proficiency with playing cards. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.</li>
-                <li>You can treat ordinary playing cards as simple ranged weapons with the finesse and thrown properties (range 30/60). On a hit, they deal 1d6 slashing damage. <strong>If you are already proficient with playing cards as weapons, the damage die increases by one step (to 1d8).</strong></li>
-                <li>Your ranged weapon attacks with playing cards ignore half cover and three-quarters cover.</li>
-                <li>When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.</li>
+                <li>You gain proficiency with playing cards. If you are already proficient, add double proficiency.</li>
+                <li>Treat playing cards as simple ranged weapons (finesse, thrown 30/60). Hit: 1d6 slashing. <strong>If already proficient as weapons, 1d8.</strong></li>
+                <li>Bonus action: Throw an extra card when you attack with one.</li>
             </ul>
         </description>
         <sheet>
-            <description>Cards are 1d6 weapons (30/60). If already proficient, damage is 1d8. Attacks ignore 1/2 and 3/4 cover. Bonus action: Throw extra card.</description>
+            <description>Cards are 1d6 weapons (30/60). If already proficient, 1d8. Bonus action: Throw extra card.</description>
         </sheet>
         <rules>
             <stat name="dexterity" value="1" />
@@ -67,7 +54,6 @@
     <element name="Cheat Death" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_CHEAT_DEATH">
         <description>
             <p><em>"The grave can wait. I have one last hand to play."</em></p>
-            <p>You have a standing arrangement with the powers that govern death—or perhaps you just know how to bluff the Reaper. You gain the following benefits:</p>
             <ul>
                 <li>Increase your Constitution or Charisma score by 1, to a maximum of 20.</li>
                 <li>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.</li>
@@ -79,6 +65,67 @@
         </sheet>
         <rules>
             <select type="Ability Score Improvement" name="Cheat Death ASI" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+
+    <element name="Ace in the Hole" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_ACE_IN_THE_HOLE">
+        <requirements>[dex:13]||[cha:13]</requirements>
+        <description>
+            <p><em>"A 20 is a crit. A 1 is a miss. But an Ace in the Hole? That's whatever I say it is."</em></p>
+            <p>You have learned to keep a card up your sleeve.</p>
+            <ul>
+                <li>Increase your Dexterity or Charisma score by 1, to a maximum of 20.</li>
+                <li><strong>Pocket Destiny:</strong> When you finish a long rest, roll a d20 and record it. This is your Hole Card.</li>
+                <li><strong>Play the Ace:</strong> Replace an attack, check, or save with your Hole Card (declare before rolling).</li>
+                <li><strong>The Bluff:</strong> Reaction to replace an incoming attack roll against you with your Hole Card.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Long Rest: Roll d20 (Hole Card). Use to replace your own roll or Reaction to replace enemy attack roll against you.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Ace in the Hole ASI" supports="ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+
+    <element name="Double or Nothing" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_DOUBLE_OR_NOTHING">
+        <requirements>[con:13]</requirements>
+        <description>
+            <p><em>"I don't like those numbers. Change them."</em></p>
+            <p>You refuse to accept a poor performance from fate.</p>
+            <ul>
+                <li>Increase your Constitution or Charisma score by 1, to a maximum of 20.</li>
+                <li><strong>The Ante:</strong> When you roll damage, you can reroll <strong>any number</strong> of dice. You take 1 necrotic damage per die rerolled (unpreventable).</li>
+                <li><strong>The Result:</strong> You must use the new rolls.</li>
+                <li><strong>Jackpot:</strong> If a rerolled die shows its max value, gain Temp HP equal to total max-value dice + Con Mod.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Reroll damage dice at cost of 1 necrotic/die. If die rolls max, gain Temp HP (Total Max Dice + {{constitution:modifier}}).</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Double or Nothing ASI" supports="ID_PHB_FEAT_ASI_CONSTITUTION|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+
+    <element name="Against the Odds" type="Feat" source="Trick's Ledger of Many Tricks" id="ID_TRICK_FEAT_AGAINST_THE_ODDS">
+        <requirements>[con:13]</requirements>
+        <description>
+            <p><em>"Never tell me the odds."</em></p>
+            <p>When death comes knocking, you propose a coin toss.</p>
+            <ul>
+                <li>Increase your Constitution score by 1, to a maximum of 20.</li>
+                <li><strong>The Gamble:</strong> Reaction when taking damage to make a <strong>DC 13 Flat Check</strong> (d20 only).</li>
+                <li><strong>Success (13+):</strong> Reduce damage by <strong>2d12 + Con Mod</strong>.</li>
+                <li><strong>Failure (1-12):</strong> Damage is not reduced, reaction lost.</li>
+                <li><strong>Cooldown:</strong> Proficiency Bonus per Long Rest.</li>
+            </ul>
+        </description>
+        <sheet usage="{{proficiency}}/Long Rest" action="Reaction">
+            <description>Take damage: Make DC 13 Flat Check. Success: Reduce damage by 2d12 + {{constitution:modifier}}. Failure: No reduction.</description>
+        </sheet>
+        <rules>
+            <stat name="constitution" value="1" />
         </rules>
     </element>
 </elements>

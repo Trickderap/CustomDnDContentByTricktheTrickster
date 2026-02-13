@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Spells</name>
+        <update version="0.0.1">
+            <file name="spells.xml" url="" />
+        </update>
+    </info>
+    
+    <element name="Coin Toss" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_COIN_TOSS">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You flick a coin into the air, transforming it into a spinning bolt of force. Make a ranged spell attack. On a hit, the target takes <strong>1d8 force damage</strong>.</p>
+            <p>Immediately after, flip a coin (d2):</p>
+            <ul>
+                <li><strong>Heads:</strong> Target is knocked <strong>prone</strong>.</li>
+                <li><strong>Tails:</strong> Target is pushed <strong>5 feet</strong> away.</li>
+            </ul>
+            <p>Damage increases by 1d8 at 5th, 11th, and 17th level.</p>
+        </description>
+        <setters>
+            <set name="keywords">somatic, material</set>
+            <set name="level">0</set>
+            <set name="school">Evocation</set>
+            <set name="time">1 action</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">60 feet</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a coin</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Borrowed Luck" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_BORROWED_LUCK">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You tug on the threads of fate. You gain <strong>advantage</strong> on the triggering roll.</p>
+            <p><strong>The Debt:</strong> At the start of your next turn, you have <strong>disadvantage</strong> on the first attack, check, or save you make. If you don't roll, you take <strong>1d6 psychic damage</strong>.</p>
+        </description>
+        <setters>
+            <set name="keywords">verbal</set>
+            <set name="level">1</set>
+            <set name="school">Divination</set>
+            <set name="time">1 reaction</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">Self</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Fold" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_FOLD">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You instantly turn into a flat playing card to dodge harm. Reduce the triggering damage by <strong>2d10 + your spellcasting ability modifier</strong> and teleport up to 15 feet to an unoccupied space.</p>
+        </description>
+        <setters>
+            <set name="keywords">somatic</set>
+            <set name="level">2</set>
+            <set name="school">Abjuration</set>
+            <set name="time">1 reaction</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">Self</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Snake Eyes" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_SNAKE_EYES">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>The target must succeed on a Wisdom save or be cursed. While cursed, whenever they make an attack or save, they subtract a <strong>d4</strong> from the roll.</p>
+            <p>If they roll a <strong>1 on the d20</strong>, they take <strong>3d6 necrotic damage</strong> and are <strong>stunned</strong> until the end of their next turn.</p>
+        </description>
+        <setters>
+            <set name="keywords">verbal, somatic, material</set>
+            <set name="level">2</set>
+            <set name="school">Necromancy</set>
+            <set name="time">1 action</set>
+            <set name="duration">Concentration, up to 1 minute</set>
+            <set name="range">30 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a pair of dice</set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Dead Man's Volley" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_DEAD_MANS_VOLLEY">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You throw a deck of cards that multiplies into a storm. Each creature in a 30-foot cone must make a Dexterity save. On failure, they take <strong>6d6 slashing damage</strong> (half on success).</p>
+            <p><strong>The River (d6):</strong></p>
+            <ul>
+                <li><strong>1-2 (Hearts):</strong> +2d6 fire damage.</li>
+                <li><strong>3-4 (Spades):</strong> Targets are slowed (as per <em>slow</em> spell).</li>
+                <li><strong>5-6 (Diamonds):</strong> Targets are blinded.</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="keywords">verbal, somatic, material</set>
+            <set name="level">3</set>
+            <set name="school">Evocation</set>
+            <set name="time">1 action</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">Self (30-foot cone)</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a deck of cards</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="All In" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_ALL_IN">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You take <strong>4d10 necrotic damage</strong> (cannot be reduced). The next time you deal damage this turn, add force damage equal to <strong>double</strong> the necrotic damage taken.</p>
+            <p><strong>The Payout:</strong> If this reduces a creature to 0 HP, you regain HP equal to the necrotic damage taken.</p>
+        </description>
+        <setters>
+            <set name="keywords">verbal, somatic, material</set>
+            <set name="level">4</set>
+            <set name="school">Transmutation</set>
+            <set name="time">1 bonus action</set>
+            <set name="duration">1 round</set>
+            <set name="range">Self</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a drop of your own blood</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Liquidation" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_LIQUIDATION">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>Make a melee spell attack. Hit: <strong>5d10 force damage</strong>.</p>
+            <p>If target is reduced to 50 HP or fewer, they make a Charisma save. On failure, they turn into gold coins (dead). On success (or if &gt;50 HP), they take an extra <strong>5d10 necrotic damage</strong>.</p>
+        </description>
+        <setters>
+            <set name="keywords">verbal, somatic, material</set>
+            <set name="level">5</set>
+            <set name="school">Transmutation</set>
+            <set name="time">1 action</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">Touch</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a contract torn in half</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Jackpot" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_JACKPOT">
+        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>Summon molten gold coins in a 20-foot radius cylinder. Dexterity save: <strong>6d8 bludgeoning + 4d8 fire</strong> and prone on failure (half on success).</p>
+            <p>Area is difficult terrain. Creatures ending their turn there must succeed on a Strength save or be <strong>restrained</strong>.</p>
+        </description>
+        <setters>
+            <set name="keywords">verbal, somatic, material</set>
+            <set name="level">6</set>
+            <set name="school">Conjuration</set>
+            <set name="time">1 action</set>
+            <set name="duration">Concentration, up to 1 minute</set>
+            <set name="range">60 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a gold coin, which is consumed</set>
+            <set name="isConcentration">true</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+</elements>
