@@ -11,8 +11,11 @@
 \usepackage{tocloft}
 \usepackage{cuted}
 \usepackage{multicol}
+\usepackage{booktabs}
 
-% --- D&D VISUAL STYLE SETTINGS ---
+% =========================================================
+% D&D VISUAL STYLE SETTINGS
+% =========================================================
 
 % Margins
 \geometry{top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm}
@@ -37,6 +40,10 @@
   {\normalfont\large\bfseries\color{PhbRed}}
   {}{0em}{}
 
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{black}}
+  {}{0em}{}
+
 % Table Styling
 \renewcommand{\arraystretch}{1.3}
 
@@ -50,9 +57,11 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
-% --- STAT BLOCK & SIDEBAR SETTINGS ---
+% =========================================================
+% STAT BLOCK & SIDEBAR SETTINGS
+% =========================================================
 \usepackage[most]{tcolorbox}
-\tcbuselibrary{breakable} % <--- 1. ENABLE BREAKING LIBRARY
+\tcbuselibrary{breakable} % Enable breaking library
 
 % Define the Colors
 \definecolor{StatBg}{HTML}{FDF1DC}
@@ -66,7 +75,7 @@
     colframe=StatFrame,
     fonttitle=\bfseries\scshape\Large\color{PhbRed},
     coltitle=PhbRed,
-    title=#1,
+    title={#1},
     sharp corners,
     boxrule=1.5pt,
     enhanced,
@@ -88,7 +97,9 @@
 
 \newcommand{\statrule}{\vspace{2pt}\hrule height 1pt \color{PhbRed}\vspace{4pt}}
 
-% --- DOCUMENT CONTENT ---
+% =========================================================
+% DOCUMENT CONTENT
+% =========================================================
 
 \begin{document}
 
@@ -157,16 +168,14 @@ This supplement provides new \textbf{Subclasses}, \textbf{Lineages}, \textbf{Fea
 \chapter{Subclasses}
 The multiverse is a place of infinite possibility, where luck and skill often blur into one. These archetypes represent those who have mastered the art of the gamble.
 
-% =======================================================
-% PALADIN SECTION 
-% =======================================================
+% ---------------------------------------------------------
+% PALADIN SACRED OATHS
+% ---------------------------------------------------------
 
 \section{Paladin Sacred Oaths}
 At 3rd level, a paladin gains the Sacred Oath feature. The following options are available to paladins in addition to those in the \textit{Player's Handbook}: the Oath of the Ledger and the Oath of the Debtor.
 
-% -------------------------------------------------------
-% OATH OF THE LEDGER
-% -------------------------------------------------------
+% --- Oath of the Ledger ---
 \subsection{Oath of the Ledger}
 \textit{"The House always wins. My hammer is just the receipt."}
 
@@ -186,13 +195,17 @@ The tenets of the Oath of the Ledger are written in invisible ink that burns whe
 You gain oath spells at the paladin levels listed.
 
 \begin{center}
+\renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\linewidth}{l X}
+\toprule
 \textbf{Paladin Level} & \textbf{Spells} \\
+\midrule
 3rd & \textit{hellish rebuke, hunter's mark} \\
 5th & \textit{hold person, zone of truth} \\
 9th & \textit{bestow curse, slow} \\
 13th & \textit{locate creature, staggering smite} \\
 17th & \textit{dominate person, geas} \\
+\bottomrule
 \end{tabularx}
 \end{center}
 
@@ -222,9 +235,7 @@ Once you use this feature, you can't use it again until you finish a long rest.
 
 \vspace{0.5cm}
 
-% -------------------------------------------------------
-% OATH OF THE DEBTOR
-% -------------------------------------------------------
+% --- Oath of the Debtor ---
 \subsection{Oath of the Debtor}
 \textit{"I don't fight for glory. I fight because if I stop, the bill comes due."}
 
@@ -244,13 +255,17 @@ A Debtor's vows are less a code of honor and more a repayment plan.
 You gain oath spells at the paladin levels listed.
 
 \begin{center}
+\renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\linewidth}{l X}
+\toprule
 \textbf{Paladin Level} & \textbf{Spells} \\
+\midrule
 3rd & \textit{false life, hex} \\
 5th & \textit{blur, darkness} \\
 9th & \textit{life transference, vampiric touch} \\
 13th & \textit{death ward, shadow of moil} \\
 17th & \textit{enervation, reincarnate} \\
+\bottomrule
 \end{tabularx}
 \end{center}
 
@@ -281,58 +296,58 @@ At 20th level, you can declare spiritual bankruptcy to reset the board. As an ac
 Once you use this feature, you can't use it again until you finish a long rest.
 
 % ---------------------------------------------------------
-% WARLOCK
+% WARLOCK: THE PROPRIETOR
 % ---------------------------------------------------------
 \section{Warlock: The Proprietor}
 \textit{``The House does not gamble. The House invests. And you, my dear, are a very high-risk asset.''}
 
 You have signed a contract of employment with the Proprietor. Your job is to enforce the House Rules, collect debts, and ensure that the odds always favor your patron.
 
-\subsection*{Expanded Spell List}
+\subsection{Expanded Spell List}
 The Proprietor lets you choose from an expanded list of spells when you learn a warlock spell. Most involve control, surveillance, or enforcement of terms.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\linewidth}{c X}
-    \hline
+    \toprule
     \textbf{Spell Level} & \textbf{Spells} \\
-    \hline
+    \midrule
     1st & \textit{command, identify} \\
     2nd & \textit{detect thoughts, zone of truth} \\
     3rd & \textit{clairvoyance, glyph of warding} \\
     4th & \textit{locate creature, private sanctum} \\
     5th & \textit{dominate person, geas} \\
-    \hline
+    \bottomrule
 \end{tabularx}
 \end{center}
 
-\subsection*{The House Edge}
+\subsection{The House Edge}
 \textit{``The odds are never in your favor.''}
 
 Starting at 1st level, you learn to manipulate probability in your favor. When a creature within 60 feet of you makes an attack roll, ability check, or saving throw with advantage, you can use your reaction to cancel the advantage. If you do so, you gain a \textbf{House Chip} (a d6). Within the next minute, you can roll this chip and add the number rolled to one attack roll, ability check, or saving throw you make.
 
 You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
 
-\subsection*{VIP Substitution}
+\subsection{VIP Substitution}
 \textit{``My best employees get... special protections.''}
 
 At 6th level, your patron ensures their assets are protected. When you are hit by an attack, you can use your reaction to swap places with a willing creature within 30 feet of you. If you have cast \textit{hex} on a creature within 30 feet, you can swap places with them (unwillingly) instead. The creature you swapped with takes the hit.
 
 Once you use this feature, you can't use it again until you finish a short or long rest.
 
-\subsection*{Eye in the Sky}
+\subsection{Eye in the Sky}
 \textit{``I see everything. Even the cards you haven't drawn yet.''}
 
 At 10th level, your senses are heightened to detect cheats and frauds. You are immune to being charmed. You gain proficiency in the Insight skill. If you are already proficient, you gain expertise. Additionally, you gain \textbf{truesight} out to a range of 15 feet.
 
-\subsection*{Foreclosure}
+\subsection{Foreclosure}
 \textit{``Your debt is due. Immediately.''}
 
 At 14th level, you can call in a debt with lethal force. As an action, you touch a creature. The target must make a Charisma saving throw against your warlock spell save DC. On a failed save, the target takes \textbf{55 (10d10) force damage}. On a successful save, it takes half as much damage. On a successful save, it takes half as much damage.
 
 If this damage reduces the target to 0 hit points, you rip a fragment of their soul free, manifesting as a \textbf{Soul Coin}. You can consume this coin as a bonus action to regain one warlock spell slot.
 
-\subsection*{The House Always Wins}
+\subsection{The House Always Wins}
 \textit{``Did you really think you could beat the Dealer?''}
 
 At 20th level, you can channel the ultimate authority of the Proprietor. As an action, you can transform for 1 minute. While transformed:
@@ -347,45 +362,45 @@ Once you use this feature, you can't use it again until you finish a long rest.
 \clearpage
 
 % ---------------------------------------------------------
-% CLERIC
+% CLERIC: CHANCE DOMAIN
 % ---------------------------------------------------------
 \section{Cleric: Chance Domain}
 \textit{``Certainty is a cage. Faith is the courage to roll the dice when you can't see the numbers.''}
 
 Clerics of Chance believe that the only truth in the universe is the Golden Roll. They reject destiny and embrace the chaos of the moment.
 
-\subsection*{Domain Spells}
+\subsection{Domain Spells}
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\linewidth}{c X}
-    \hline
+    \toprule
     \textbf{Cleric Level} & \textbf{Spells} \\
-    \hline
+    \midrule
     1st & \textit{chaos bolt, bane} \\
     3rd & \textit{mirror image, nystul's magic aura} \\
     5th & \textit{blink, bestow curse} \\
     7th & \textit{confusion, death ward} \\
     9th & \textit{mislead, skill empowerment} \\
-    \hline
+    \bottomrule
 \end{tabularx}
 \end{center}
 
-\subsection*{Gambler's Instinct}
+\subsection{Gambler's Instinct}
 \textit{``I like those odds.''}
 
 At 1st level, you gain proficiency with gaming sets and the Deception skill. You learn the \textit{guidance} cantrip if you don't already know it. When you cast \textit{guidance}, the target rolls \textbf{2d4} and chooses the highest number to add to the check.
 
-\subsection*{Cascading Fortune}
+\subsection{Cascading Fortune}
 \textit{``Fortune favors the bold, and hits them twice.''}
 
 Also at 1st level, whenever you roll a die for damage or healing for a spell of 1st level or higher, if you roll the maximum possible number on the die, you can roll that die again and add the new result to the total. This can happen multiple times if you continue to roll the maximum.
 
-\subsection*{Channel Divinity: Twist of Fate}
+\subsection{Channel Divinity: Twist of Fate}
 \textit{``Let's try that again, shall we?''}
 
 At 2nd level, you can use your Channel Divinity to alter a pivotal moment. As a reaction when a creature within 30 feet of you makes an attack roll, ability check, or saving throw, you can force the creature to reroll the d20. You make this choice after seeing the roll but before the DM says whether the roll succeeds or fails.
 
-\subsection*{50/50 Shot}
+\subsection{50/50 Shot}
 \textit{``Heads I live, tails... well, let's hope for heads.''}
 
 At 6th level, you can gamble with your own safety. When you take damage, you can use your reaction to roll a \textbf{d6}.
@@ -395,12 +410,12 @@ At 6th level, you can gamble with your own safety. When you take damage, you can
 \end{itemize}
 You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain expended uses when you finish a long rest.
 
-\subsection*{Potent Spellcasting}
+\subsection{Potent Spellcasting}
 \textit{``The House always gets its cut... and so do I.''}
 
 Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.
 
-\subsection*{The Perfect Run}
+\subsection{The Perfect Run}
 \textit{``The Golden Roll. It happens once in a lifetime.''}
 
 At 17th level, you master the flow of chance.
@@ -413,19 +428,19 @@ At 17th level, you master the flow of chance.
 \clearpage
 
 % ---------------------------------------------------------
-% ROGUE
+% ROGUE: THE CARDSHARP
 % ---------------------------------------------------------
 \section{Rogue: The Cardsharp}
 \textit{``A deck of cards is 52 opportunities for a betrayal. I only need one.''}
 
 You blend arcane infusion with sleight of hand, turning playing cards into deadly weapons.
 
-\subsection*{Deadly Dealing}
+\subsection{Deadly Dealing}
 \textit{``Pick a card. Any card. It'll be the last thing you see.''}
 
 At 3rd level, you gain proficiency with playing cards. You treat playing cards as simple ranged weapons with the finesse and thrown properties (range 30/60). On a hit, they deal \textbf{1d6 slashing damage}. These cards count as magical for the purpose of overcoming resistance.
 
-\subsection*{The Draw}
+\subsection{The Draw}
 \textit{``Hearts for burning passion, Spades for the grave.''}
 
 At 3rd level, your Sneak Attack is infused with the magic of the suits. When you deal Sneak Attack damage with a playing card, roll a \textbf{d4} to determine a bonus effect:
@@ -436,12 +451,12 @@ At 3rd level, your Sneak Attack is infused with the magic of the suits. When you
     \item \textbf{4 (Spades):} The target cannot regain hit points until the start of your next turn.
 \end{itemize}
 
-\subsection*{Fold 'Em}
+\subsection{Fold 'Em}
 \textit{``You can't read a face that isn't there.''}
 
 At 9th level, you become impossible to read. You are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, or know your alignment. You can also perfectly palm Small or smaller objects, making them impossible to detect on your person without a physical search.
 
-\subsection*{The Forced Shuffle}
+\subsection{The Forced Shuffle}
 \textit{``I think it's time we switched seats.''}
 
 At 13th level, you can manipulate positioning on the battlefield. As a bonus action, you can throw a card at a creature within 30 feet. The target must make a Charisma saving throw (DC = 8 + Prof + Cha).
@@ -451,7 +466,7 @@ At 13th level, you can manipulate positioning on the battlefield. As a bonus act
 \end{itemize}
 You can use this feature a number of times equal to your Charisma modifier (minimum of once). You regain expended uses on a long rest.
 
-\subsection*{52-Card Pickup}
+\subsection{52-Card Pickup}
 \textit{``Let's see how you handle a bad beat.''}
 
 At 17th level, you can unleash your entire deck in a storm of blades. As an action, you spray cards in a 30-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + Prof + Dex).
@@ -467,23 +482,26 @@ You can choose one creature who failed the save to apply your Sneak Attack damag
 \chapter{Lineages}
 Some are born into the game; others are dragged into it. These lineages represent those whose very blood has been altered by luck, fate, or a deal gone wrong.
 
+% ---------------------------------------------------------
+% CHANCEBORN
+% ---------------------------------------------------------
 \section{Chanceborn}
 \textit{``I didn't mean to do that. But I'm glad I did.''}
 
 You were born during a convergence of improbable events—a coin landing on its edge, a solar eclipse at midnight, or a dice roll that defied physics. The Trickster's influence runs in your veins, making you a living anomaly in the laws of probability.
 
-\subsection*{Born of Chaos}
+\subsection{Born of Chaos}
 Chanceborn look mostly like their mortal parents, but they always bear the mark of the odds. This might manifest as \textbf{pupils shaped like the front projection of a twenty-sided die}, a shadow that moves slightly out of sync with their body, or the faint, rhythmic sound of tumbling dice whenever they walk. They are often restless, driven by an instinctive need to push their luck.
 
-\subsection*{Living Talismans}
+\subsection{Living Talismans}
 Society views Chanceborn with a mix of awe and superstition. In some cultures, they are considered living good luck charms, invited to weddings and business deals to bless the proceedings. In others, they are shunned as agents of chaos who bring instability wherever they go. A Chanceborn rarely stays in one place for long; they drift wherever the winds of fate—or the flip of a coin—take them.
 
-\subsection*{Chanceborn Names}
+\subsection{Chanceborn Names}
 Chanceborn are often given names related to luck, gambling, or sudden events.
 
 \textbf{Names:} Ace, Chance, Cipher, Dice, Echo, Fate, Felix, Hazard, Jinx, Kismet, Lucky, Merit, Omen, Penny, Rook, Seven, Venture.
 
-\subsection*{Chanceborn Traits}
+\subsection{Chanceborn Traits}
 \begin{itemize}
     \item \textbf{Ability Score Increase:} Your \textbf{Wisdom} score increases by 2, and one other ability score of your choice increases by 1.
     \item \textbf{Creature Type:} You are a Humanoid.
@@ -500,7 +518,10 @@ Chanceborn are often given names related to luck, gambling, or sudden events.
 \chapter{Feats}
 These new feats represent the specialized tricks, hustles, and gambits learned by those who live on the edge of luck.
 
-\section*{Card Shark}
+% ---------------------------------------------------------
+% CARD SHARK
+% ---------------------------------------------------------
+\section{Card Shark}
 \textit{Prerequisite: Dexterity 13 or higher}
 
 \textit{``It's not gambling if you know you're going to win.''}
@@ -513,7 +534,10 @@ You have mastered the art of throwing cards with deadly precision. You gain the 
     \item When you take the Attack action to throw a playing card, you can use a bonus action to throw another card.
 \end{itemize}
 
-\section*{Cheat Death}
+% ---------------------------------------------------------
+% CHEAT DEATH
+% ---------------------------------------------------------
+\section{Cheat Death}
 \textit{``The grave can wait. I have one last hand to play.''}
 
 You have a standing arrangement with the powers that govern death—or perhaps you just know how to bluff the Reaper. You gain the following benefits:
@@ -530,6 +554,9 @@ You have a standing arrangement with the powers that govern death—or perhaps y
 \chapter{Supernatural Gifts}
 Not all power comes from study or devotion. Some power is bought, bargained for, or stolen.
 
+% ---------------------------------------------------------
+% BRAND OF THE DEAD MAN'S WAGER
+% ---------------------------------------------------------
 \section{Brand of the Dead Man's Wager}
 \textit{Supernatural Gift (mark)}
 
@@ -537,23 +564,23 @@ Not all power comes from study or devotion. Some power is bought, bargained for,
 
 This brand appears on your skin as a searing mark of your debt to the Trickster. It manifests as a burning sun with 8 rays, surrounded by 20 iron chain links that seem to tighten as time passes. While this mark is on your person, you feel a constant, feverish heat during the day and a phantom weight dragging at your soul at night.
 
-\subsection*{The Metabolic Clock}
+\subsection{The Metabolic Clock}
 The mark binds your vitality to the cycle of the sun and the debt you owe.
 \begin{itemize}
     \item \textbf{Active Phase (Hours 1-8):} You gain a \textbf{+2 bonus to AC}. The sun on the brand glows brightly, but one ray extinguishes every hour.
     \item \textbf{Burden Phase (Hours 9-20):} The sun goes dark. You lose the AC bonus. You cannot benefit from a Long Rest until the 20th hour of the cycle passes.
 \end{itemize}
 
-\subsection*{Rolling the Bones}
+\subsection{Rolling the Bones}
 During the Burden Phase, the Dealer comes to collect interest on your borrowed time. At the end of every hour, roll a \textbf{d20}. 
 \textbf{On a roll of 1}, you trigger a Corruption Effect. Roll a \textbf{d8} on the table below:
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\linewidth}{c X} 
-    \hline
+    \toprule
     \textbf{d8} & \textbf{Effect} \\
-    \hline
+    \midrule
     1 & \textbf{Singed Nerves:} You take 1d4 fire damage that cannot be reduced. \\
     2 & \textbf{Phantom Weight:} Your speed is reduced by 10 feet for 1 hour. \\
     3 & \textbf{Creaking Joints:} Disadvantage on Stealth checks for 1 hour. \\
@@ -562,7 +589,7 @@ During the Burden Phase, the Dealer comes to collect interest on your borrowed t
     6 & \textbf{Metabolic Tax:} Your hit point maximum is reduced by \textbf{1d6 + your level} until you finish a Long Rest. \\
     7 & \textbf{Feverish Haze:} Disadvantage on Intelligence and Charisma checks for 1 hour. \\
     8 & \textbf{Grace Period:} The cooldown ends immediately. You may begin a Long Rest. \\
-    \hline
+    \bottomrule
 \end{tabularx}
 \end{center}
 
@@ -573,6 +600,9 @@ During the Burden Phase, the Dealer comes to collect interest on your borrowed t
 \chapter{Magic Items}
 The tools of the Trickster are rarely straightforward weapons of war. They are puzzles, wagers, and instruments of chaos scattered across the multiverse to tempt the bold and the desperate.
 
+% ---------------------------------------------------------
+% COIN OF THE DOUBLE-CROSS
+% ---------------------------------------------------------
 \section{Coin of the Double-Cross}
 \textit{Wondrous Item, Uncommon (Requires Attunement)}
 
@@ -580,10 +610,10 @@ The tools of the Trickster are rarely straightforward weapons of war. They are p
 
 This heavy gold coin features the smiling mask of the Trickster on one side (``Heads'') and the weeping mask of the Dealer on the other (``Tails''). While attuned to it, the coin always feels warm to your touch.
 
-\subsection*{The Fix}
+\subsection{The Fix}
 You can manipulate the outcome of the toss to suit your needs. When you flip this coin, you can mentally command it to land on \textbf{Heads} or \textbf{Tails}. You can use this to settle disputes, cheat at gambling, or fool NPCs into thinking Fate has made a decision.
 
-\subsection*{Heads I Win, Tails You Lose}
+\subsection{Heads I Win, Tails You Lose}
 As a \textbf{bonus action}, you can flick the coin into the air to distract a creature you can see within 30 feet of you. The coin flashes with hypnotic light, forcing the creature to make a \textbf{DC 13 Wisdom saving throw}.
 
 If they fail, their attention is fixated on the coin, triggering an effect based on how you mentally commanded it to land:
@@ -593,13 +623,16 @@ If they fail, their attention is fixated on the coin, triggering an effect based
 \end{itemize}
 The coin magically returns to your pocket at the start of your next turn.
 
-\subsection*{The Edge (Curse)}
+\subsection{The Edge (Curse)}
 If you use the combat feature and roll a \textbf{Natural 1} on your attack (Heads) or the enemy rolls a \textbf{Natural 20} on their attack (Tails), the coin lands on its Edge. It vanishes instantly, returning to the Trickster's vault.
 
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
 
+% ---------------------------------------------------------
+% DECK OF EMPTY FATES
+% ---------------------------------------------------------
 \section{Deck of Empty Fates}
 \textit{Weapon (Deadly Playing Card), Rare (Requires Attunement)}
 
@@ -607,10 +640,10 @@ If you use the combat feature and roll a \textbf{Natural 1} on your attack (Head
 
 To the naked eye, this appears to be a deck of pristine, white vellum cards with no markings. They feel cool to the touch, like polished marble. The ink only appears the moment the card strikes a living target, writing their fate in real-time.
 
-\subsection*{The Infinite Deal}
+\subsection{The Infinite Deal}
 You gain a \textbf{+1 bonus} to attack and damage rolls made with this magic weapon. The deck is never depleted. Immediately after you make a ranged attack with a card, it vanishes and reappears in the deck. It functions as a Deadly Playing Card (Finesse, Thrown 30/60).
 
-\subsection*{Fate Revealed}
+\subsection{Fate Revealed}
 The cards remain blank on normal hits. However, when you score a \textbf{Critical Hit} (Natural 20) with this weapon, the card flashes with magical ink, revealing a Face Card. Roll a \textbf{d4}:
 \begin{enumerate}
     \item \textbf{Jack of Knaves:} You regain hit points equal to the damage dealt.
@@ -619,7 +652,7 @@ The cards remain blank on normal hits. However, when you score a \textbf{Critica
     \item \textbf{Ace of Endings:} Instead of doubling the damage dice, you \textbf{triple} the damage dice.
 \end{enumerate}
 
-\subsection*{The Joker}
+\subsection{The Joker}
 If you roll a \textbf{Natural 1} on an attack roll with this deck, you draw the Joker. The card explodes in your hand. You take \textbf{2d6 force damage}, and you cannot use the Deck again until the start of your next turn.
 
 % =========================================================
@@ -631,10 +664,13 @@ If you roll a \textbf{Natural 1} on an attack roll with this deck, you draw the 
 \chapter{New Weapons}
 The Trickster's arsenal includes weapons that are not found in a typical armory. These specialized tools require a deft hand and a deceptive mind to master.
 
-\section*{Weapon Descriptions}
+% ---------------------------------------------------------
+% WEAPON DESCRIPTIONS
+% ---------------------------------------------------------
+\section{Weapon Descriptions}
 The following new weapon is available to characters who have proficiency with it, most notably the Cardsharp rogue archetype.
 
-\subsection*{Weapon Properties}
+\subsection{Weapon Properties}
 \textbf{Deadly Playing Card.} \textit{``Sharp as a razor, light as a feather, and deadly as sin.''} These cards are magically infused or razor-edged, designed to slice through air and armor alike.
 
 \begin{itemize}
@@ -648,12 +684,12 @@ The following new weapon is available to characters who have proficiency with it
 \centering
 \renewcommand{\arraystretch}{1.5}
 \begin{tabularx}{\textwidth}{l l l l X}
-    \hline
+    \toprule
     \textbf{Name} & \textbf{Cost} & \textbf{Damage} & \textbf{Weight} & \textbf{Properties} \\
-    \hline
+    \midrule
     \multicolumn{5}{l}{\textit{\textbf{Simple Ranged Weapons}}} \\
     Deadly Playing Card & --- & 1d6 slashing & --- & Finesse, Thrown (range 30/60) \\
-    \hline
+    \bottomrule
 \end{tabularx}
 \end{table*}
 
@@ -664,7 +700,107 @@ The following new weapon is available to characters who have proficiency with it
 \chapter{Monsters}
 The darker corners of the Proprietor's ledger are not filled with gold, but with things that should not exist.
 
-\section*{Unluck Eater}
+% ---------------------------------------------------------
+% MONSTER: KERUS VALORUM
+% ---------------------------------------------------------
+\clearpage
+\onecolumn % Force Full Page Width for the Boss
+\raggedbottom 
+
+\section{Kerus Valorum}
+\textit{"You cannot bribe an equation. You cannot bargain with the sum. The math is done. You are in the red."}
+
+Deep within the Proprietor's vaults, where the souls of kings and beggars are stacked like poker chips, stands the Grand Auditor, \textbf{Kerus Valorum}. He is not merely a construct; he is the physical manifestation of Consequence. Standing nearly nine feet tall, his body is plates of obsidian fused with gold, and his "eyes" are rotating gemstone lenses that analyze the value of everything they see.
+
+\subsection{The Redemption of the Wicked}
+Long before he was the Auditor, Valorum was a mortal tyrant—a creature of pure, Chaotic Evil impulse who slaughtered for the joy of the sound. He lived without code or constraint, a whirlwind of blood that swept across kingdoms.
+
+But chaos is inefficient. It leaves value on the table. The Trickster saw the wasted potential in Valorum's slaughter. He offered the tyrant a wager, a game of wits that Valorum was destined to lose. The price of the loss was not his soul, but his \textit{purpose}.
+
+Bound now to the Ledger, Valorum was reforged. His chaotic rage was tempered into cold, Lawful Evil calculation. He no longer kills for pleasure; he kills because the equation demands it. He is a zealot of the Deal, believing that an unpaid debt is the only true sin in the multiverse.
+
+\subsection{The Vault of Solvency}
+When not deployed, Valorum resides in the Vault of Solvency, a pocket dimension of endless, cold iron shelves. Here, the contracts of the multiverse are filed not by name, but by the probability of default. The air hums with the sound of counting—a dry, rhythmic ticking that emanates from Valorum himself as he audits the books.
+
+\subsection{Adventure Hooks}
+\textbf{The Final Notice.} Any party member bearing the \textit{Brand of the Dead Man's Wager} feels their mark burn with sudden, freezing cold. A spectral courier delivers a obsidian tablet: \textit{"The grace period has expired. Present yourself at the Vault of Solvency within three days to renegotiate terms. Failure to appear will result in immediate foreclosure."} If they do not arrive, Valorum enters the Material Plane to collect the debt personally.
+
+\textbf{The Wrong Decimal.} Valorum appears to collect a debt from a local king, claiming a contract was signed centuries ago. The party discovers the contract is a forgery created by the Rogue Cardsharp. They must prove the fraud to Valorum—a being who cares only for the signature, not the context—before he "liquidates" the kingdom.
+
+\subsection{Roleplaying the Auditor}
+Valorum is not a villain in the traditional sense; he is a force of nature. He does not hate the players; he simply views them as liabilities.
+\begin{itemize}
+    \item \textbf{The Voice of Math.} Speak in a monotone, resonant voice. Use financial terminology for violence ("Your life total has been adjusted," "Transaction declined").
+    \item \textbf{Impartiality.} If a player rolls a critical failure, Valorum nods approvingly, noting it as "statistically inevitable."
+\end{itemize}
+
+\subsection{Tactics and Behaviors}
+\begin{itemize}
+    \item \textbf{The Audit.} At the start of combat, Valorum assesses the "net worth" of his enemies. He targets those with the lowest current hit points or those who have used limited resources (Luck points), viewing them as "insolvent."
+    \item \textbf{Separation of Assets.} Valorum uses his mount, \textbf{Solvency}, to fly over front-line defenders, dropping directly onto squishy spellcasters to disarm them of their focus.
+    \item \textbf{No Negotiation.} Valorum does not speak during combat, save to announce the remaining balance of a target's life.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\begin{monsterbox}{Kerus Valorum, Grand Auditor of the Gilded Ledger}
+    \textit{Medium construct, lawful evil}
+    \statrule
+    \textbf{Armor Class} 21 (Obsidian Plate +1) \\
+    \textbf{Hit Points} 243 (18d8 + 90 + 72) \\
+    \textbf{Speed} 30 ft., fly 60 ft. (mounted on Solvency)
+    \statrule
+    \begin{tabularx}{\linewidth}{XXXXXX}
+        \textbf{STR} & \textbf{DEX} & \textbf{CON} & \textbf{INT} & \textbf{WIS} & \textbf{CHA} \\
+        24 (+7) & 14 (+2) & 20 (+5) & 16 (+3) & 18 (+4) & 20 (+5) \\
+    \end{tabularx}
+    \statrule
+    \textbf{Saving Throws} Str +12, Con +10, Wis +9, Cha +10 \\
+    \textbf{Skills} Insight +14, Intimidation +10, Perception +9 \\
+    \textbf{Damage Resistances} fire, necrotic; bludgeoning, piercing, and slashing from nonmagical attacks \\
+    \textbf{Condition Immunities} charmed, exhaustion, frightened \\
+    \textbf{Senses} truesight 60 ft., passive Perception 19 \\
+    \textbf{Languages} All (via The Ledger) \\
+    \textbf{Challenge} 16 (15,000 XP)
+    \statrule
+
+    \textit{\textbf{The Inescapable Ledger.}} Valorum knows the precise location of any creature within 120 feet that owes a debt to the House (has less than full HP or has used a Luck point). He ignores cover and invisibility against these targets.
+
+    \textit{\textbf{Aura of Interest.}} Hostile creatures within 10 feet of Valorum take 5 psychic damage whenever they deal damage to Valorum or a friendly creature.
+
+    \textit{\textbf{Magic Resistance.}} Valorum has advantage on saving throws against spells and other magical effects.
+
+    \textit{\textbf{Solvency (Mount).}} Valorum fights while mounted on a spectral obsidian wolf. The wolf shares Valorum's turn and HP pool but grants him a flying speed of 60 ft. If Valorum is dismounted, the wolf vanishes until recalled (Bonus Action).
+
+    \section*{Actions}
+    \textit{\textbf{Multiattack.}} Valorum makes three attacks: two with the \textit{Ledger-Blade} and one with \textit{Asset Seizure}.
+
+    \textit{\textbf{The Ledger-Blade.}} \textit{Melee Weapon Attack:} +12 to hit, reach 10 ft., one target. \\
+    \textit{Hit:} 14 (2d6 + 7) slashing damage plus 9 (2d8) force damage.
+
+    \textit{\textbf{Liquidation (Recharge 5–6).}} Valorum focuses his ``Audit'' on a single target within 10 feet. He makes one \textit{Ledger-Blade} attack. If it hits, the target takes an extra 45 (10d8) force damage and must succeed on a \textbf{DC 19 Constitution saving throw} or be \textbf{stunned} until the end of their next turn.
+
+    \textit{\textbf{Asset Seizure.}} Valorum demands payment from a creature within 30 feet. The target must succeed on a \textbf{DC 19 Strength saving throw}. On a failure, one object they are holding (weapon or focus) is pulled from their grip and flies 30 feet away. If the item is magical, the creature takes 15 (3d10) force damage.
+
+    \textit{\textbf{Executive Order (1/Day).}} Valorum casts \textit{command} (at 5th level) on up to 5 creatures (DC 19 Wisdom save). The command is always ``Halt'' or ``Grovel.''
+
+    \section*{Reactions}
+    \textit{\textbf{Garnish Wages.}} When a creature within 5 feet hits Valorum with an attack, Valorum snaps his fingers to ``tax'' the effort. The attacker takes force damage equal to the damage they just dealt to Valorum (Max 20).
+
+    \section*{Legendary Actions}
+    Valorum can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. Valorum regains spent legendary actions at the start of his turn.
+
+    \textbf{Movement.} Valorum moves up to his speed without provoking opportunity attacks. \\
+    \textbf{The Audit.} Valorum marks a creature he can see. The next attack against that creature has advantage. \\
+    \textbf{Forceful Collection (Costs 2 Actions).} Valorum makes one \textit{Ledger-Blade} attack.
+\end{monsterbox}
+
+% ---------------------------------------------------------
+% MONSTER: UNLUCK EATER
+% ---------------------------------------------------------
+\clearpage
+\twocolumn % Switch back to Columns for small monsters
+\section{Unluck Eater}
 \textit{"It looked at me with those big, watering eyes, and I swear I felt my sword hand twitch. It wasn't fear. It was the feeling of missing a parry that hadn't happened yet."}
 \\—Sergeant Darrow, shortly before the incident at the Gilded Rose.
 
@@ -672,68 +808,65 @@ To the untrained eye, an Unluck Eater appears to be a mundane, albeit slightly u
 
 However, those who study the arcane know them as \textbf{Probability Parasites}. They do not originate from the natural world but leak into the Material Plane from the gaps between the Feywild and the Far Realm.
 
-\subsection*{The Nature of the Beast}
+\subsection{The Nature of the Beast}
 \textbf{The Purr of Entropy.} The Unluck Eater does not verbalize like a normal beast. Its "purr" is actually a low-frequency vibration that sounds remarkably like the clicking of dice tumbling on a wooden table or the ticking of a clock that skips a second.
 
 \textbf{Static Affection.} Touching an Unluck Eater feels pleasant but wrong. Its fur is incredibly soft, yet petting it leaves a lingering static charge on your fingertips. Characters holding an Unluck Eater might find small objects slipping from their grasp or coins disappearing from their pockets, only to reappear in the creature's bedding.
 
 \textbf{The Shadow's Lag.} The most telltale sign of an Unluck Eater is its shadow. It does not move perfectly in sync with the creature. If the Eater jumps, the shadow might wait a fraction of a second before following, or land slightly before the creature does. This is because the Eater exists slightly outside the linear flow of cause and effect.
 
-\subsection*{Tactics \& Behavior}
+\subsection{Tactics \& Behavior}
 Unluck Eaters are drawn to individuals of "high destiny"—adventurers, gamblers, and royalty—whose actions cause significant ripples in the fabric of fate. It will bond with a party, acting the part of a loyal mascot.
 
 It instinctively uses its \textit{Glutton for Failure} ability to endear itself to the party, saving them from minor embarrassments or missed attacks. It wants them to succeed, because the higher they climb, the more delicious the eventual fall will be.
 
 When the Eater is "full" (holding many Entropy Charges), it becomes sluggish and heavy. Its eyes may dilate until they are entirely black, and the air around it smells faintly of ozone and copper (the smell of blood).
 
-% Force the Unluck Eater Stat Block to a clean column/page
-\clearpage 
-
 \begin{monsterbox}{Unluck Eater}
-\textit{Tiny aberration, chaotic neutral}
-\statrule
-\textbf{Armor Class} 14 (natural armor) \\
-\textbf{Hit Points} 21 (6d4 + 6) \\
-\textbf{Speed} 30 ft., climb 30 ft.
-\statrule
-\begin{tabularx}{\linewidth}{XXXXXX}
-\textbf{STR} & \textbf{DEX} & \textbf{CON} & \textbf{INT} & \textbf{WIS} & \textbf{CHA} \\
-6 (-2) & 16 (+3) & 12 (+1) & 10 (+0) & 14 (+2) & 18 (+4) \\
-\end{tabularx}
-\statrule
-\textbf{Skills} Stealth +5, Persuasion +6 \\
-\textbf{Senses} Darkvision 60 ft., passive Perception 12 \\
-\textbf{Languages} Understands Common and Deep Speech but can't speak \\
-\textbf{Challenge} 1/2 (100 XP)
-\statrule
-
-\textit{\textbf{Innocent Guise.}} While the Unluck Eater has not attacked or used its \textit{Entropy Burst}, any creature who targets it with an attack or a harmful spell must first make a \textbf{DC 14 Wisdom saving throw}. On a failed save, the creature must choose a new target or lose the attack or spell.
-
-\textit{\textbf{Entropy Storage.}} The Unluck Eater tracks the number of times it has used \textit{Glutton for Failure}. It has no maximum limit, but if it dies, it explodes. Each creature within 20 feet must make a DC 13 Dexterity saving throw, taking 1d6 force damage per stored charge on a failed save, or half as much on a successful one.
-
-\section*{Actions}
-\textit{\textbf{Nip.}} \textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 1 piercing damage plus 2 (1d4) force damage.
-
-\textit{\textbf{Entropy Burst (Recharge 6).}} The Unluck Eater unleashes a wave of bad luck. It expends up to 5 stored entropy charges. For each charge expended, one creature it can see within 30 feet must succeed on a \textbf{DC 14 Charisma saving throw} or take 2d8 psychic damage and have disadvantage on the next attack roll it makes.
-
-\section*{Reactions}
-\textit{\textbf{Glutton for Failure.}} When a creature within 30 feet of the Unluck Eater fails an attack roll, ability check, or saving throw, the Unluck Eater can turn that failure into a \textbf{success}. The Unluck Eater gains 1 entropy charge.
+    \textit{Tiny aberration, chaotic neutral}
+    \statrule
+    \textbf{Armor Class} 14 (natural armor) \\
+    \textbf{Hit Points} 21 (6d4 + 6) \\
+    \textbf{Speed} 30 ft., climb 30 ft.
+    \statrule
+    \begin{tabularx}{\linewidth}{XXXXXX}
+    \textbf{STR} & \textbf{DEX} & \textbf{CON} & \textbf{INT} & \textbf{WIS} & \textbf{CHA} \\
+    6 (-2) & 16 (+3) & 12 (+1) & 10 (+0) & 14 (+2) & 18 (+4) \\
+    \end{tabularx}
+    \statrule
+    \textbf{Skills} Stealth +5, Persuasion +6 \\
+    \textbf{Senses} Darkvision 60 ft., passive Perception 12 \\
+    \textbf{Languages} Understands Common and Deep Speech but can't speak \\
+    \textbf{Challenge} 1/2 (100 XP)
+    \statrule
+    
+    \textit{\textbf{Innocent Guise.}} While the Unluck Eater has not attacked or used its \textit{Entropy Burst}, any creature who targets it with an attack or a harmful spell must first make a \textbf{DC 14 Wisdom saving throw}. On a failed save, the creature must choose a new target or lose the attack or spell.
+    
+    \textit{\textbf{Entropy Storage.}} The Unluck Eater tracks the number of times it has used \textit{Glutton for Failure}. It has no maximum limit, but if it dies, it explodes. Each creature within 20 feet must make a DC 13 Dexterity saving throw, taking 1d6 force damage per stored charge on a failed save, or half as much on a successful one.
+    
+    \section*{Actions}
+    \textit{\textbf{Nip.}} \textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 1 piercing damage plus 2 (1d4) force damage.
+    
+    \textit{\textbf{Entropy Burst (Recharge 6).}} The Unluck Eater unleashes a wave of bad luck. It expends up to 5 stored entropy charges. For each charge expended, one creature it can see within 30 feet must succeed on a \textbf{DC 14 Charisma saving throw} or take 2d8 psychic damage and have disadvantage on the next attack roll it makes.
+    
+    \section*{Reactions}
+    \textit{\textbf{Glutton for Failure.}} When a creature within 30 feet of the Unluck Eater fails an attack roll, ability check, or saving throw, the Unluck Eater can turn that failure into a \textbf{success}. The Unluck Eater gains 1 entropy charge.
 \end{monsterbox}
 
-\vspace{0.5cm}
-
 \begin{sidebarbox}{Synergy: The Gilded Croupier}
-If the Unluck Eater is present during a fight with a Gilded Croupier, the Croupier can use its \textbf{Cash Out} legendary action to detonate the Eater, healing itself and damaging players based on the stored Entropy Charges.
+    If the Unluck Eater is present during a fight with a Gilded Croupier, the Croupier can use its \textbf{Cash Out} legendary action to detonate the Eater, healing itself and damaging players based on the stored Entropy Charges.
 \end{sidebarbox}
 
-% --- THE GILDED CROUPIER SECTION ---
+% ---------------------------------------------------------
+% MONSTER: THE GILDED CROUPIER
+% ---------------------------------------------------------
 \clearpage
 \onecolumn      % Switch to Full Width Canvas
 \raggedbottom   % Force content to the top
 
-\section*{The Gilded Croupier}
+\section{The Gilded Croupier}
 
-% --- LORE SECTION (Unbalanced Columns: Fill Left then Right) ---
+% Lore
 \begin{multicols*}{2}
 \textit{"I demanded to speak to the manager. The thing that rolled out from behind the curtain didn't have a face, just a mask of polished mahogany. It told me my credit was declined. Then it stamped my brother, and... he just wasn't there anymore."}
 \\—Survivor of the Infinite Casino.
@@ -742,28 +875,28 @@ The Proprietor does not demean himself by collecting every petty debt personally
 
 \textbf{The House's Enforcer.} A Gilded Croupier presides over the Proprietor’s domains, whether they are literal casinos in the Feywild or soul-vaults in the Shadowfell. They act as impartial judges, ensuring the "games" are played fairly—until it is time for the House to win. To fight a Croupier is to fight an equation that has already solved for your defeat.
 
-% SUBSECTION 1: Physical Description & Mechanics
-\subsection*{Constructed Perfection}
+% Physical Description & Mechanics
+\subsection{Constructed Perfection}
 \textbf{The Golden Ratio of Violence.} Croupiers are built with four arms to maximize efficiency. Two arms are delicate, tipped with brass fingers for shuffling decks or raking chips with blinding speed. The other two are heavy, piston-driven limbs designed for "customer service." They do not feel pain, pity, or greed.
 
 \textbf{The Ticker Heart.} Inside the chest of every Croupier is a specialized modron-core, ticking in perfect rhythm with the multiverse. A glass window in the center of their torso reveals a constantly scrolling spool of golden parchment—a ticker tape of every debt owed within a 100-mile radius. When a Croupier identifies a debtor, the tape stops, a bell chimes, and the construct initiates "collection protocols."
 
 \textbf{Clockwork Courtesy.} Despite their lethal nature, Croupiers are programmed with a veneer of high-class hospitality. They move with fluid, eerie grace. They speak in pre-recorded, multi-tonal voices, offering polite phrases like \textit{"Please keep your hands off the table"} or \textit{"Your time has expired"} while dismembering intruders.
 
-% SUBSECTION 2: Weapons & Hierarchy
-\subsection*{Tools of the Trade}
+% Weapons & Hierarchy
+\subsection{Tools of the Trade}
 \textbf{The Void Stamp.} The most feared tool in a Croupier's arsenal is not a weapon of war, but of bureaucracy. The Void Stamp is a heavy brass device wreathed in necrotic magic. When a Croupier deems a creature's debt "unpayable," it does not kill them—it cancels their contract with existence. The stamp leaves behind nothing but a lingering smell of ozone and a memory that is already beginning to fade.
 
 \textbf{Pit Boss Hierarchy.} Croupiers often command squads of lesser constructs, such as Animated Armor painted in livery or tiny Modron runners. In the Proprietor's casinos, the Croupier is the absolute authority; even powerful devils and demons respect the floor rules when a Croupier is watching, for they know that the House has means of collection that transcend immortality.
 \end{multicols*}
 
-% --- WIDE STAT BLOCK ---
+% Stat Block
 \begin{monsterbox}{The Gilded Croupier}
 \textit{Large construct, lawful neutral}
 \statrule
 \textbf{Armor Class} 17 (natural armor) \\
 \textbf{Hit Points} 114 (12d10 + 48) \\
-\textbf{Speed} 30 ft.
+\textbf{Speed} 30 ft.a
 \statrule
 \begin{tabularx}{\linewidth}{XXXXXX}
 \textbf{STR} & \textbf{DEX} & \textbf{CON} & \textbf{INT} & \textbf{WIS} & \textbf{CHA} \\
@@ -801,7 +934,7 @@ The Croupier can take 3 legendary actions, choosing from the options below.
 \textbf{Cash Out (Costs 3 Actions).} The Croupier targets an Unluck Eater it can see within 60 feet. The Eater is destroyed. All creatures within 20 feet of the Eater must make a DC 15 Dexterity saving throw, taking 1d8 force damage for every \textit{Entropy Charge} the Eater had stored (half on success). The Croupier heals for the same amount.
 \end{monsterbox}
 
-% --- RESET FOR REST OF BOOK ---
+% Reset Layout
 \twocolumn
 
 \end{document}
