@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Subclasses: Collected</name>
-        <update version="0.0.1">
+        <update version="0.0.2">
             <file name="subclasses.xml" url="https://raw.githubusercontent.com/Trickderap/CustomDnDContentByTricktheTrickster/refs/heads/main/Mechanics/subclasses.xml" />
         </update>
     </info>
@@ -44,24 +44,24 @@
                 <thead>
                     <tr><td>Paladin Level</td><td>Spells</td></tr>
                 </thead>
-                <tr><td>3rd</td><td><em>hellish rebuke, hunter's mark</em></td></tr>
-                <tr><td>5th</td><td><em>hold person, zone of truth</em></td></tr>
-                <tr><td>9th</td><td><em>bestow curse, slow</em></td></tr>
-                <tr><td>13th</td><td><em>locate creature, staggering smite</em></td></tr>
-                <tr><td>17th</td><td><em>dominate person, geas</em></td></tr>
+                <tr><td>3rd</td><td><em>borrowed luck, hellish rebuke</em></td></tr>
+                <tr><td>5th</td><td><em>snake eyes, zone of truth</em></td></tr>
+                <tr><td>9th</td><td><em>russian roulette, slow</em></td></tr>
+                <tr><td>13th</td><td><em>all in, locate creature</em></td></tr>
+                <tr><td>17th</td><td><em>liquidation, geas</em></td></tr>
             </table>
         </description>
         <sheet display="false" />
         <rules>
+            <grant type="Spell" id="ID_TRICK_SPELL_BORROWED_LUCK" level="3" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_HELLISH_REBUKE" level="3" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" level="3" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_HOLD_PERSON" level="5" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_SNAKE_EYES" level="5" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_ZONE_OF_TRUTH" level="5" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_BESTOW_CURSE" level="9" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_RUSSIAN_ROULETTE" level="9" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_SLOW" level="9" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_ALL_IN" level="13" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" level="13" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_STAGGERING_SMITE" level="13" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" level="17" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_LIQUIDATION" level="17" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_GEAS" level="17" spellcasting="Paladin" prepared="true" />
         </rules>
     </element>
@@ -172,24 +172,24 @@
                 <thead>
                     <tr><td>Paladin Level</td><td>Spells</td></tr>
                 </thead>
-                <tr><td>3rd</td><td><em>false life, hex</em></td></tr>
-                <tr><td>5th</td><td><em>blur, darkness</em></td></tr>
-                <tr><td>9th</td><td><em>life transference, vampiric touch</em></td></tr>
-                <tr><td>13th</td><td><em>death ward, shadow of moil</em></td></tr>
-                <tr><td>17th</td><td><em>enervation, reincarnate</em></td></tr>
+                <tr><td>3rd</td><td><em>borrowed luck, false life</em></td></tr>
+                <tr><td>5th</td><td><em>fold, darkness</em></td></tr>
+                <tr><td>9th</td><td><em>russian roulette, life transference</em></td></tr>
+                <tr><td>13th</td><td><em>all in, shadow of moil</em></td></tr>
+                <tr><td>17th</td><td><em>liquidation, reincarnate</em></td></tr>
             </table>
         </description>
         <sheet display="false" />
         <rules>
+            <grant type="Spell" id="ID_TRICK_SPELL_BORROWED_LUCK" level="3" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_FALSE_LIFE" level="3" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_HEX" level="3" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_BLUR" level="5" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_FOLD" level="5" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="5" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_RUSSIAN_ROULETTE" level="9" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_XGTE_SPELL_LIFE_TRANSFERENCE" level="9" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_VAMPIRIC_TOUCH" level="9" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="13" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_ALL_IN" level="13" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_XGTE_SPELL_SHADOW_OF_MOIL" level="13" spellcasting="Paladin" prepared="true" />
-            <grant type="Spell" id="ID_XGTE_SPELL_ENERVATION" level="17" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_TRICK_SPELL_LIQUIDATION" level="17" spellcasting="Paladin" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_REINCARNATE" level="17" spellcasting="Paladin" prepared="true" />
         </rules>
     </element>
@@ -300,7 +300,6 @@
         </sheet>
         <rules>
             <select type="Proficiency" name="Deadly Dealing (Gaming Set)" supports="Gaming Set" />
-            
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_DEADLY_PLAYING_CARD" />
         </rules>
     </element>
@@ -392,25 +391,25 @@
             <h5>Chance Domain Spells</h5>
             <table>
                 <thead><tr><td>Cleric Level</td><td>Spells</td></tr></thead>
-                <tr><td>1st</td><td><em>chaos bolt, bane</em></td></tr>
-                <tr><td>3rd</td><td><em>mirror image, nystul's magic aura</em></td></tr>
-                <tr><td>5th</td><td><em>blink, bestow curse</em></td></tr>
-                <tr><td>7th</td><td><em>confusion, death ward</em></td></tr>
-                <tr><td>9th</td><td><em>mislead, skill empowerment</em></td></tr>
+                <tr><td>1st</td><td><em>borrowed luck, chaos bolt</em></td></tr>
+                <tr><td>3rd</td><td><em>snake eyes, nystul's magic aura</em></td></tr>
+                <tr><td>5th</td><td><em>dead man's volley, blink</em></td></tr>
+                <tr><td>7th</td><td><em>all in, confusion</em></td></tr>
+                <tr><td>9th</td><td><em>liquidation, mislead</em></td></tr>
             </table>
         </description>
         <sheet display="false" />
         <spellcasting name="Cleric" extend="true">
+            <extend>ID_TRICK_SPELL_BORROWED_LUCK</extend>
             <extend>ID_XGTE_SPELL_CHAOS_BOLT</extend>
-            <extend>ID_PHB_SPELL_BANE</extend>
-            <extend>ID_PHB_SPELL_MIRROR_IMAGE</extend>
+            <extend>ID_TRICK_SPELL_SNAKE_EYES</extend>
             <extend>ID_PHB_SPELL_NYSTULS_MAGIC_AURA</extend>
+            <extend>ID_TRICK_SPELL_DEAD_MANS_VOLLEY</extend>
             <extend>ID_PHB_SPELL_BLINK</extend>
-            <extend>ID_PHB_SPELL_BESTOW_CURSE</extend>
+            <extend>ID_TRICK_SPELL_ALL_IN</extend>
             <extend>ID_PHB_SPELL_CONFUSION</extend>
-            <extend>ID_PHB_SPELL_DEATH_WARD</extend>
+            <extend>ID_TRICK_SPELL_LIQUIDATION</extend>
             <extend>ID_PHB_SPELL_MISLEAD</extend>
-            <extend>ID_XGTE_SPELL_SKILL_EMPOWERMENT</extend>
         </spellcasting>
     </element>
 
@@ -424,7 +423,6 @@
         </sheet>
         <rules>
             <select type="Proficiency" name="Gaming Set (Gambler's Instinct)" supports="Gaming Set" />
-            
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
             <grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
         </rules>
@@ -517,24 +515,24 @@
             <h5>Proprietor Expanded Spells</h5>
             <table>
                 <thead><tr><td>Spell Level</td><td>Spells</td></tr></thead>
-                <tr><td>1st</td><td><em>command, identify</em></td></tr>
-                <tr><td>2nd</td><td><em>detect thoughts, zone of truth</em></td></tr>
-                <tr><td>3rd</td><td><em>clairvoyance, glyph of warding</em></td></tr>
-                <tr><td>4th</td><td><em>locate creature, private sanctum</em></td></tr>
-                <tr><td>5th</td><td><em>dominate person, geas</em></td></tr>
+                <tr><td>1st</td><td><em>borrowed luck, command</em></td></tr>
+                <tr><td>2nd</td><td><em>snake eyes, zone of truth</em></td></tr>
+                <tr><td>3rd</td><td><em>russian roulette, clairvoyance</em></td></tr>
+                <tr><td>4th</td><td><em>all in, locate creature</em></td></tr>
+                <tr><td>5th</td><td><em>liquidation, geas</em></td></tr>
             </table>
         </description>
         <sheet display="false" />
         <spellcasting name="Warlock" extend="true">
+            <extend>ID_TRICK_SPELL_BORROWED_LUCK</extend>
             <extend>ID_PHB_SPELL_COMMAND</extend>
-            <extend>ID_PHB_SPELL_IDENTIFY</extend>
-            <extend>ID_PHB_SPELL_DETECT_THOUGHTS</extend>
+            <extend>ID_TRICK_SPELL_SNAKE_EYES</extend>
             <extend>ID_PHB_SPELL_ZONE_OF_TRUTH</extend>
+            <extend>ID_TRICK_SPELL_RUSSIAN_ROULETTE</extend>
             <extend>ID_PHB_SPELL_CLAIRVOYANCE</extend>
-            <extend>ID_PHB_SPELL_GLYPH_OF_WARDING</extend>
+            <extend>ID_TRICK_SPELL_ALL_IN</extend>
             <extend>ID_PHB_SPELL_LOCATE_CREATURE</extend>
-            <extend>ID_PHB_SPELL_PRIVATE_SANCTUM</extend>
-            <extend>ID_PHB_SPELL_DOMINATE_PERSON</extend>
+            <extend>ID_TRICK_SPELL_LIQUIDATION</extend>
             <extend>ID_PHB_SPELL_GEAS</extend>
         </spellcasting>
     </element>

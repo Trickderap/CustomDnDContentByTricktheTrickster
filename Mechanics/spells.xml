@@ -84,6 +84,7 @@
         <description>
             <p>You open a magical pot, inviting your allies to invest their vitality for mutual protection. Up to 5 willing creatures within range (including yourself) can choose to spend one Hit Die.</p>
             <p>Roll all the spent Hit Dice and add them together. The total is the <strong>Pot</strong>. You gain a pool of Temporary Hit Points equal to the Pot + your spellcasting ability modifier. As a bonus action on your turn, you can transfer any amount of these Temporary Hit Points to a creature within 30 feet of you.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the maximum number of Hit Dice that can be spent increases by 1 for each slot level above 2nd.</p>
         </description>
         <setters>
             <set name="keywords">abjuration</set>
@@ -106,6 +107,7 @@
         <description>
             <p>You shout a curse of disbelief, forcing fate to rewrite the outcome. The critical hit becomes a normal hit.</p>
             <p>Additionally, the attacker must succeed on a Wisdom saving throw or take 2d8 psychic damage from the shock of their stolen glory.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.</p>
         </description>
         <setters>
             <set name="keywords">psychic</set>
@@ -128,6 +130,7 @@
         <description>
             <p>You realize the hand you've been dealt is a losing one, and you choose to bow out. You instantly turn into a flat, two-dimensional playing card and flutter out of harm's way.</p>
             <p>You reduce the triggering damage by 2d10 + your spellcasting ability modifier and teleport up to 15 feet to an unoccupied space you can see. If this reduces the damage to 0, you reappear holding a card that says "Better Luck Next Time."</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the damage reduction increases by 1d10 for each slot level above 2nd.</p>
         </description>
         <setters>
             <set name="keywords">abjuration</set>
@@ -151,6 +154,7 @@
             <p>You fix your gaze on a creature and curse their probability. The target must succeed on a Wisdom saving throw or be cursed for the duration.</p>
             <p>While cursed, whenever the target makes an attack roll or a saving throw, they must roll a d4 and subtract the number rolled from the result.</p>
             <p>Additionally, if the target rolls a 1 on the d20 for an attack roll or saving throw, the curse flares with necrotic energy. The target takes 3d6 necrotic damage and is stunned until the end of their next turn.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the necrotic damage increases by 1d6 for each slot level above 2nd.</p>
         </description>
         <setters>
             <set name="keywords">necrotic</set>
@@ -178,7 +182,7 @@
                 <li><strong>3-4 (Spades):</strong> Targets act as if under the effects of the slow spell until the start of your next turn.</li>
                 <li><strong>5-6 (Diamonds):</strong> Targets are blinded until the start of your next turn by a flash of prismatic light.</li>
             </ul>
-            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the slashing damage increases by 1d6 for each slot level above 3rd.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the initial slashing damage increases by 1d6 for each slot level above 3rd.</p>
         </description>
         <setters>
             <set name="keywords">slashing, fire</set>
@@ -199,12 +203,13 @@
     <element name="Russian Roulette" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_RUSSIAN_ROULETTE">
         <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>You summon a spectral revolver with a single bullet in the chamber and aim it at a creature within range. Choose a number between 1 and 6, then roll a d6.</p>
+            <p>You summon a spectral revolver with a single bullet in the chamber. You aim it at a creature within range and let fate decide the outcome. Roll a d6.</p>
             <ul>
-                <li><strong>Match (The Shot):</strong> If you roll the chosen number, the spell scores a catastrophic hit. The target takes 10d10 necrotic damage.</li>
-                <li><strong>No Match (The Click):</strong> If you roll any other number, the tension snaps. The target takes 3d10 psychic damage.</li>
-                <li><strong>Natural 1 (The Backfire):</strong> If you chose 1 and rolled a 1, or if you roll a 1 regardless of your choice, you take 3d10 necrotic damage as the gun explodes in your hand (the target takes no damage).</li>
+                <li><strong>1 (The Backfire):</strong> The mechanism jams catastrophically. The spell fails, and you take 3d10 necrotic damage. The target takes no damage.</li>
+                <li><strong>2-5 (The Click):</strong> The chamber is empty, but the sound of the hammer snapping snaps the target's nerve. The target takes 3d10 psychic damage.</li>
+                <li><strong>6 (The Shot):</strong> The bullet fires with thunderous force. The target takes 10d10 necrotic damage.</li>
             </ul>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage for "The Shot" increases by 2d10 for each slot level above 3rd.</p>
         </description>
         <setters>
             <set name="keywords">necrotic, psychic</set>
@@ -228,6 +233,7 @@
             <p>You wager your own vitality on a single, devastating strike. When you cast this spell, you immediately take 4d10 necrotic damage. This damage cannot be reduced or prevented in any way.</p>
             <p>The next time you deal damage with a spell or attack before the end of your turn, you add force damage to the total equal to double the necrotic damage you took.</p>
             <p><strong>The Payout.</strong> If this attack reduces a creature to 0 hit points, you regain hit points equal to the necrotic damage you originally took.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 5th level or higher, the necrotic damage you take (and thus the potential bonus damage) increases by 1d10 for each slot level above 4th.</p>
         </description>
         <setters>
             <set name="keywords">necrotic, force</set>
@@ -251,6 +257,7 @@
             <p>You attempt to forcibly settle a creature's debt with existence. Make a melee spell attack against a creature you can reach. On a hit, the target takes 5d10 force damage.</p>
             <p>If this damage reduces the target to 50 hit points or fewer, you can force them to make a Charisma saving throw. On a failure, they are instantly turned into a pile of gold coins equal to their hit point maximum x 10. The creature is dead, and the only way to restore them is by using a wish spell or by melting the gold down and casting true resurrection.</p>
             <p>If the target succeeds on the save, or if they have more than 50 hit points remaining, they take an additional 5d10 necrotic damage instead of turning to gold.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, the initial force damage increases by 1d10, and the hit point threshold for the execution effect increases by 10 for each slot level above 5th.</p>
         </description>
         <setters>
             <set name="keywords">force, necrotic</set>
@@ -274,6 +281,7 @@
             <p>You designate a 20-foot radius cylinder point within range and summon a deluge of heavy, molten gold coins from the Proprietor's vaults. Each creature in the area must make a Dexterity saving throw. On a failure, a creature takes 6d8 bludgeoning damage and 4d8 fire damage and is knocked prone. On a success, they take half damage and are not knocked prone.</p>
             <p>Until the spell ends, the area is difficult terrain. Any creature that ends its turn in the area must succeed on a Strength saving throw or be restrained as the coins pile over them.</p>
             <p>When the spell ends, the coins turn into worthless lead and ash.</p>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 7th level or higher, the bludgeoning damage increases by 1d8 and the fire damage increases by 1d8 for each slot level above 6th.</p>
         </description>
         <setters>
             <set name="keywords">bludgeoning, fire</set>
@@ -295,17 +303,18 @@
         <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
             <p>You summon a massive, spectral wheel of fortune that appears in the sky and spins wildly. Choose a point within range. All creatures within a 30-foot-radius sphere centered on that point must make a Constitution saving throw.</p>
-            <p>Roll a d8 to determine the effect. Creatures take 10d8 damage of the type listed below on a failed save, or half as much on a successful one.</p>
+            <p>Roll a d8 to determine the effect. Creatures take 10d8 damage of the type corresponding to the d8 result table below on a failed save, or half as much on a successful one.</p>
             <ul>
-                <li><strong>1. Red:</strong> Fire damage.</li>
-                <li><strong>2. Blue:</strong> Cold damage.</li>
-                <li><strong>3. Green:</strong> Acid damage.</li>
-                <li><strong>4. Yellow:</strong> Lightning damage.</li>
-                <li><strong>5. White:</strong> Force damage.</li>
-                <li><strong>6. Black:</strong> Necrotic damage.</li>
-                <li><strong>7. Gold (The House Wins):</strong> Psychic damage. Additionally, you regain hit points equal to half the total damage dealt.</li>
+                <li><strong>1. Red:</strong> Fire.</li>
+                <li><strong>2. Blue:</strong> Cold.</li>
+                <li><strong>3. Green:</strong> Acid.</li>
+                <li><strong>4. Yellow:</strong> Lightning.</li>
+                <li><strong>5. White:</strong> Force.</li>
+                <li><strong>6. Black:</strong> Necrotic.</li>
+                <li><strong>7. Gold (The House Wins):</strong> Psychic. Additionally, you regain hit points equal to half the total damage dealt.</li>
                 <li><strong>8. Jackpot:</strong> Roll twice on this table and apply both effects. If you roll an 8 on either of the new rolls, reroll that die until a different number appears.</li>
             </ul>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 8th level or higher, the damage increases by 1d8 for each slot level above 7th.</p>
         </description>
         <setters>
             <set name="keywords">fire, cold, acid, lightning, force, necrotic, psychic</set>
