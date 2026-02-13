@@ -2,29 +2,30 @@
 <elements>
     <info>
         <name>Spells</name>
-        <update version="0.0.1">
+        <update version="0.0.2">
             <file name="spells.xml" url="" />
         </update>
     </info>
     
     <element name="Coin Toss" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_COIN_TOSS">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>You flick a coin into the air, transforming it into a spinning bolt of force. Make a ranged spell attack. On a hit, the target takes <strong>1d8 force damage</strong>.</p>
-            <p>Immediately after, flip a coin (d2):</p>
+            <p>You flick a coin into the air, transforming it into a spinning, shimmering bolt of magical force. Make a ranged spell attack against the target. On a hit, the target takes 1d8 force damage.</p>
+            <p>Immediately after the damage is dealt, the magical coin flips in the air (roll a d2 or flip a real coin):</p>
             <ul>
-                <li><strong>Heads:</strong> Target is knocked <strong>prone</strong>.</li>
-                <li><strong>Tails:</strong> Target is pushed <strong>5 feet</strong> away.</li>
+                <li><strong>Heads:</strong> The target is knocked prone by the force of the impact.</li>
+                <li><strong>Tails:</strong> The target is pushed 5 feet away from you.</li>
             </ul>
-            <p>Damage increases by 1d8 at 5th, 11th, and 17th level.</p>
+            <p class="indent">The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>
         </description>
         <setters>
-            <set name="keywords">somatic, material</set>
+            <set name="keywords">force</set>
             <set name="level">0</set>
             <set name="school">Evocation</set>
             <set name="time">1 action</set>
             <set name="duration">Instantaneous</set>
             <set name="range">60 feet</set>
+            <set name="hasVerbalComponent">false</set>
             <set name="hasSomaticComponent">true</set>
             <set name="hasMaterialComponent">true</set>
             <set name="materialComponent">a coin</set>
@@ -33,51 +34,126 @@
         </setters>
     </element>
 
-    <element name="Borrowed Luck" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_BORROWED_LUCK">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+    <element name="Penny Pinch" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_PENNY_PINCH">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>You tug on the threads of fate. You gain <strong>advantage</strong> on the triggering roll.</p>
-            <p><strong>The Debt:</strong> At the start of your next turn, you have <strong>disadvantage</strong> on the first attack, check, or save you make. If you don't roll, you take <strong>1d6 psychic damage</strong>.</p>
+            <p>You make a pinching motion towards a creature, attempting to tax their very life force. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage.</p>
+            <p>If the target fails the save, you gain 1 temporary hit point.</p>
+            <p class="indent">This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>
         </description>
         <setters>
-            <set name="keywords">verbal</set>
+            <set name="keywords">necrotic</set>
+            <set name="level">0</set>
+            <set name="school">Necromancy</set>
+            <set name="time">1 action</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">60 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent" />
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Borrowed Luck" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_BORROWED_LUCK">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You tug on the threads of fate to borrow success from your own future. You gain advantage on the triggering roll.</p>
+            <p><strong>The Debt.</strong> At the start of your next turn, fate collects its due. You have disadvantage on the first attack roll, ability check, or saving throw you make before the end of that turn. If you do not make a roll on that turn, you take 1d6 psychic damage as the magical feedback snaps back at you.</p>
+        </description>
+        <setters>
+            <set name="keywords">divination</set>
             <set name="level">1</set>
             <set name="school">Divination</set>
             <set name="time">1 reaction</set>
             <set name="duration">Instantaneous</set>
             <set name="range">Self</set>
             <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">false</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent" />
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Ante Up" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_ANTE_UP">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You open a magical pot, inviting your allies to invest their vitality for mutual protection. Up to 5 willing creatures within range (including yourself) can choose to spend one Hit Die.</p>
+            <p>Roll all the spent Hit Dice and add them together. The total is the <strong>Pot</strong>. You gain a pool of Temporary Hit Points equal to the Pot + your spellcasting ability modifier. As a bonus action on your turn, you can transfer any amount of these Temporary Hit Points to a creature within 30 feet of you.</p>
+        </description>
+        <setters>
+            <set name="keywords">abjuration</set>
+            <set name="level">2</set>
+            <set name="school">Abjuration</set>
+            <set name="time">1 action</set>
+            <set name="duration">1 hour</set>
+            <set name="range">30 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a poker chip</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="Bad Beat" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_BAD_BEAT">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You shout a curse of disbelief, forcing fate to rewrite the outcome. The critical hit becomes a normal hit.</p>
+            <p>Additionally, the attacker must succeed on a Wisdom saving throw or take 2d8 psychic damage from the shock of their stolen glory.</p>
+        </description>
+        <setters>
+            <set name="keywords">psychic</set>
+            <set name="level">2</set>
+            <set name="school">Enchantment</set>
+            <set name="time">1 reaction</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">60 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">false</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent" />
             <set name="isConcentration">false</set>
             <set name="isRitual">false</set>
         </setters>
     </element>
 
     <element name="Fold" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_FOLD">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>You instantly turn into a flat playing card to dodge harm. Reduce the triggering damage by <strong>2d10 + your spellcasting ability modifier</strong> and teleport up to 15 feet to an unoccupied space.</p>
+            <p>You realize the hand you've been dealt is a losing one, and you choose to bow out. You instantly turn into a flat, two-dimensional playing card and flutter out of harm's way.</p>
+            <p>You reduce the triggering damage by 2d10 + your spellcasting ability modifier and teleport up to 15 feet to an unoccupied space you can see. If this reduces the damage to 0, you reappear holding a card that says "Better Luck Next Time."</p>
         </description>
         <setters>
-            <set name="keywords">somatic</set>
+            <set name="keywords">abjuration</set>
             <set name="level">2</set>
             <set name="school">Abjuration</set>
             <set name="time">1 reaction</set>
             <set name="duration">Instantaneous</set>
             <set name="range">Self</set>
+            <set name="hasVerbalComponent">false</set>
             <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">false</set>
+            <set name="materialComponent" />
             <set name="isConcentration">false</set>
             <set name="isRitual">false</set>
         </setters>
     </element>
 
     <element name="Snake Eyes" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_SNAKE_EYES">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>The target must succeed on a Wisdom save or be cursed. While cursed, whenever they make an attack or save, they subtract a <strong>d4</strong> from the roll.</p>
-            <p>If they roll a <strong>1 on the d20</strong>, they take <strong>3d6 necrotic damage</strong> and are <strong>stunned</strong> until the end of their next turn.</p>
+            <p>You fix your gaze on a creature and curse their probability. The target must succeed on a Wisdom saving throw or be cursed for the duration.</p>
+            <p>While cursed, whenever the target makes an attack roll or a saving throw, they must roll a d4 and subtract the number rolled from the result.</p>
+            <p>Additionally, if the target rolls a 1 on the d20 for an attack roll or saving throw, the curse flares with necrotic energy. The target takes 3d6 necrotic damage and is stunned until the end of their next turn.</p>
         </description>
         <setters>
-            <set name="keywords">verbal, somatic, material</set>
+            <set name="keywords">necrotic</set>
             <set name="level">2</set>
             <set name="school">Necromancy</set>
             <set name="time">1 action</set>
@@ -93,18 +169,19 @@
     </element>
 
     <element name="Dead Man's Volley" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_DEAD_MANS_VOLLEY">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>You throw a deck of cards that multiplies into a storm. Each creature in a 30-foot cone must make a Dexterity save. On failure, they take <strong>6d6 slashing damage</strong> (half on success).</p>
-            <p><strong>The River (d6):</strong></p>
+            <p>You throw a deck of cards into the air, and they multiply into a storm of razor-edged projectiles. Each creature in a 30-foot cone must make a Dexterity saving throw. A creature takes 6d6 slashing damage on a failed save, or half as much damage on a successful one.</p>
+            <p><strong>The River.</strong> Roll a d6 to determine a magical after-effect applied to all creatures who failed the save:</p>
             <ul>
-                <li><strong>1-2 (Hearts):</strong> +2d6 fire damage.</li>
-                <li><strong>3-4 (Spades):</strong> Targets are slowed (as per <em>slow</em> spell).</li>
-                <li><strong>5-6 (Diamonds):</strong> Targets are blinded.</li>
+                <li><strong>1-2 (Hearts):</strong> Targets take an additional 2d6 fire damage.</li>
+                <li><strong>3-4 (Spades):</strong> Targets act as if under the effects of the slow spell until the start of your next turn.</li>
+                <li><strong>5-6 (Diamonds):</strong> Targets are blinded until the start of your next turn by a flash of prismatic light.</li>
             </ul>
+            <p class="indent"><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the slashing damage increases by 1d6 for each slot level above 3rd.</p>
         </description>
         <setters>
-            <set name="keywords">verbal, somatic, material</set>
+            <set name="keywords">slashing, fire</set>
             <set name="level">3</set>
             <set name="school">Evocation</set>
             <set name="time">1 action</set>
@@ -119,14 +196,41 @@
         </setters>
     </element>
 
-    <element name="All In" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_ALL_IN">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+    <element name="Russian Roulette" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_RUSSIAN_ROULETTE">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>You take <strong>4d10 necrotic damage</strong> (cannot be reduced). The next time you deal damage this turn, add force damage equal to <strong>double</strong> the necrotic damage taken.</p>
-            <p><strong>The Payout:</strong> If this reduces a creature to 0 HP, you regain HP equal to the necrotic damage taken.</p>
+            <p>You summon a spectral revolver with a single bullet in the chamber and aim it at a creature within range. Choose a number between 1 and 6, then roll a d6.</p>
+            <ul>
+                <li><strong>Match (The Shot):</strong> If you roll the chosen number, the spell scores a catastrophic hit. The target takes 10d10 necrotic damage.</li>
+                <li><strong>No Match (The Click):</strong> If you roll any other number, the tension snaps. The target takes 3d10 psychic damage.</li>
+                <li><strong>Natural 1 (The Backfire):</strong> If you chose 1 and rolled a 1, or if you roll a 1 regardless of your choice, you take 3d10 necrotic damage as the gun explodes in your hand (the target takes no damage).</li>
+            </ul>
         </description>
         <setters>
-            <set name="keywords">verbal, somatic, material</set>
+            <set name="keywords">necrotic, psychic</set>
+            <set name="level">3</set>
+            <set name="school">Necromancy</set>
+            <set name="time">1 action</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">60 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a spinning top or cylinder</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
+    <element name="All In" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_ALL_IN">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You wager your own vitality on a single, devastating strike. When you cast this spell, you immediately take 4d10 necrotic damage. This damage cannot be reduced or prevented in any way.</p>
+            <p>The next time you deal damage with a spell or attack before the end of your turn, you add force damage to the total equal to double the necrotic damage you took.</p>
+            <p><strong>The Payout.</strong> If this attack reduces a creature to 0 hit points, you regain hit points equal to the necrotic damage you originally took.</p>
+        </description>
+        <setters>
+            <set name="keywords">necrotic, force</set>
             <set name="level">4</set>
             <set name="school">Transmutation</set>
             <set name="time">1 bonus action</set>
@@ -142,13 +246,14 @@
     </element>
 
     <element name="Liquidation" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_LIQUIDATION">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>Make a melee spell attack. Hit: <strong>5d10 force damage</strong>.</p>
-            <p>If target is reduced to 50 HP or fewer, they make a Charisma save. On failure, they turn into gold coins (dead). On success (or if &gt;50 HP), they take an extra <strong>5d10 necrotic damage</strong>.</p>
+            <p>You attempt to forcibly settle a creature's debt with existence. Make a melee spell attack against a creature you can reach. On a hit, the target takes 5d10 force damage.</p>
+            <p>If this damage reduces the target to 50 hit points or fewer, you can force them to make a Charisma saving throw. On a failure, they are instantly turned into a pile of gold coins equal to their hit point maximum x 10. The creature is dead, and the only way to restore them is by using a wish spell or by melting the gold down and casting true resurrection.</p>
+            <p>If the target succeeds on the save, or if they have more than 50 hit points remaining, they take an additional 5d10 necrotic damage instead of turning to gold.</p>
         </description>
         <setters>
-            <set name="keywords">verbal, somatic, material</set>
+            <set name="keywords">force, necrotic</set>
             <set name="level">5</set>
             <set name="school">Transmutation</set>
             <set name="time">1 action</set>
@@ -164,13 +269,14 @@
     </element>
 
     <element name="Jackpot" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_JACKPOT">
-        <supports>Bard, Sorcerer, Warlock, Wizard</supports>
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
         <description>
-            <p>Summon molten gold coins in a 20-foot radius cylinder. Dexterity save: <strong>6d8 bludgeoning + 4d8 fire</strong> and prone on failure (half on success).</p>
-            <p>Area is difficult terrain. Creatures ending their turn there must succeed on a Strength save or be <strong>restrained</strong>.</p>
+            <p>You designate a 20-foot radius cylinder point within range and summon a deluge of heavy, molten gold coins from the Proprietor's vaults. Each creature in the area must make a Dexterity saving throw. On a failure, a creature takes 6d8 bludgeoning damage and 4d8 fire damage and is knocked prone. On a success, they take half damage and are not knocked prone.</p>
+            <p>Until the spell ends, the area is difficult terrain. Any creature that ends its turn in the area must succeed on a Strength saving throw or be restrained as the coins pile over them.</p>
+            <p>When the spell ends, the coins turn into worthless lead and ash.</p>
         </description>
         <setters>
-            <set name="keywords">verbal, somatic, material</set>
+            <set name="keywords">bludgeoning, fire</set>
             <set name="level">6</set>
             <set name="school">Conjuration</set>
             <set name="time">1 action</set>
@@ -184,4 +290,37 @@
             <set name="isRitual">false</set>
         </setters>
     </element>
+
+    <element name="Wheel of Fate" type="Spell" source="Trick's Ledger of Many Tricks" id="ID_TRICK_SPELL_WHEEL_OF_FATE">
+        <supports>Bard, Cleric, Druid, Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>You summon a massive, spectral wheel of fortune that appears in the sky and spins wildly. Choose a point within range. All creatures within a 30-foot-radius sphere centered on that point must make a Constitution saving throw.</p>
+            <p>Roll a d8 to determine the effect. Creatures take 10d8 damage of the type listed below on a failed save, or half as much on a successful one.</p>
+            <ul>
+                <li><strong>1. Red:</strong> Fire damage.</li>
+                <li><strong>2. Blue:</strong> Cold damage.</li>
+                <li><strong>3. Green:</strong> Acid damage.</li>
+                <li><strong>4. Yellow:</strong> Lightning damage.</li>
+                <li><strong>5. White:</strong> Force damage.</li>
+                <li><strong>6. Black:</strong> Necrotic damage.</li>
+                <li><strong>7. Gold (The House Wins):</strong> Psychic damage. Additionally, you regain hit points equal to half the total damage dealt.</li>
+                <li><strong>8. Jackpot:</strong> Roll twice on this table and apply both effects. If you roll an 8 on either of the new rolls, reroll that die until a different number appears.</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="keywords">fire, cold, acid, lightning, force, necrotic, psychic</set>
+            <set name="level">7</set>
+            <set name="school">Evocation</set>
+            <set name="time">1 action</set>
+            <set name="duration">Instantaneous</set>
+            <set name="range">120 feet</set>
+            <set name="hasVerbalComponent">true</set>
+            <set name="hasSomaticComponent">true</set>
+            <set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">a wheel or spinner</set>
+            <set name="isConcentration">false</set>
+            <set name="isRitual">false</set>
+        </setters>
+    </element>
+
 </elements>
